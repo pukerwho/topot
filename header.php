@@ -36,7 +36,12 @@
             'menu_class' => 'flex justify-between text-lg'
           ]); ?>
         </div>
-        <div class="header_contact hidden lg:flex">
+        <div class="lang flex items-center">
+          <?php if (function_exists('pll_the_languages')) { 
+            pll_the_languages(); 
+          } ?>
+        </div>
+        <!-- <div class="header_contact hidden lg:flex">
           <div class="phone-btn second-btn flex mr-4">
             <img src="<?php bloginfo('template_url'); ?>/img/phone.svg" alt="" width="15px">
           </div>
@@ -45,7 +50,7 @@
               Обратная связь
             </div>
           </a>
-        </div>
+        </div> -->
         <div class="header_humburger block lg:hidden">
           <span></span>
           <span></span>
