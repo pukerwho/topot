@@ -20,6 +20,4 @@ Template Name: ГЛАВНАЯ
 
 <?php get_template_part('blocks/main/blog'); ?>
 
-<?php get_template_part('blocks/main/hey'); ?>
-
 <?php get_footer(); ?>

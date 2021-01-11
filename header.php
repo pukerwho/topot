@@ -26,8 +26,7 @@
       <div class="header_content flex justify-between items-center text-white">
         <div class="header_logo">
           <a href="<?php echo home_url(); ?>" class="flex items-center">
-            <img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="" width="30px" class="mr-4">
-            <span class="text-xl uppercase">TimeToTop</span>
+            <span class="text-xl uppercase"><span class="font-black">Treba</span></span>
           </a>
         </div>
         <div class="header_menu hidden lg:block">

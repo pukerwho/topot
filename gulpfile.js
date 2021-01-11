@@ -1,14 +1,45 @@
-'use strict';
- 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
- 
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
+const { src, dest, series } = require('gulp');
+const sass = require('gulp-sass');
+const inlinesource = require('gulp-inline-source');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+
+
+function scss() {
+  return src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
-});
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
-});
+    .pipe(dest('./css'));
+}
+
+function prefix() {
+  return src('./css/style.css')
+    .pipe(autoprefixer())
+    .pipe(dest('./css'));
+}
+
+function minify() {
+  return src('./css/style.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest('./css'));
+};
+
+function scripts() {
+	return src('./assets/js/**/*.js')
+		.pipe(concat('all.js'))
+    .pipe(dest('./js'));
+}
+
+function inlinecss() {
+  return src('temp/header.php')
+    .pipe(inlinesource())
+    .pipe(dest('./'));
+}
+
+exports.prefix = prefix;
+exports.minify = minify;
+exports.scss = scss;
+exports.scripts = scripts;
+exports.inlinecss = inlinecss;
+
+exports.default = series(scss, prefix, minify);
