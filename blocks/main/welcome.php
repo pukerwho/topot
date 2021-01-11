@@ -9,7 +9,7 @@
 				<div class="welcome_desc text-white text-xl md:text-2xl relative opacity-75 z-10 mb-6">
 					<p><?php _e('Бесплатная консультация специалиста по вашему вопросу', 'topot'); ?></p>
 				</div>	
-				<div class="welcome_form lg:w-5/12 inline-flex bg-white rounded relative z-10 p-2">
+				<div class="welcome_form lg:w-7/12 inline-flex bg-white rounded relative z-10 p-2">
 					<input type="text" placeholder="<?php _e('Оставьте Ваш телефон или email', 'top'); ?>" class="w-full">
 					<div class="welcome_btn first-btn flex"><?php _e('Отправить', 'topot'); ?></div>
 				</div>
