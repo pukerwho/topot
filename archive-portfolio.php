@@ -7,7 +7,7 @@
 		<div class="flex flex-wrap lg:-mx-2">
 			<?php 
 				$services_query = new WP_Query(array(
-					'post_type' => 'cases',
+					'post_type' => 'portfolio',
 					'posts_per_page' => 9,
 				)); 
 				if ($services_query->have_posts()) : while ($services_query->have_posts()) : $services_query->the_post(); 

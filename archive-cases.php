@@ -19,11 +19,9 @@
 					<div class="bg-light rounded-b-lg text-center py-8 px-2">
 						<span class="text-lg text-white opacity-75"><?php the_title(); ?></span>
 					</div>
-					
 				</a>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
-		
 	</div>
 </div>
 
