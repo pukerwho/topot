@@ -46,7 +46,7 @@
 		<!-- END WELCOME -->
 		<!-- DESCRIPTION -->
 		<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Несколько слов про услугу', 'topot'); ?></h2>
-		<div>
+		<div class="content">
 			<?php echo category_description(get_queried_object()->term_id); ?>
 		</div>
 		<!-- END DESCRIPTION -->
