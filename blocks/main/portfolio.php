@@ -5,9 +5,9 @@
 				<div class="sticky">
 					<h2 class="text-4xl md:text-5xl second-color mb-6"><?php _e('Портфолио', 'topot'); ?></h2>
 					<div class="text-xl md:text-2xl">
-						<p class="mb-2">Если вам нравятся наши работы - обязательно напишите нам. Мы отправим вам свое коммерческое предложение.</p>
+						<p class="mb-2"><?php _e('Если вам нравятся наши работы - обязательно напишите нам. Мы отправим вам свое коммерческое предложение', 'topot'); ?>.</p>
 						<p class="mb-6"><a href="mailto:info@timeto.top" class="underline">info@timeto.top</a></p>
-						<p>Выполненые проекты <span class="hidden md:inline">👉</span><span class="inline md:hidden">👇</span></p>
+						<p><?php _e('Выполненые проекты', 'topot'); ?> <span class="hidden md:inline">👉</span><span class="inline md:hidden">👇</span></p>
 					</div>	
 				</div>
 			</div>

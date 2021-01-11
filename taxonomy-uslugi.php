@@ -22,19 +22,19 @@
 					</div>
 					<div class="flex items-center justify-center -mx-2 -mt-4 relative z-20">
 						<div class="welcome_contact_icon px-2">
-							<a href="#" class="flex items-center rounded-lg btn telegram px-4 py-2">
+							<a href="tg://resolve?domain=time2top" class="flex items-center rounded-lg btn telegram px-4 py-2" target="_blank">
 								<img src="<?php bloginfo('template_url'); ?>/img/telegram.svg" alt="Telegram" width="21" class="mr-2">
 								<span class="text-xl">Telegram</span>
 							</a>
 						</div>
 						<div class="welcome_contact_icon px-2">
-							<a href="#" class="flex items-center rounded-lg btn viber px-4 py-2">
+							<a href="viber://chat?number=+380997713997" class="flex items-center rounded-lg btn viber px-4 py-2" target="_blank">
 								<img src="<?php bloginfo('template_url'); ?>/img/viber.svg" alt="Viber" width="21" class="mr-2">
 								<span class="text-xl">Viber</span>
 							</a>
 						</div>
 						<div class="welcome_contact_icon px-2">
-							<a href="#" class="flex items-center rounded-lg btn email px-4 py-2">
+							<a href="mailto:hello@treba-solutions.com" class="flex items-center rounded-lg btn email px-4 py-2">
 								<img src="<?php bloginfo('template_url'); ?>/img/email.svg" alt="Email" width="21" class="mr-2">
 								<span class="text-xl">Email</span>
 							</a>

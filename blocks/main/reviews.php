@@ -71,7 +71,7 @@ if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom
 		<div class="modal_body">
 			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?php echo carbon_get_the_post_meta('crb_reviews_youtube'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: 75vh;"></iframe>
 			<div class="modal_close pointer">
-				Закрыть
+				<?php _e('Закрыть', 'topot'); ?>
 			</div>
 		</div>
 	</div>

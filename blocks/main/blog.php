@@ -5,8 +5,8 @@
 				<div class="sticky">
 					<h2 class="text-4xl md:text-5xl second-color mb-6"><?php _e('Наш блог', 'topot'); ?></h2>
 					<div class="text-xl md:text-2xl">
-						<p class="mb-6">Делимся различной полезной информацией для наших клиентов.</p>
-						<p>👉 <a href="/blog" class="underline">Перейти в раздел</a></p>
+						<p class="mb-6"><?php _e('Делимся различной полезной информацией для наших клиентов', 'topot'); ?>.</p>
+						<p>👉 <a href="/blog" class="underline"><?php _e('Перейти в раздел', 'topot'); ?></a></p>
 					</div>	
 				</div>
 			</div>
