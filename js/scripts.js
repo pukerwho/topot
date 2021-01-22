@@ -228,32 +228,44 @@ function init() {
 
 
   var ctx = document.getElementById('myChart').getContext('2d');
-  var gradientFill = ctx.createLinearGradient(0, 0, 0, 300);
-  gradientFill.addColorStop(0, "rgba(128, 182, 244, 0.6)");
-  gradientFill.addColorStop(1, "rgba(244, 144, 128, 0.6)");
+  var gradientFill = ctx.createLinearGradient(320, 0, 320, 320);
+  gradientFill.addColorStop(0, "#3d9e40");
+  gradientFill.addColorStop(1, "rgba(0, 0, 0, 0.01)");
   var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
-        labels: ['май 2019', 'сентябрь 2019', 'январь 2020', 'май 2020', 'сентябрь 2020', 'январь 2021'],
+        labels: ['Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
         datasets: [{
             backgroundColor: gradientFill,
             label: 'Количество ключевых слов в ТОП-3',
-            data: [99, 145, 225, 334, 356, 401],
+            data: [126, 148, 140, 345, 410, 450, 567, 760, 810],
             // backgroundColor: ['rgba(244,119,35,0.25)'],
             borderColor: ['rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)'],
-            borderWidth: 2
+            borderWidth: 3,
+            pointRadius: 0,
         }]
     },
     options: {
       animation: {
         easing: "easeInOutBack"
       },
+      legend: {
+        display: false
+      },
       scales: {
         yAxes: [{
           ticks: {
             beginAtZero: true
+          },
+          gridLines: {
+            color: "rgba(255, 255, 255, 0.01)",
           }
-        }]
+        }],
+        xAxes: [{
+          gridLines: {
+            display:false
+          }
+        }],
       }
     }
 });
