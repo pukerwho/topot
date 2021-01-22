@@ -224,6 +224,39 @@ function init() {
       }
     }
   });
+
+
+
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var gradientFill = ctx.createLinearGradient(0, 0, 0, 300);
+  gradientFill.addColorStop(0, "rgba(128, 182, 244, 0.6)");
+  gradientFill.addColorStop(1, "rgba(244, 144, 128, 0.6)");
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['май 2019', 'сентябрь 2019', 'январь 2020', 'май 2020', 'сентябрь 2020', 'январь 2021'],
+        datasets: [{
+            backgroundColor: gradientFill,
+            label: 'Количество ключевых слов в ТОП-3',
+            data: [99, 145, 225, 334, 356, 401],
+            // backgroundColor: ['rgba(244,119,35,0.25)'],
+            borderColor: ['rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)'],
+            borderWidth: 2
+        }]
+    },
+    options: {
+      animation: {
+        easing: "easeInOutBack"
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+});
 }
 
 
