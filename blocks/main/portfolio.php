@@ -22,18 +22,18 @@
 					<div class="portfolio_item mb-12">
 						<div class="portfolio_item_header mb-12 px-4 md:px-10 pt-10">
 							<div class="portfolio_item_title bold-font text-4xl mb-3">
-								<?php echo carbon_get_the_post_meta('crb_portfolio_title'); ?>
+								<a href="<?php echo carbon_get_the_post_meta('crb_portfolio_url'); ?>"><?php echo carbon_get_the_post_meta('crb_portfolio_title'); ?></a>
 							</div>
 							<div class="portfolio_item_description text-xl md:text-2xl mb-8">
 								<?php echo carbon_get_the_post_meta('crb_portfolio_description'); ?>
 							</div>
 							<div class="portfolio_item_tags">
-								<span>Wordpress</span>
-								<span>Верстка</span>
-								<span>Интернет-магазин</span>
-								<span>API</span>
-								<span>JS</span>
-								<span>SCSS</span>
+								<?php 
+									$portfolio_tags = carbon_get_the_post_meta('crb_portfolio_tags'); 
+									foreach ($portfolio_tags as $tag):
+								?>
+									<span><?php echo $tag['crb_portfolio_tag']; ?></span>
+								<?php endforeach; ?>
 							</div>
 						</div>
 						<div class="portfolio_item_images">

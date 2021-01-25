@@ -12,6 +12,10 @@ function crb_post_theme_options() {
       Field::make( 'textarea', 'crb_portfolio_description', 'Описание' ),
       Field::make( 'image', 'crb_portfolio_thumb', 'Заглавная картинка' )->set_value_type( 'url'),
       Field::make( 'text', 'crb_portfolio_url', 'Ссылка' ),
+      Field::make( 'complex', 'crb_portfolio_tags', 'Теги' )->set_layout( 'tabbed-vertical' )
+        ->add_fields( array(
+          Field::make( 'text', 'crb_portfolio_tag', 'Тег' ),
+      ) ),
   ) );
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'reviews' )
