@@ -44,12 +44,55 @@
 			</div>
 		</div>
 		<!-- END WELCOME -->
+		
+		<!-- WHY US -->
+		<?php if(carbon_get_the_post_meta('crb_uslugi_show_whyus')): ?>
+		<div class="mb-20">
+			<div>
+				<span class="block text-4xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'topot'); ?>?</span>
+			</div>
+			<div class="flex flex-wrap lg:-mx-2">
+				<?php 
+					$whyus_data = carbon_get_the_post_meta('crb_uslugi_whyus'); 
+					foreach( $whyus_data as $whyus_item ):
+				?>
+				<div class="w-full lg:w-1/3 flex flex-col items-center px-2 mb-12 lg:mb-0">
+					<img src="<?php echo $whyus_item['crb_uslugi_whyus_icon']; ?>" alt="" class="mb-4" width="55">
+					<div class="text-xl font-bold text-center mb-4">
+						<?php echo $whyus_item['crb_uslugi_whyus_title']; ?>
+					</div>
+					<div class="text-center">
+						<?php echo $whyus_item['crb_uslugi_whyus_description']; ?>
+					</div>
+				</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+		<?php endif; ?>
+		<!-- END WHY US -->
+
+		<!-- PRICE -->
+		<?php if (carbon_get_the_post_meta('crb_uslugi_show_price')): ?>
+		<?php
+			$custom_price_template = carbon_get_the_post_meta('crb_uslugi_price_template');
+	    switch ($custom_price_template) {
+	      case 'seo':
+	        get_template_part('blocks/templates/price/templates-price-seo');
+	        break;
+	      default: 
+	        get_template_part('blocks/templates/price/templates-price-seo');
+	    }
+		?>
+		<?php endif; ?>
+		<!-- END PRICE -->
+
 		<!-- DESCRIPTION -->
 		<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Несколько слов про услугу', 'topot'); ?></h2>
 		<div class="content mb-20">
 			<?php echo category_description(get_queried_object()->term_id); ?>
 		</div>
 		<!-- END DESCRIPTION -->
+
 		<!-- OTHER -->
 		<div>
 			<h2 class="text-4xl md:text-5xl second-color mb-4"><?php _e('Наши услуги', 'topot'); ?></h2>
