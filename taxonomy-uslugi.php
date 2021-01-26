@@ -49,7 +49,7 @@
 		<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_whyus')): ?>
 		<div class="mb-20">
 			<div>
-				<span class="block text-4xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'topot'); ?>?</span>
+				<h2 class="block text-4xl md:text-5xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'topot'); ?>?</h2>
 			</div>
 			<div class="flex flex-wrap lg:-mx-2">
 				<?php 
@@ -92,6 +92,34 @@
 		?>
 		<?php endif; ?>
 		<!-- END PRICE -->
+
+		<!-- FAQ -->
+		
+		<div class="w-full lg:w-3/4 mx-auto mb-20">
+			<h2 class="text-4xl md:text-5xl third-color text-center mb-4"><?php _e('Ответы на вопросы', 'topot'); ?></h2>
+			<?php 
+				$faq = carbon_get_the_post_meta('crb_uslugi_faq');
+				foreach($faq as $f):
+			?>
+				<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-light rounded-lg mb-3">
+					<summary itemprop="name" class="cursor-pointer">
+						<div>
+							<?php echo $f['crb_uslugi_faq_q'] ?>	
+						</div>
+						<div class="icon">
+							<span></span>
+							<span></span>
+						</div>
+					</summary> 
+					<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="content">
+						<div itemprop="text" class="px-6 py-3">
+							<p><?php echo $f['crb_uslugi_faq_a'] ?></p>
+						</div>
+					</div>
+				</details>
+			<?php endforeach; ?>
+		</div>
+		<!-- END FAQ -->
 
 		<!-- OTHER -->
 		<div>

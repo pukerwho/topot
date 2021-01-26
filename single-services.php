@@ -48,7 +48,7 @@
 		<!-- WHY US -->
 		<div class="mb-20">
 			<div>
-				<span class="block text-4xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'topot'); ?>?</span>
+				<span class="block text-4xl md:text-5xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'topot'); ?>?</span>
 			</div>
 			<div class="flex flex-wrap lg:-mx-2">
 				<?php 
@@ -142,7 +142,7 @@
 		<!-- FAQ -->
 		<div>
 			<div class="w-full lg:w-3/4 mx-auto">
-				<h2 class="text-3xl second-color text-center mb-4"><?php _e('Ответы на вопросы', 'topot'); ?></h2>
+				<h2 class="text-4xl md:text-5xl second-color text-center mb-4"><?php _e('Ответы на вопросы', 'topot'); ?></h2>
 				<?php 
 					$faq = carbon_get_the_post_meta('crb_services_faq');
 					foreach($faq as $f):

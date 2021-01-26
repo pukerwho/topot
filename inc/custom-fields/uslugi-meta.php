@@ -39,6 +39,12 @@ function crb_uslugi_theme_options() {
           )
         )
       ),
+
+      Field::make( 'complex', 'crb_uslugi_faq', 'FAQ' )
+        ->add_fields( array(
+          Field::make( 'text', 'crb_uslugi_faq_q', 'Вопрос' ),
+          Field::make( 'textarea', 'crb_uslugi_faq_a', 'Ответ' ),
+      ) ),
   ) );
 }
 

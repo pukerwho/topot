@@ -1,6 +1,6 @@
 <!-- PRICE BLOCK -->
 <div class="price mb-20">
-	<h2 class="text-4xl text-center second-color mb-12"><?php _e('Тарифы', 'topot'); ?></h2>
+	<h2 class="text-4xl md:text-5xl text-center second-color mb-12"><?php _e('Тарифы', 'topot'); ?></h2>
 	<div class="flex flex-col lg:flex-row flex-wrap lg:-mx-2 ">
 		<!-- PRICE ITEM -->
 		<div class="w-full lg:w-1/3 lg:px-2 mb-4 lg:mb-0">
