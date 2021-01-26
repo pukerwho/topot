@@ -16,7 +16,15 @@ function crb_uslugi_theme_options() {
 	    		Field::make( 'image', 'crb_uslugi_whyus_icon', 'Иконка' )->set_value_type( 'url'),
 	    		Field::make( 'text', 'crb_uslugi_whyus_title', 'Заголовок' ),
 	    		Field::make( 'textarea', 'crb_uslugi_whyus_description', 'Описание' ),
-	    ) ),
+	    ))->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_uslugi_show_whyus',
+            'value' => '1', 
+            'compare' => '=',
+          )
+        )
+      ),
 
 	    Field::make( 'checkbox', 'crb_uslugi_show_price', 'Выводить Тарифы?' ),
       Field::make( 'select', 'crb_uslugi_price_template', 'Шаблон тарифов' )->add_options(
