@@ -52,8 +52,8 @@
 		<!-- END DESCRIPTION -->
 		<!-- OTHER -->
 		<div>
-			<h2 class="text-4xl md:text-5xl second-color mb-4"><?php _e('Что мы можем', 'topot'); ?></h2>
-			<div>
+			<h2 class="text-4xl md:text-5xl second-color mb-4"><?php _e('Наши услуги', 'topot'); ?></h2>
+			<div class="flex flex-wrap lg:-mx-2">
 				<?php 
 					$current_term = get_queried_object_id();
 					$custom_query = new WP_Query( array( 
