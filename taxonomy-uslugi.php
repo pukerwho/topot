@@ -46,10 +46,42 @@
 		<!-- END WELCOME -->
 		<!-- DESCRIPTION -->
 		<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Несколько слов про услугу', 'topot'); ?></h2>
-		<div class="content">
+		<div class="content mb-20">
 			<?php echo category_description(get_queried_object()->term_id); ?>
 		</div>
 		<!-- END DESCRIPTION -->
+		<!-- OTHER -->
+		<div>
+			<h2 class="text-4xl md:text-5xl second-color mb-4"><?php _e('Что мы можем', 'topot'); ?></h2>
+			<div>
+				<?php 
+					$current_term = get_queried_object_id();
+					$custom_query = new WP_Query( array( 
+					'post_type' => 'services', 
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'tax_query' => array(
+				    array(
+			        'taxonomy' => 'uslugi',
+					    'terms' => $current_term,
+			        'field' => 'term_id',
+			        'include_children' => true,
+			        'operator' => 'IN'
+				    )
+					),
+				) );
+				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+				  <a href="<?php the_permalink(); ?>" class="w-full lg:w-1/3 block lg:px-2 mb-4">
+						<div class="bg-light rounded-lg flex flex-col justify-center items-center p-12">
+			      	<div class="title text-white text-2xl text-center">
+			      		<?php the_title(); ?>
+			      	</div>
+			      </div>
+					</a>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div>
+		</div>
+		<!-- END OTHER -->
 	</div>
 </div>
 
