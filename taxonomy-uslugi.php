@@ -98,7 +98,7 @@
 		<div class="w-full lg:w-3/4 mx-auto mb-20">
 			<h2 class="text-4xl md:text-5xl third-color text-center mb-4"><?php _e('Ответы на вопросы', 'topot'); ?></h2>
 			<?php 
-				$faq = carbon_get_the_post_meta('crb_uslugi_faq');
+				$faq = carbon_get_term_meta(get_queried_object_id(),'crb_uslugi_faq');
 				foreach($faq as $f):
 			?>
 				<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-light rounded-lg mb-3">
