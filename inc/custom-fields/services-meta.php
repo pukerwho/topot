@@ -8,6 +8,7 @@ function crb_services_theme_options() {
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'services' )
     ->add_fields( array(
+      Field::make( 'image', 'crb_services_thumb', 'Иконка для услуги' )->set_value_type( 'url'),
     	Field::make( 'image', 'crb_services_person_photo', 'Вы в надежных руках - Фото' ),
       Field::make( 'rich_text', 'crb_services_person_text', 'Вы в надежных руках - текст' ),
       Field::make( 'rich_text', 'crb_services_case_text', 'Реальный кейс - текст' ),
