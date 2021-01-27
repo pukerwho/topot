@@ -68,14 +68,14 @@
 			</div>
 		</div>
 		<!-- END WHY US -->
-		<!-- OUR TROPHY -->
+		<!-- OUR CASE -->
 		<div class="flex flex-col lg:flex-row items-center mb-20 px-2">
 			<div class="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
 				<div class="flex items-center text-3xl second-color font-bold mb-4">
 					<img src="<?php bloginfo('template_url'); ?>/img/sign-of-the-horns.webp" width="35" class="mr-2">
 					<span><?php _e('Реальный кейс', 'topot'); ?></span>
 				</div>
-				<div class="text-md">
+				<div class="text-md content">
 					<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_case_text') ); ?>
 				</div>
 			</div>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- END OUR TROPHY -->
+		<!-- END OUR CASE -->
 		<!-- PERSON -->
 		<div class="bg-light rounded-lg shadow-xl mb-20">
 			<div class="flex flex-col-reverse lg:flex-row lg:items-center">
