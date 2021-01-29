@@ -29,7 +29,7 @@
 			</div>
 			<!-- END Вступительный текст -->
 			<div class="w-full lg:w-4/5 page bg-light shadow-md rounded-lg my-0 mx-auto lg:my-8 px-4 lg:px-8 py-8">
-				<article class="content">
+				<article class="content text-lg">
 					<?php the_content(); ?>
 				</article>
 			</div>
