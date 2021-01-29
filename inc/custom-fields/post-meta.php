@@ -27,6 +27,7 @@ function crb_post_theme_options() {
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'cases' )
     ->add_fields( array(
+      Field::make( 'textarea', 'crb_cases_description', 'Описание' ),
       // Field::make( 'text', 'crb_cases_name', 'Заголовок' ),
       // Field::make( 'image', 'crb_cases_thumb', 'Заглавная картинка' )->set_value_type( 'url')
   ) );

@@ -11,14 +11,14 @@
 			'order' => 'DESC',
 		));
 		if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-			<div class="cases_item w-full md:w-1/2 mx-auto mb-20">
+			<a href="<?php the_permalink(); ?>" class="cases_item w-full md:w-1/2 block mx-auto mb-20">
 				<div class="cases_item_title text-center text-white text-2xl md:text-3xl px-3 md:px-6 md:py-8 py-4">
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					<?php the_title(); ?>
 				</div>
 				<div class="cases_item_img">
 					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 				</div>
-			</div>
+			</a>
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 		<div class="more_btn flex justify-center mb-20">
 			<a href="<?php echo get_post_type_archive_link( 'cases' ); ?>">
