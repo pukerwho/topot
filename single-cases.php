@@ -28,7 +28,7 @@
 				<?php echo carbon_get_the_post_meta('crb_cases_description'); ?>
 			</div>
 			<!-- END Вступительный текст -->
-			<div class="w-full lg:w-4/5 page bg-light shadow-md rounded-lg my-0 mx-auto lg:my-8 px-4 lg:px-8 py-8 lg:py-10">
+			<div class="w-full lg:w-4/5 page bg-light shadow-md rounded-lg my-0 mx-auto lg:my-8 px-4 lg:px-8 pt-8 lg:pt-10">
 				<article class="content">
 					<?php the_content(); ?>
 				</article>
