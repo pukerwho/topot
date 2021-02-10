@@ -18,7 +18,7 @@
 			<div class="w-full lg:w-1/2 pl-0 lg:pl-10">
 				<?php $custom_query = new WP_Query( array( 
 					'post_type' => 'portfolio', 
-					'posts_per_page' => 5,
+					'posts_per_page' => 3,
 					'orderby' => 'date',
 					'order' => 'DESC',
 				));
