@@ -139,6 +139,16 @@ function init() {
     .setTween(item, {opacity: "0.95", scale: 0.95})
     .addTo(controller);
   })
+
+  //Анимация Заголовков
+  let textShow = document.querySelectorAll('.text-show');
+  var text_show_array = Array.prototype.slice.call(textShow);
+  text_show_array.forEach(function(item){
+    console.log('text-show')
+    var scene = new ScrollMagic.Scene({triggerElement: item,  duration: 1000, offset: -250, ease: Linear.easeNone})
+    .setTween(item, {scale: 0,})
+    .addTo(controller);
+  })
   
 
   //Services

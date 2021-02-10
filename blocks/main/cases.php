@@ -1,6 +1,9 @@
 <div class="cases">
 	<div class="container mx-auto px-4 lg:px-0">
-		<h2 class="text-4xl md:text-5xl text-center second-color mb-4"><?php _e('Кейсы', 'topot'); ?></h2>
+		<div class="relative">
+			<h2 class="display-inline text-4xl md:text-5xl text-center second-color mb-4"><?php _e('Кейсы', 'topot'); ?></h2>
+			<div class="text-show"></div>	
+		</div>
 		<div class="text-center text-xl md:text-2xl mb-12">
 			<?php _e('Описываем процесс и полученный результат', 'topot'); ?>. <br><?php _e('Здесь вы сможете лучше узнать, как мы работаем', 'topot'); ?>. 
 		</div>

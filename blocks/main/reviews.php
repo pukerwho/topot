@@ -1,6 +1,9 @@
 <div class="reviews mb-20">
 	<div class="container mx-auto px-4 lg:px-0">
-		<h2 class="text-4xl md:text-5xl text-center third-color mb-12"><?php _e('Что говорят наши клиенты', 'topot'); ?></h2>
+		<div class="relative">
+			<h2 class="display-inline text-4xl md:text-5xl text-center third-color mb-12"><?php _e('Что говорят наши клиенты', 'topot'); ?></h2>
+			<div class="text-show"></div>	
+		</div>
 		<div class="reviews_grid flex flex-wrap mb-12 mx-0 md:-mx-6">
 			<div class="reviews_facebook flex flex-col justify-center rounded-lg w-full lg:w-1/4 px-6 mb-6 md:mb-0 py-8 md:py-0">
 				<div class="reviews_facebook_svg mb-6">
