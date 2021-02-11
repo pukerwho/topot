@@ -16,10 +16,10 @@
 			</div>
 			<div class="w-full lg:w-1/3 text-center lg:text-left">
 				<div class="welcome_lead">
-					<div class="welcome_lead_title bg-second-gradient inline-block rounded-2xl shadow-xl text-4xl title-font text-black pt-4 pb-8 px-8">
+					<div class="welcome_lead_title bg-second-gradient inline-block rounded-2xl shadow-xl text-2xl lg:text-4xl title-font text-black pt-4 pb-8 px-8">
 						<?php _e('Чат с экспертом', 'top'); ?>
 					</div>
-					<div class="welcome_lead_text flex items-center relative justify-center bg-white rounded-2xl shadow-xl text-2xl text-black py-4 px-8 -mt-8 ml-8">
+					<div class="welcome_lead_text flex items-center relative justify-center bg-white rounded-2xl shadow-xl text-xl lg:text-2xl text-black py-4 px-8 -mt-8 lg:ml-8">
 						<span class="font-bold pr-4"><?php _e('Задать вопрос', 'top'); ?></span>
 						<img src="<?php bloginfo('template_url'); ?>/img/arrow-right.svg" width="20">
 					</div>
