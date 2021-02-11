@@ -106,12 +106,12 @@ function init() {
 
   //SWIPER 
   var windowWidth = 767;
-
-  if ($(document).width() < windowWidth) {
+  console.log(windowWidth);
+  if (document.body.clientWidth < windowWidth) {
+    console.log('mobile swiper');
     var swiperServices = new Swiper('.swiper-services', {
       slidesPerView: 1,
       spaceBetween: 30,
-      
       loop: true,
       autoplay: {
         delay: 3000,
@@ -123,6 +123,7 @@ function init() {
       },
     })
   } else {
+    console.log('pc swiper');
     var swiperServices = new Swiper('.swiper-services', {
       slidesPerView: 3,
       spaceBetween: 30,
