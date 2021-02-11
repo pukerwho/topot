@@ -105,21 +105,40 @@ function init() {
 
 
   //SWIPER 
-  var swiperServices = new Swiper('.swiper-services', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesOffsetBefore: windowPadding,
-    slidesOffsetAfter: windowPadding,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-    },
-    speed: 1000,
-    navigation: {
-      nextEl: '.services_slider_next',
-      prevEl: '.services_slider_prev',
-    },
-  });
+  var windowWidth = 767;
+
+  if ($(document).width() < windowWidth) {
+    var swiperServices = new Swiper('.swiper-services', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      speed: 1000,
+      navigation: {
+        nextEl: '.services_slider_next',
+        prevEl: '.services_slider_prev',
+      },
+    })
+  } else {
+    var swiperServices = new Swiper('.swiper-services', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesOffsetBefore: windowPadding,
+      slidesOffsetAfter: windowPadding,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      speed: 1000,
+      navigation: {
+        nextEl: '.services_slider_next',
+        prevEl: '.services_slider_prev',
+      },
+    })
+  }
 
   var controller = new ScrollMagic.Controller();
   //Анимация Портфолио
