@@ -146,7 +146,7 @@ function init() {
   text_show_array.forEach(function(item){
     console.log('text-show')
     var scene = new ScrollMagic.Scene({triggerElement: item,  duration: 1000, offset: -250, ease: Linear.easeNone})
-    .setTween(item, {scale: 0,})
+    .setTween(item, {scaleX: 0,})
     .addTo(controller);
   })
   

@@ -1,7 +1,7 @@
-<div class="welcome flex items-center mb-20 md:mb-0">
+<div class="welcome flex items-center mb-20 md:mb-0 pt-32 lg:pt-0">
 	<div class="container mx-auto px-4 lg:px-0">
-		<div class="flex items-center bg-light relative rounded-lg shadow-xl px-6 py-8">
-			<div class="w-full lg:w-2/3">
+		<div class="flex flex-col lg:flex-row items-center bg-light relative rounded-lg shadow-xl px-6 py-8">
+			<div class="w-full lg:w-2/3 mb-6 lg:mb-0">
 				<div class="welcome_title text-white relative z-10 mb-6">
 					<h1><?php _e('Создаем сайты', 'top'); ?>
 					<br><?php _e('и привлекаем клиентов', 'top'); ?></h1>
@@ -9,12 +9,12 @@
 				<div class="welcome_desc text-white text-xl md:text-2xl relative opacity-75 z-10 mb-6">
 					<p><?php _e('Бесплатная консультация специалиста по вашему вопросу', 'topot'); ?></p>
 				</div>	
-				<div class="welcome_form lg:w-7/12 inline-flex bg-white rounded relative z-10 p-2">
+				<div class="welcome_form lg:w-7/12 flex justify-center flex-col lg:inline-flex lg:flex-row lg:justify-start lg:bg-white lg:rounded relative z-10 lg:p-2">
 					<input type="text" placeholder="<?php _e('Оставьте Ваш телефон или email', 'top'); ?>" class="w-full">
 					<div class="welcome_btn first-btn flex"><?php _e('Отправить', 'topot'); ?></div>
 				</div>
 			</div>
-			<div class="w-full lg:w-1/3">
+			<div class="w-full lg:w-1/3 text-center lg:text-left">
 				<div class="welcome_lead">
 					<div class="welcome_lead_title bg-second-gradient inline-block rounded-2xl shadow-xl text-4xl title-font text-black pt-4 pb-8 px-8">
 						<?php _e('Чат с экспертом', 'top'); ?>
