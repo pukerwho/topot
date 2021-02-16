@@ -106,7 +106,7 @@ function init() {
 
   //SWIPER 
   var windowWidth = 767;
-  console.log(windowWidth);
+  
   if (document.body.clientWidth < windowWidth) {
     console.log('mobile swiper');
     var swiperServices = new Swiper('.swiper-services', {
@@ -169,6 +169,16 @@ function init() {
     .setTween(item, {scaleX: 0,})
     .addTo(controller);
   })
+
+  //Анимация Задать Вопрос (Welcome Block)
+  let welcomeLeadText = document.querySelectorAll('.welcome_lead_text');
+  var welcome_lead_text_array = Array.prototype.slice.call(welcomeLeadText);
+  welcome_lead_text_array.forEach(function(item){
+    console.log('welcome_lead_text');
+    var scene = new ScrollMagic.Scene({triggerElement: item, duration: 50,  offset: -250, ease: Linear.easeNone});
+    scene.setClassToggle('welcome_lead_text', 'hidden');
+    scene.addTo(controller);
+  })
   
 
   //Services
@@ -190,53 +200,6 @@ function init() {
     }
   }
 
-
-  // // Animate Portfolio
-  // let animateElements = document.querySelectorAll('.portfolio_animate_this');
-  // var div_array = Array.prototype.slice.call(animateElements);
-  // let screenHeight = window.innerHeight;;
-  // let pageHeight = document.body.clientHeight;
-
-  // div_array.forEach(function(item){
-  //   if (item) {
-  //     var moveVar = 80;
-  //     var animateElHeight = item.offsetHeight;
-  //     var animateElFromTop = item.getBoundingClientRect().top + pageYOffset - screenHeight;
-  //     document.addEventListener('scroll', function(){
-  //       currentScroll = pageYOffset;
-  //       if (animateElFromTop < currentScroll & currentScroll < (animateElFromTop+screenHeight)) {
-  //         // moveVar = 100-(-100*((animateElFromTop - currentScroll)/animateElHeight));
-  //         var moveVar = (80-(80*(currentScroll - animateElFromTop))/screenHeight);
-  //         var moveVar = Math.floor(moveVar);
-  //         var transformAnimate = "translate3d("+moveVar+"%, 0, 0)";
-  //         item.style.transform = transformAnimate;  
-  //       }
-  //     });
-  //   }
-  // })
-
-
-  // //Cases
-  // let caseItems = document.querySelectorAll('.cases_item');
-  // var case_array = Array.prototype.slice.call(caseItems);
-  // case_array.forEach(function(item){
-  //   if (item) {
-  //     var opacityVar = 1;
-  //     var animateElFromTop = item.getBoundingClientRect().top + pageYOffset - screenHeight;
-  //     var animateElHeight = item.offsetHeight;
-  //     document.addEventListener('scroll', function(){
-  //       if (-1*(animateElFromTop - currentScroll) > (screenHeight - 50)) {
-  //         var opacityVar = 2 + ((currentScroll - animateElFromTop)/-(screenHeight));
-  //         // var transformVar = Math.floor(moveVar);
-  //         console.log(currentScroll - animateElFromTop);
-  //         console.log(screenHeight);
-  //         item.style.opacity = opacityVar;  
-  //       };
-  //     });
-
-  //   }
-  // });
-
   //Page Services 
   let serviceTitlesAnimate = document.querySelectorAll('.service_title_animate');
   var serviceTitlesArray = Array.prototype.slice.call(serviceTitlesAnimate);
@@ -257,48 +220,7 @@ function init() {
 
 
 
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var gradientFill = ctx.createLinearGradient(320, 0, 320, 320);
-  gradientFill.addColorStop(0, "#3d9e40");
-  gradientFill.addColorStop(1, "rgba(0, 0, 0, 0.01)");
-  var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-        datasets: [{
-            backgroundColor: gradientFill,
-            label: 'Количество ключевых слов в ТОП-3',
-            data: [126, 148, 140, 345, 410, 450, 567, 760, 810],
-            // backgroundColor: ['rgba(244,119,35,0.25)'],
-            borderColor: ['rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)','rgba(255,255,255,0.5)'],
-            borderWidth: 3,
-            pointRadius: 0,
-        }]
-    },
-    options: {
-      animation: {
-        easing: "easeInOutBack"
-      },
-      legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          },
-          gridLines: {
-            color: "rgba(255, 255, 255, 0.01)",
-          }
-        }],
-        xAxes: [{
-          gridLines: {
-            display:false
-          }
-        }],
-      }
-    }
-});
+  
 }
 
 

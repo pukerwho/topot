@@ -65,6 +65,7 @@ function theme_name_scripts() {
   wp_enqueue_script( 'gsap', get_template_directory_uri() . '/js/animation.gsap.min.js','','',true);
   wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js','','',true);
   wp_enqueue_script( 'chart', 'https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js','','',true);
+  wp_enqueue_script( 'animate-puk', get_template_directory_uri() . '/js/animate-puk.js', '','',true);
   
   wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', '','',true);
 };

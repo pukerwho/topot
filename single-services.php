@@ -86,7 +86,8 @@
 							<?php _e('Трафик из поисковых систем', 'topot'); ?>
 						</div>
 						<div class="w-full">
-							<canvas id="myChart" width="400"></canvas>
+							<canvas id="<?php echo carbon_get_the_post_meta('crb_services_case_id'); ?>" width="400"></canvas>
+							<?php echo carbon_get_the_post_meta('crb_services_case_js'); ?>
 						</div>
 					</div>
 				</div>

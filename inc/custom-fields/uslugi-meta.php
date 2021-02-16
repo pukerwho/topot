@@ -8,6 +8,12 @@ function crb_uslugi_theme_options() {
   Container::make( 'term_meta', __( 'Настройки', 'topot' ) )
     ->where( 'term_taxonomy', '=', 'uslugi' )
     ->add_fields( array(
+      Field::make( 'select', 'crb_uslugi_template', 'Шаблон для категории' )->add_options(
+        array(
+          'seo' => 'Для SEO-продвижения',
+          'create' => 'Для Создания сайтов',
+        )
+      ),
       Field::make( 'image', 'crb_uslugi_thumb', 'Иконка для категории' )->set_value_type( 'url'),
       Field::make( 'textarea', 'crb_uslugi_description', 'Короткое описание' ),
       Field::make( 'checkbox', 'crb_uslugi_show_whyus', 'Показывать блог ЧЕМ МЫ ЛУЧШЕ?' ),
@@ -44,6 +50,15 @@ function crb_uslugi_theme_options() {
         ->add_fields( array(
           Field::make( 'text', 'crb_uslugi_faq_q', 'Вопрос' ),
           Field::make( 'textarea', 'crb_uslugi_faq_a', 'Ответ' ),
+      ) ),
+
+      Field::make( 'association', 'crb_uslugi_services', 'Какие услуги выводить' )
+      ->set_duplicates_allowed( true )
+      ->set_types( array(
+          array(
+            'type'      => 'post',
+            'post_type' => 'services',
+          )
       ) ),
   ) );
 }
