@@ -1,11 +1,11 @@
 <div class="cases">
 	<div class="container mx-auto px-4 lg:px-0">
 		<div class="relative">
-			<h2 class="display-inline text-4xl md:text-5xl text-center second-color mb-4"><?php _e('Кейсы', 'topot'); ?></h2>
+			<h2 class="display-inline text-4xl md:text-5xl text-center second-color mb-4"><?php _e('Кейсы', 'treba'); ?></h2>
 			<div class="text-show"></div>	
 		</div>
 		<div class="text-center text-xl md:text-2xl mb-12">
-			<?php _e('Описываем процесс и полученный результат', 'topot'); ?>. <br><?php _e('Здесь вы сможете лучше узнать, как мы работаем', 'topot'); ?>. 
+			<?php _e('Описываем процесс и полученный результат', 'treba'); ?>. <br><?php _e('Здесь вы сможете лучше узнать, как мы работаем', 'treba'); ?>. 
 		</div>
 		<?php $custom_query = new WP_Query( array( 
 			'post_type' => 'cases', 
@@ -26,7 +26,7 @@
 		<div class="more_btn flex justify-center mb-20">
 			<a href="<?php echo get_post_type_archive_link( 'cases' ); ?>">
 				<div class="second-btn text-black">
-					<?php _e('Больше кейсов', 'topot'); ?>
+					<?php _e('Больше кейсов', 'treba'); ?>
 				</div>
 			</a>
 		</div>

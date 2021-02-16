@@ -2,7 +2,7 @@
 
 <div class="pt-32 pb-20">
 	<div class="container mx-auto px-2 lg:px-0">
-		<h1 class="text-5xl first-color text-center mb-12"><?php _e('Наши услуги', 'topot'); ?></h1>
+		<h1 class="text-5xl first-color text-center mb-12"><?php _e('Наши услуги', 'treba'); ?></h1>
 		<div class="flex flex-wrap lg:-mx-2">
 			<?php $services = get_terms(array(
 				'taxonomy' => 'uslugi', 
@@ -22,7 +22,7 @@
 						</div>
 		      	<div>
 		      		<a href="<?php echo get_term_link($service); ?>">
-		      			<?php _e('Перейти', 'topot'); ?> →
+		      			<?php _e('Перейти', 'treba'); ?> →
 		      		</a>
 		      	</div>
 		      </div>

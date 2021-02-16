@@ -1,8 +1,8 @@
 <div class="services relative mb-20 md:mb-32 mt-0 md:-mt-10 z-10">
 	<div class="container mx-auto mb-12 px-4 lg:px-0">
-		<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Что мы предлагаем', 'topot'); ?></h2>
+		<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Что мы предлагаем', 'treba'); ?></h2>
 		<div class="w-full lg:w-5/6 text-xl md:text-2xl">
-			<?php _e('Мы начали свой путь в интернете в 2010 году, с создания своих проектов. За это время научились делать быстрые, адаптивные, кроссбраузерные сайты, которые легко можно продвинуть в поиске и которые будут конвертировать посетителя в покупателя. Теперь предлагаем воспользоваться нашей экспертизой.', 'topot'); ?>
+			<?php _e('Мы начали свой путь в интернете в 2010 году, с создания своих проектов. За это время научились делать быстрые, адаптивные, кроссбраузерные сайты, которые легко можно продвинуть в поиске и которые будут конвертировать посетителя в покупателя. Теперь предлагаем воспользоваться нашей экспертизой.', 'treba'); ?>
 		</div>
 	</div>
 	<div class="services_slider">
@@ -24,7 +24,7 @@
 		      		<?php echo carbon_get_term_meta($uslugi->term_id, 'crb_uslugi_description' ); ?>
 		      	</div>
 		      	<div class="more text-blue-400 text-xl font-bold px-6">
-		      		<a href="<?php echo get_term_link($uslugi); ?>"><?php _e('Подробнее', 'topot'); ?></a>
+		      		<a href="<?php echo get_term_link($uslugi); ?>"><?php _e('Подробнее', 'treba'); ?></a>
 		      	</div>
 		      </div>
 	      <?php endforeach; ?>

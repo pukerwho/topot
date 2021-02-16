@@ -11,14 +11,14 @@
 					<h1 class="text-center lg:text-left"><?php the_title(); ?></h1>
 				</div>
 				<div class="welcome_desc text-white text-xl md:text-2xl relative opacity-75 z-10 mb-6">
-					<p><?php _e('Бесплатная консультация специалиста по вашему вопросу', 'topot'); ?></p>
+					<p><?php _e('Бесплатная консультация специалиста по вашему вопросу', 'treba'); ?></p>
 				</div>	
 			</div>
 			<div class="w-full lg:w-1/3">
 				<div class="welcome_lead">
 					<div class="welcome_lead_title w-full text-center">
 						<div class="bg-second-gradient inline-block rounded-2xl shadow-xl text-2xl lg:text-4xl title-font text-black pt-4 pb-8 px-8">
-							<?php _e('Обсудить проект', 'top'); ?>	
+							<?php _e('Обсудить проект', 'treba'); ?>	
 						</div>
 					</div>
 					<div class="flex items-center justify-center -mx-2 -mt-4 relative z-20">
@@ -48,7 +48,7 @@
 		<!-- WHY US -->
 		<div class="mb-20">
 			<div>
-				<span class="block text-4xl md:text-5xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'topot'); ?>?</span>
+				<span class="block text-4xl md:text-5xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'treba'); ?>?</span>
 			</div>
 			<div class="flex flex-wrap lg:-mx-2">
 				<?php 
@@ -73,7 +73,7 @@
 			<div class="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
 				<div class="flex items-center text-3xl second-color font-bold mb-4">
 					<img src="<?php bloginfo('template_url'); ?>/img/sign-of-the-horns.webp" width="35" class="mr-2">
-					<span><?php _e('Реальный кейс', 'topot'); ?></span>
+					<span><?php _e('Реальный кейс', 'treba'); ?></span>
 				</div>
 				<div class="text-md content">
 					<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_case_text') ); ?>
@@ -83,7 +83,7 @@
 				<div class="flex mb-10">
 					<div class="w-full">
 						<div class="text-2xl font-bold first-color text-center mb-4">
-							<?php _e('Трафик из поисковых систем', 'topot'); ?>
+							<?php _e('Трафик из поисковых систем', 'treba'); ?>
 						</div>
 						<div class="w-full">
 							<canvas id="<?php echo carbon_get_the_post_meta('crb_services_case_id'); ?>" width="400"></canvas>
@@ -113,9 +113,9 @@
 					src="<?php echo $person_photo_full[0] ?>" alt="" loading="lazy" class="w-full rounded lg:rounded-l-lg">
 				</div>
 				<!-- PERSON CONTENT -->
-				<div class="w-full lg:w-2/3 lg:pl-6 py-4 px-2 lg:px-0">
+				<div class="w-full lg:w-2/3 py-4 px-2 lg:px-6">
 					<div class="text-4xl font-bold mb-6">
-						<?php _e('Вы в надежных руках', 'topot'); ?>
+						<?php _e('Вы в надежных руках', 'treba'); ?>
 					</div>
 					<div class="text-xl">
 						<?php echo carbon_get_the_post_meta('crb_services_person_text'); ?>
@@ -135,7 +135,7 @@
 	    }
 		?>
 		<!-- DESCRIPTION -->
-		<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Несколько слов про услугу', 'topot'); ?></h2>
+		<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Несколько слов про услугу', 'treba'); ?></h2>
 		<div class="content mb-20">
 			<?php the_content(); ?>
 		</div>
@@ -143,7 +143,7 @@
 		<!-- FAQ -->
 		<div>
 			<div class="w-full lg:w-3/4 mx-auto">
-				<h2 class="text-4xl md:text-5xl second-color text-center mb-4"><?php _e('Ответы на вопросы', 'topot'); ?></h2>
+				<h2 class="text-4xl md:text-5xl second-color text-center mb-4"><?php _e('Ответы на вопросы', 'treba'); ?></h2>
 				<?php 
 					$faq = carbon_get_the_post_meta('crb_services_faq');
 					foreach($faq as $f):

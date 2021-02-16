@@ -8,14 +8,14 @@
 		    <ul class="flex justify-center uppercase">
 					<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
 						<a itemprop="item" href="<?php echo home_url(); ?>" class="red-color hover:text-white">
-							<span itemprop="name"><?php _e( 'Главная', 'topot' ); ?></span>
+							<span itemprop="name"><?php _e( 'Главная', 'treba' ); ?></span>
 						</a>                        
 						<meta itemprop="position" content="1">
 					</li>
 					<span class="mx-1">—</span>
 		      <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
 		        <a itemprop="item" href="<?php echo get_post_type_archive_link( 'cases' ); ?>" class="red-color hover:text-white">
-		          <span itemprop="name"><?php _e( 'Кейсы', 'topot' ); ?></span>
+		          <span itemprop="name"><?php _e( 'Кейсы', 'treba' ); ?></span>
 		        </a>                        
 		        <meta itemprop="position" content="2">
 		      </li>

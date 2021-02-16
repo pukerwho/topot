@@ -41,16 +41,6 @@
             pll_the_languages(); 
           } ?>
         </div>
-        <!-- <div class="header_contact hidden lg:flex">
-          <div class="phone-btn second-btn flex mr-4">
-            <img src="<?php bloginfo('template_url'); ?>/img/phone.svg" alt="" width="15px">
-          </div>
-          <a href="#">
-            <div class="first-btn flex">
-              Обратная связь
-            </div>
-          </a>
-        </div> -->
         <div class="header_humburger block lg:hidden">
           <span></span>
           <span></span>

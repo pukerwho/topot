@@ -1,7 +1,7 @@
 <div class="reviews mb-20">
 	<div class="container mx-auto px-4 lg:px-0">
 		<div class="relative">
-			<h2 class="display-inline text-4xl md:text-5xl text-center third-color mb-12"><?php _e('Что говорят наши клиенты', 'topot'); ?></h2>
+			<h2 class="display-inline text-4xl md:text-5xl text-center third-color mb-12"><?php _e('Что говорят наши клиенты', 'treba'); ?></h2>
 			<div class="text-show"></div>	
 		</div>
 		<div class="reviews_grid flex flex-wrap mb-12 mx-0 md:-mx-6">
@@ -13,12 +13,6 @@
 							<circle class="outer totop-animate" cx="60" cy="60" r="55"></circle>
 						</svg>
 					</figure>
-					<!-- <figure class="chart" data-percent="75">
-						<figcaption class="text_dark">5/5</figcaption>
-						<svg width="120" height="120">
-							<circle class="outer totop-animate" cx="60" cy="60" r="60" transform="rotate(-90, 95, 95)"></circle>
-						</svg>
-					</figure> -->
 				</div>
 				<div class="text-white text-center text-xl title_font font-black mb-4">
 					facebook
@@ -56,7 +50,7 @@
 		<div class="more_btn flex justify-center">
 			<a href="<?php echo get_post_type_archive_link( 'reviews' ); ?>">
 				<div class="first-btn">
-					<?php _e('Больше отзывов', 'topot'); ?>
+					<?php _e('Больше отзывов', 'treba'); ?>
 				</div>
 			</a>
 		</div>
@@ -74,7 +68,7 @@ if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom
 		<div class="modal_body">
 			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?php echo carbon_get_the_post_meta('crb_reviews_youtube'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: 75vh;"></iframe>
 			<div class="modal_close pointer">
-				<?php _e('Закрыть', 'topot'); ?>
+				<?php _e('Закрыть', 'treba'); ?>
 			</div>
 		</div>
 	</div>
