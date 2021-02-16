@@ -7,11 +7,11 @@
 					<br><?php _e('и привлекаем клиентов', 'treba'); ?></h1>
 				</div>
 				<div class="welcome_desc text-white text-xl md:text-2xl relative opacity-75 z-10 mb-6">
-					<p><?php _e('Бесплатная консультация специалиста по вашему вопросу', 'topot'); ?></p>
+					<p><?php _e('Бесплатная консультация специалиста по вашему вопросу', 'treba'); ?></p>
 				</div>	
 				<div class="welcome_form lg:w-7/12 flex justify-between flex-col lg:inline-flex lg:flex-row lg:justify-start lg:bg-white lg:rounded relative z-10 lg:p-2">
 					<input type="text" placeholder="<?php _e('Оставьте Ваш телефон или email', 'treba'); ?>" class="w-full lg:w-8/12">
-					<div class="welcome_btn first-btn flex"><?php _e('Отправить', 'topot'); ?></div>
+					<div class="welcome_btn first-btn flex"><?php _e('Отправить', 'treba'); ?></div>
 				</div>
 			</div>
 			<div class="w-full lg:w-1/3 text-center lg:text-left">
