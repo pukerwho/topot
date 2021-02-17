@@ -127,7 +127,7 @@
 				$uslugi_template = carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_template');
 		    if ($uslugi_template === 'seo'): 
 		  ?>
-				<h2 class="text-2xl md:text-3xl first-color mb-4"><?php _e('Занимаемся SEO-продвижением по всей Украине', 'topot'); ?></h2>
+				<h2 class="text-2xl md:text-3xl second-color mb-4"><?php _e('Занимаемся SEO-продвижением по всей Украине', 'topot'); ?></h2>
 				<div class="flex flex-wrap lg:-mx-2 bg-light rounded-lg px-8 pt-8 pb-4">
 					<?php 
 						$current_term = get_queried_object_id();
@@ -168,51 +168,53 @@
 		<!-- END Продвижение в городах -->
 
 		<!-- Продвижение на CMS -->
-		<?php
-			$uslugi_template = carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_template');
-	    if ($uslugi_template === 'seo'): 
-	  ?>
-			<h2 class="text-2xl md:text-3xl second-color mb-4"><?php _e('Раскрутка сайтов на различных CMS', 'topot'); ?></h2>
-			<div class="flex flex-wrap lg:-mx-2 bg-light rounded-lg px-8 pt-8 pb-4">
-				<?php 
-					$current_term = get_queried_object_id();
-					$custom_query = new WP_Query( array( 
-					'post_type' => 'services', 
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'post__in' => $services_array,
-					'tax_query' => array(
-				    array(
-			        'taxonomy' => 'uslugi',
-					    'terms' => $current_term,
-			        'field' => 'term_id',
-			        'include_children' => true,
-			        'operator' => 'IN'
-				    )
-					),
-					'meta_query' => array(
-						array(
-							'key'     => 'crb_services_crm_show',
-				      'value'   => 'yes',
-				      'compare' => '=', 
-						)
-					),
-				) );
-				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-					<div class="w-full lg:w-1/3 px-2 mb-4">
-						<div class="title text-white">
-							<a href="<?php the_permalink(); ?>">
-		      			<?php the_title(); ?>
-		      		</a>
-		      	</div>	
-					</div>
-				<?php endwhile; endif; wp_reset_postdata(); ?>
-			</div>
-		<?php endif; ?>
+		<div class="mb-10">
+			<?php
+				$uslugi_template = carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_template');
+		    if ($uslugi_template === 'seo'): 
+		  ?>
+				<h2 class="text-2xl md:text-3xl first-color mb-4"><?php _e('Раскрутка сайтов на различных CMS', 'topot'); ?></h2>
+				<div class="flex flex-wrap lg:-mx-2 bg-light rounded-lg px-8 pt-8 pb-4">
+					<?php 
+						$current_term = get_queried_object_id();
+						$custom_query = new WP_Query( array( 
+						'post_type' => 'services', 
+						'orderby' => 'date',
+						'order' => 'DESC',
+						'post__in' => $services_array,
+						'tax_query' => array(
+					    array(
+				        'taxonomy' => 'uslugi',
+						    'terms' => $current_term,
+				        'field' => 'term_id',
+				        'include_children' => true,
+				        'operator' => 'IN'
+					    )
+						),
+						'meta_query' => array(
+							array(
+								'key'     => 'crb_services_crm_show',
+					      'value'   => 'yes',
+					      'compare' => '=', 
+							)
+						),
+					) );
+					if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+						<div class="w-full lg:w-1/3 px-2 mb-4">
+							<div class="title text-white">
+								<a href="<?php the_permalink(); ?>">
+			      			<?php the_title(); ?>
+			      		</a>
+			      	</div>	
+						</div>
+					<?php endwhile; endif; wp_reset_postdata(); ?>
+				</div>
+			<?php endif; ?>
+		</div>
 		<!-- END Продвижение в городах -->	
 
 		<!-- OTHER -->
-		<div class="mb-10">
+		<div>
 			<h2 class="text-4xl md:text-5xl second-color mb-4"><?php _e('Другие услуги', 'topot'); ?></h2>
 			<div class="flex flex-wrap lg:-mx-2">
 				<?php 
@@ -244,7 +246,7 @@
 			</div>
 		</div>
 		<!-- END OTHER -->
-		
+
 	</div>
 </div>
 
