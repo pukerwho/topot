@@ -121,40 +121,6 @@
 		</div>
 		<!-- END FAQ -->
 
-		<!-- OTHER -->
-		<div class="mb-10">
-			<h2 class="text-4xl md:text-5xl second-color mb-4"><?php _e('Наши услуги', 'topot'); ?></h2>
-			<div class="flex flex-wrap lg:-mx-2">
-				<?php 
-		  		$services_array = [];
-		  		$u_services = carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_services'); 
-		  		foreach($u_services as $u_service) {
-			  		$u_service_id = $u_service['id'];
-
-			  		array_push($services_array, $u_service_id);
-			  	}
-		  	?>
-				<?php 
-					$current_term = get_queried_object_id();
-					$custom_query = new WP_Query( array( 
-					'post_type' => 'services', 
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'post__in' => $services_array,
-				) );
-				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-				  <a href="<?php the_permalink(); ?>" class="w-full lg:w-1/3 block lg:px-2 mb-4">
-						<div class="h-full bg-light rounded-lg flex flex-col justify-center items-center p-12">
-			      	<div class="title text-white text-2xl text-center">
-			      		<?php the_title(); ?>
-			      	</div>
-			      </div>
-					</a>
-				<?php endwhile; endif; wp_reset_postdata(); ?>
-			</div>
-		</div>
-		<!-- END OTHER -->
-
 		<!-- Продвижение в городах -->
 		<div class="mb-10">
 			<?php
@@ -244,6 +210,41 @@
 			</div>
 		<?php endif; ?>
 		<!-- END Продвижение в городах -->	
+
+		<!-- OTHER -->
+		<div class="mb-10">
+			<h2 class="text-4xl md:text-5xl second-color mb-4"><?php _e('Другие услуги', 'topot'); ?></h2>
+			<div class="flex flex-wrap lg:-mx-2">
+				<?php 
+		  		$services_array = [];
+		  		$u_services = carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_services'); 
+		  		foreach($u_services as $u_service) {
+			  		$u_service_id = $u_service['id'];
+
+			  		array_push($services_array, $u_service_id);
+			  	}
+		  	?>
+				<?php 
+					$current_term = get_queried_object_id();
+					$custom_query = new WP_Query( array( 
+					'post_type' => 'services', 
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'post__in' => $services_array,
+				) );
+				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+				  <a href="<?php the_permalink(); ?>" class="w-full lg:w-1/3 block lg:px-2 mb-4">
+						<div class="h-full bg-light rounded-lg flex flex-col justify-center items-center p-12">
+			      	<div class="title text-white text-2xl text-center">
+			      		<?php the_title(); ?>
+			      	</div>
+			      </div>
+					</a>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div>
+		</div>
+		<!-- END OTHER -->
+		
 	</div>
 </div>
 
