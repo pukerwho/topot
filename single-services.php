@@ -69,6 +69,7 @@
 		</div>
 		<!-- END WHY US -->
 		<!-- OUR CASE -->
+		
 		<div class="flex flex-col lg:flex-row items-center mb-20 px-2">
 			<div class="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
 				<div class="flex items-center text-3xl second-color font-bold mb-4">
