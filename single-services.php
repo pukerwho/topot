@@ -97,7 +97,7 @@
 							sizes="(max-width: 767px) 767px,
 						  (max-width: 1280px) 1280px,
 						  1440px"
-							src="<?php echo $case_photo_full[0] ?>" alt="<?php echo carbon_get_the_post_meta('crb_services_case_title'); ?>" loading="lazy" class="w-full">
+							src="<?php echo $case_photo_full[0] ?>" alt="<?php echo carbon_get_the_post_meta('crb_services_case_title'); ?>" loading="lazy" class="w-full bg-light p-5 rounded-lg">
 						</div>
 					</div>
 				</div>
