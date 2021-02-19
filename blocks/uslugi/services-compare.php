@@ -8,7 +8,7 @@
 
 	<!-- Первый заказ -->
 	<div>
-		<div class="w-full sticky flex items-center bg-main pb-20"  style="top: 1rem;">
+		<div class="w-full flex items-center bg-main pb-20">
 			<div class="w-2/3 pr-10">
 				<img src="<?php bloginfo('template_url'); ?>/img/secretroom.jpg" alt="Наш первый сайт" class="w-full">
 			</div>
@@ -19,7 +19,7 @@
 		</div>
 
 		<!-- Свежий заказ -->
-		<div class="w-full sticky flex items-center bg-main mb-20" style="top: 1rem;">
+		<div class="w-full flex items-center bg-main mb-20">
 			<div class="w-2/3 pr-10">
 				<img src="<?php bloginfo('template_url'); ?>/img/scast.jpg" alt="Наш новый сайт" class="w-full">
 			</div>
