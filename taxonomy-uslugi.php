@@ -264,10 +264,10 @@
 								</div>
 								<span><?php _e('Сайты', 'treba'); ?></span>
 							</h1>
-							<div class="w-3/5 service_description text-xl md:text-3xl text-center opacity-75 mx-auto mb-10">
-								<?php _e('Мы создаем сайты, которые помогают вашему бизнесу развиваться дальше', 'treba'); ?> <img src="<?php bloginfo('template_url'); ?>/img/rocket.webp" alt="" class="inline" width="45px">
+							<div class="lg:w-3/5 service_description text-xl md:text-3xl text-center opacity-75 mx-auto mb-10">
+								<?php _e('Мы создаем сайты, которые помогают вашему бизнесу развиваться дальше', 'treba'); ?> <img src="<?php bloginfo('template_url'); ?>/img/rocket.webp" alt="" class="relative create-rocket inline" width="45px">
 							</div>
-							<div class="service_call text-2xl font-bold">
+							<div class="service_call text-2xl text-center font-bold cursor-pointer mb-12 lg:mb-0">
 								<?php _e('Бесплатная консультация', 'treba'); ?>
 							</div>
 						</div>
