@@ -61,11 +61,14 @@ function addAdminEditorStyle() {
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 function theme_name_scripts() {
   wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/style.css', false, time() );
+  wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'TweenMax', get_template_directory_uri() . '/js/TweenMax.min.js','','',true);
   wp_enqueue_script( 'ScrollMagic', get_template_directory_uri() . '/js/ScrollMagic.min.js','','',true);
   wp_enqueue_script( 'gsap', get_template_directory_uri() . '/js/animation.gsap.min.js','','',true);
   wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js','','',true);
-  wp_enqueue_script( 'chart', 'https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js','','',true);
+  wp_enqueue_script( 'imageloaded', get_template_directory_uri() . '/js/imageloaded.min.js','','',true);
+  wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.min.js','','',true);
+  // wp_enqueue_script( 'chart', 'https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js','','',true);
   wp_enqueue_script( 'animate-puk', get_template_directory_uri() . '/js/animate-puk.js', '','',true);
   
   wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', '','',true);

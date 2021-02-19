@@ -159,9 +159,19 @@ function init() {
     }
   });
 
-
-
-  
+  //MASONRY
+  $(function() {
+    var $content = $('.portfolio-masonry');
+    $content.imagesLoaded( function() {
+      $('.portfolio-masonry').masonry({
+        itemSelector: '.portfolio-masonry-item',
+        columnWidth: '.portfolio-masonry-size',
+        percentPosition: true,
+        gutter: 20,
+        horizontalOrder: true,
+      })
+    })
+  });
 }
 
 
