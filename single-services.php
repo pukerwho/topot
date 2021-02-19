@@ -80,7 +80,7 @@
 				</div>
 			</div>
 			<div class="w-full lg:w-1/2 lg:pl-8">
-				<div class="flex mb-10">
+				<div class="flex">
 					<div class="w-full">
 						<div class="text-2xl font-bold first-color text-center mb-4">
 							<?php echo carbon_get_the_post_meta('crb_services_case_title'); ?>
