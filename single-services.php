@@ -87,9 +87,9 @@
 						</div>
 						<div class="w-full">
 							<?php 
-								$case_photo_medium = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_js'), 'medium'); 
-								$case_photo_large = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_js'), 'large'); 
-								$case_photo_full = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_js'), 'full'); 
+								$case_photo_medium = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_img'), 'medium'); 
+								$case_photo_large = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_img'), 'large'); 
+								$case_photo_full = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_img'), 'full'); 
 							?>
 							<img srcset="<?php echo $case_photo_medium[0] ?> 767w, 
 							<?php echo $case_photo_large[0] ?> 1280w,
