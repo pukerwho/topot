@@ -3,7 +3,7 @@
 
 <div class="pt-32 pb-20">
 	<div class="container mx-auto px-2 lg:px-0">
-		<div class="mb-12">
+		<div class="mb-4">
 			<h1 class="w-1/2 text-3xl lg:text-5xl first-color"><?php echo post_type_archive_title(); ?></h1>
 			<div class="text-2xl"><?php _e('Сайты, разработанные нашей студией', 'treba'); ?></div>	
 		</div>

@@ -69,7 +69,6 @@
 		</div>
 		<!-- END WHY US -->
 		<!-- OUR CASE -->
-		
 		<div class="flex flex-col lg:flex-row items-center mb-20 px-2">
 			<div class="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
 				<div class="flex items-center text-3xl second-color font-bold mb-4">
@@ -84,11 +83,21 @@
 				<div class="flex mb-10">
 					<div class="w-full">
 						<div class="text-2xl font-bold first-color text-center mb-4">
-							<?php _e('Трафик из поисковых систем', 'treba'); ?>
+							<?php echo carbon_get_the_post_meta('crb_services_case_title'); ?>
 						</div>
 						<div class="w-full">
-							<canvas id="<?php echo carbon_get_the_post_meta('crb_services_case_id'); ?>" width="400"></canvas>
-							<?php echo carbon_get_the_post_meta('crb_services_case_js'); ?>
+							<?php 
+								$case_photo_medium = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_js'), 'medium'); 
+								$case_photo_large = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_js'), 'large'); 
+								$case_photo_full = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_js'), 'full'); 
+							?>
+							<img srcset="<?php echo $case_photo_medium[0] ?> 767w, 
+							<?php echo $case_photo_large[0] ?> 1280w,
+							<?php echo $case_photo_full[0] ?> 1440w"
+							sizes="(max-width: 767px) 767px,
+						  (max-width: 1280px) 1280px,
+						  1440px"
+							src="<?php echo $case_photo_full[0] ?>" alt="<?php echo carbon_get_the_post_meta('crb_services_case_title'); ?>" loading="lazy" class="w-full">
 						</div>
 					</div>
 				</div>
@@ -96,34 +105,36 @@
 		</div>
 		<!-- END OUR CASE -->
 		<!-- PERSON -->
-		<div class="bg-light rounded-lg shadow-xl mb-20">
-			<div class="flex flex-col-reverse lg:flex-row lg:items-center">
-				<!-- PERSON PHOTO -->
-				<div class="w-full lg:w-1/3 lg:pr-6">
-					<?php 
-						$person_photo_medium = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_person_photo'), 'medium'); 
-						$person_photo_large = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_person_photo'), 'large'); 
-						$person_photo_full = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_person_photo'), 'full'); 
-					?>
-					<img srcset="<?php echo $person_photo_medium[0] ?> 767w, 
-					<?php echo $person_photo_large[0] ?> 1280w,
-					<?php echo $person_photo_full[0] ?> 1440w"
-					sizes="(max-width: 767px) 767px,
-				  (max-width: 1280px) 1280px,
-				  1440px"
-					src="<?php echo $person_photo_full[0] ?>" alt="" loading="lazy" class="w-full rounded lg:rounded-l-lg">
-				</div>
-				<!-- PERSON CONTENT -->
-				<div class="w-full lg:w-2/3 py-4 px-2 lg:px-6">
-					<div class="text-4xl font-bold mb-6">
-						<?php _e('Вы в надежных руках', 'treba'); ?>
+		<?php if(carbon_get_the_post_meta('crb_services_person_show')): ?>
+			<div class="bg-light rounded-lg shadow-xl mb-20">
+				<div class="flex flex-col-reverse lg:flex-row lg:items-center">
+					<!-- PERSON PHOTO -->
+					<div class="w-full lg:w-1/3 lg:pr-6">
+						<?php 
+							$person_photo_medium = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_person_photo'), 'medium'); 
+							$person_photo_large = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_person_photo'), 'large'); 
+							$person_photo_full = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_person_photo'), 'full'); 
+						?>
+						<img srcset="<?php echo $person_photo_medium[0] ?> 767w, 
+						<?php echo $person_photo_large[0] ?> 1280w,
+						<?php echo $person_photo_full[0] ?> 1440w"
+						sizes="(max-width: 767px) 767px,
+					  (max-width: 1280px) 1280px,
+					  1440px"
+						src="<?php echo $person_photo_full[0] ?>" alt="" loading="lazy" class="w-full rounded lg:rounded-l-lg">
 					</div>
-					<div class="text-xl">
-						<?php echo carbon_get_the_post_meta('crb_services_person_text'); ?>
+					<!-- PERSON CONTENT -->
+					<div class="w-full lg:w-2/3 py-4 px-2 lg:px-6">
+						<div class="text-4xl font-bold mb-6">
+							<?php _e('Вы в надежных руках', 'treba'); ?>
+						</div>
+						<div class="text-xl">
+							<?php echo carbon_get_the_post_meta('crb_services_person_text'); ?>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		<?php endif; ?>
 		<!-- END PERSON -->
 		<?php
 			$custom_price_template = carbon_get_the_post_meta('crb_services_price_template');

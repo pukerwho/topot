@@ -9,9 +9,23 @@ function crb_services_theme_options() {
     ->where( 'post_type', '=', 'services' )
     ->add_tab('Контент', array(
       Field::make( 'image', 'crb_services_thumb', 'Иконка для услуги' )->set_value_type( 'url'),
-    	Field::make( 'image', 'crb_services_person_photo', 'Вы в надежных руках - Фото' ),
-      Field::make( 'rich_text', 'crb_services_person_text', 'Вы в надежных руках - текст' ),
-      
+      Field::make( 'checkbox', 'crb_services_person_show', 'Выводить Вы В Надежны Руках?' ),
+    	Field::make( 'image', 'crb_services_person_photo', 'Вы в надежных руках - Фото' )->set_conditional_logic( array(
+          array(
+            'field' => 'crb_services_person_show',
+            'value' => '1', 
+            'compare' => '=',
+          )
+        )
+      ),
+      Field::make( 'rich_text', 'crb_services_person_text', 'Вы в надежных руках - текст' )->set_conditional_logic( array(
+          array(
+            'field' => 'crb_services_person_show',
+            'value' => '1', 
+            'compare' => '=',
+          )
+        )
+      ),
       Field::make( 'complex', 'crb_services_whyus', 'Чем мы лучше других?' )
 	    	->add_fields( array(
 	    		Field::make( 'image', 'crb_services_whyus_icon', 'Иконка' )->set_value_type( 'url'),
@@ -20,8 +34,8 @@ function crb_services_theme_options() {
 	    ) ),
     ))
     ->add_tab('Кейс', array(
-      Field::make( 'text', 'crb_services_case_id', 'Реальный кейс - id' ),
-      Field::make( 'textarea', 'crb_services_case_js', 'Реальный кейс - график' ),
+      Field::make( 'image', 'crb_services_case_img', 'Реальный кейс - картинка' ),
+      Field::make( 'text', 'crb_services_case_title', 'Реальный кейс - заголовок над графиком' ),
       Field::make( 'rich_text', 'crb_services_case_text', 'Реальный кейс - текст' ),
     ))
     ->add_tab('ЧаВо', array(
