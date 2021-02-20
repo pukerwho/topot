@@ -11,8 +11,8 @@
 			)); 
 			foreach ($services as $service): ?>
 				<div class="services_item flex bg-light rounded-lg py-6 px-4 mb-6">
-					<div class="mr-4">
-						<img src="<?php echo carbon_get_term_meta($service->term_id, 'crb_uslugi_thumb'); ?>" alt="<?php echo $service->name ?>" width="60">
+					<div class="mr-6">
+						<img src="<?php echo carbon_get_term_meta($service->term_id, 'crb_uslugi_thumb'); ?>" alt="<?php echo $service->name ?>" width="55">
 					</div>
 					<div class="w-full">
 						<div class="title text-white text-2xl">							
@@ -20,7 +20,7 @@
 			      		<?php echo $service->name; ?>
 			      	</a>
 		      	</div>
-		      	<div class="mb-10">
+		      	<div class="mb-8">
 		      		<a href="<?php echo get_term_link($service); ?>" class="services_item_link">
 		      			<?php _e('Перейти', 'treba'); ?> →
 		      		</a>
@@ -43,8 +43,8 @@
 								),
 							) );
 							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-								<div class="w-full lg:w-1/2 lg:px-2">
-									<a href="<?php the_permalink(); ?>" class="white-link-with-hover">
+								<div class="w-full lg:w-1/2 lg:px-2 mb-2">
+									<a href="<?php the_permalink(); ?>" class="text-lg white-link-with-hover">
 					      		<?php the_title(); ?>
 									</a>	
 								</div>
