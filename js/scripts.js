@@ -108,7 +108,6 @@ function init() {
   var windowWidth = 767;
   
   if (document.body.clientWidth < windowWidth) {
-    console.log('mobile swiper');
     var swiperServices = new Swiper('.swiper-services', {
       slidesPerView: 1,
       spaceBetween: 30,
@@ -123,7 +122,6 @@ function init() {
       },
     })
   } else {
-    console.log('pc swiper');
     var swiperServices = new Swiper('.swiper-services', {
       slidesPerView: 3,
       spaceBetween: 30,
@@ -158,6 +156,25 @@ function init() {
       }
     }
   });
+
+  //Services Slider
+  let servicesSlides = document.querySelectorAll('.services_slider_slide');
+  for (servicesSlide of servicesSlides) {
+    if (servicesSlide) {
+      servicesSlideFullWidth = servicesSlide.offsetWidth;
+      servicesSlideWidth = (servicesSlideFullWidth/3) - 20;
+      servicesSlide.style.height = servicesSlideFullWidth + 'px';  
+      servicesSlide.style.backgroundSize = 2*servicesSlideFullWidth + 'px';  
+      servicesSlide.addEventListener("mousemove", function(e) {
+        // let servicesStyle = getComputedStyle(this);
+        // servicesBgPositionY = servicesStyle.getPropertyValue('background-position-y');
+        // servicesBgPositionX = servicesStyle.getPropertyValue('background-position-x');
+
+        this.style.backgroundPositionX = 'calc(50% + ' + e.offsetX/10 + 'px)';
+        this.style.backgroundPositionY = 'calc(50% + ' + e.offsetY/10 + 'px)';
+      });
+    }
+  }
 
   //MASONRY
   $(function() {

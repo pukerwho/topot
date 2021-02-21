@@ -87,22 +87,3 @@ create_stat_third_array.forEach(function(item){
   .setTween(item, {top: 0, left: 0})
   .addTo(controller);
 })
-
-//Services
-let servicesSlides = document.querySelectorAll('.services_slider_slide');
-for (servicesSlide of servicesSlides) {
-  if (servicesSlide) {
-    servicesSlideFullWidth = servicesSlide.offsetWidth;
-    servicesSlideWidth = (servicesSlideFullWidth/3) - 20;
-    servicesSlide.style.height = servicesSlideFullWidth + 'px';  
-    servicesSlide.style.backgroundSize = 2*servicesSlideFullWidth + 'px';  
-    servicesSlide.addEventListener("mousemove", function(e) {
-      // let servicesStyle = getComputedStyle(this);
-      // servicesBgPositionY = servicesStyle.getPropertyValue('background-position-y');
-      // servicesBgPositionX = servicesStyle.getPropertyValue('background-position-x');
-
-      this.style.backgroundPositionX = 'calc(50% + ' + e.offsetX/10 + 'px)';
-      this.style.backgroundPositionY = 'calc(50% + ' + e.offsetY/10 + 'px)';
-    });
-  }
-}
