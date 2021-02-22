@@ -61,6 +61,36 @@ function crb_services_theme_options() {
           )
         )
       ),
+      Field::make( 'text', 'crb_services_price_create_title', 'Заголовок для блока Цена' )->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_services_price_template',
+            'value' => 'create', 
+            'compare' => '=',
+          )
+        )
+      ),
+      Field::make( 'text', 'crb_services_price_create_total', 'Стоимость разработки' )->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_services_price_template',
+            'value' => 'create', 
+            'compare' => '=',
+          )
+        )
+      ),
+      Field::make( 'complex', 'crb_services_price_create_whatdo', 'Что входит в стоимость' )
+        ->add_fields( array(
+          Field::make( 'text', 'crb_services_price_create_do', 'Одной строкой' ),
+      ) )->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_services_price_template',
+            'value' => 'create', 
+            'compare' => '=',
+          )
+        )
+      ),
       Field::make( 'checkbox', 'crb_services_city_show', 'Выводить в разделе Города?' ),
       Field::make( 'checkbox', 'crb_services_crm_show', 'Выводить в разделе CRM?' ),
     ));
