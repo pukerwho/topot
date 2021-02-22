@@ -68,6 +68,40 @@
 			</div>
 		</div>
 		<!-- END WHY US -->
+
+		<?php if(carbon_get_the_post_meta('crb_services_show_example')): ?>
+		<!-- PORTFOLIO -->
+		<h2 class="text-4xl md:text-5xl first-color mb-10"><?php _e('Примеры работ', 'treba'); ?></h2>
+		<div class="portfolio-masonry lg:-mx-2 mb-16">
+			<div class="portfolio-masonry-size"></div>
+			<?php 
+	  		$portfolio_array = [];
+	  		$u_portfolio = carbon_get_the_post_meta(get_the_ID(), 'crb_services_portfolio'); 
+	  		foreach($u_portfolio as $portfolio) {
+		  		$portfolio_id = $portfolio['id'];
+
+		  		array_push($portfolio_array, $portfolio_id);
+		  	}
+	  	?>
+			<?php 
+				$custom_query = new WP_Query( array( 
+				'post_type' => 'portfolio', 
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'post__in' => $portfolio_array,
+			) );
+			if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+			  <div class="portfolio-masonry-item overflow-hidden px-2 service_example_item animate-puk mb-4">
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="" class="w-full">
+					</a>
+				</div>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
+		</div>
+		<!-- END PORTFOLIO -->
+		<?php endif; ?>
+
+		<?php if(carbon_get_the_post_meta('crb_services_show_case')): ?>
 		<!-- OUR CASE -->
 		<div class="flex flex-col lg:flex-row items-center mb-20 px-2">
 			<div class="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
@@ -104,6 +138,8 @@
 			</div>
 		</div>
 		<!-- END OUR CASE -->
+		<?php endif; ?>
+
 		<!-- PERSON -->
 		<?php if(carbon_get_the_post_meta('crb_services_person_show')): ?>
 			<div class="bg-light rounded-lg shadow-xl mb-20">

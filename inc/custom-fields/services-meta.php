@@ -34,9 +34,34 @@ function crb_services_theme_options() {
 	    ) ),
     ))
     ->add_tab('Кейс', array(
-      Field::make( 'image', 'crb_services_case_img', 'Реальный кейс - картинка' ),
-      Field::make( 'text', 'crb_services_case_title', 'Реальный кейс - заголовок над графиком' ),
-      Field::make( 'rich_text', 'crb_services_case_text', 'Реальный кейс - текст' ),
+      Field::make( 'checkbox', 'crb_services_show_case', 'Выводить Кейс?' ),
+      Field::make( 'image', 'crb_services_case_img', 'Реальный кейс - картинка' )->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_services_show_case',
+            'value' => '1', 
+            'compare' => '=',
+          )
+        )
+      ),
+      Field::make( 'text', 'crb_services_case_title', 'Реальный кейс - заголовок над графиком' )->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_services_show_case',
+            'value' => '1', 
+            'compare' => '=',
+          )
+        )
+      ),
+      Field::make( 'rich_text', 'crb_services_case_text', 'Реальный кейс - текст' )->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_services_show_case',
+            'value' => '1', 
+            'compare' => '=',
+          )
+        )
+      ),
     ))
     ->add_tab('ЧаВо', array(
       Field::make( 'complex', 'crb_services_faq', 'FAQ' )
@@ -87,6 +112,23 @@ function crb_services_theme_options() {
           array(
             'field' => 'crb_services_price_template',
             'value' => 'create', 
+            'compare' => '=',
+          )
+        )
+      ),
+      Field::make( 'checkbox', 'crb_services_show_example', 'Выводить примеры из Портфолио?' ),
+      Field::make( 'association', 'crb_services_portfolio', 'Какие работы выводить' )
+      ->set_duplicates_allowed( true )
+      ->set_types( array(
+          array(
+            'type'      => 'post',
+            'post_type' => 'portfolio',
+          )
+      ) )->set_conditional_logic( 
+        array(
+          array(
+            'field' => 'crb_services_show_example',
+            'value' => '1', 
             'compare' => '=',
           )
         )

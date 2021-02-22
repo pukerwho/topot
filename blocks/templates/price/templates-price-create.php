@@ -1,6 +1,6 @@
-<h2 class="text-4xl md:text-5xl first-color text-center mb-10"><?php echo carbon_get_the_post_meta('crb_services_price_create_title');  ?></h2>
+<h2 class="text-4xl md:text-5xl second-color text-center mb-10"><?php echo carbon_get_the_post_meta('crb_services_price_create_title');  ?></h2>
 <div class="bg-light rounded-lg px-8 py-10 mb-20">
-	<div class="flex flex-wrap flex-col lg:flex-row lg:-mx-2">
+	<div class="flex flex-wrap flex-col lg:items-center lg:flex-row lg:-mx-2">
 		<div class="w-full lg:w-1/2 px-2 mb-6 lg:mb-0">
 			<div class="mb-6 text-center">
 				<div>
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="w-full lg:w-1/2 px-2">
-			<div class="text-2xl second-color mb-4"><?php _e('Что входит в эту сумму?', 'treba'); ?></div>
+			<div class="text-2xl first-color mb-4"><?php _e('Что входит в эту сумму?', 'treba'); ?></div>
 			<ul class="price_item_list">
 				<?php 
 					$what_do_create = carbon_get_the_post_meta('crb_services_price_create_whatdo'); 
