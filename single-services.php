@@ -76,10 +76,9 @@
 			<div class="portfolio-masonry-size"></div>
 			<?php 
 	  		$portfolio_array = [];
-	  		$u_portfolio = carbon_get_the_post_meta(get_the_ID(), 'crb_services_portfolio'); 
+	  		$u_portfolio = carbon_get_post_meta(get_the_ID(), 'crb_services_portfolio'); 
 	  		foreach($u_portfolio as $portfolio) {
 		  		$portfolio_id = $portfolio['id'];
-
 		  		array_push($portfolio_array, $portfolio_id);
 		  	}
 	  	?>
