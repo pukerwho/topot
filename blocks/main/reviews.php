@@ -29,14 +29,14 @@
 			));
 			if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="reviews_item w-full lg:w-1/4 px-0 md:px-6">
-				<div class="reviews_item_photo modal_click_js relative mb-2" data-modal-id="modal_order_<?php echo get_the_ID(); ?>">
+				<div class="reviews_item_photo modal_click_js relative cursor-pointer mb-2" data-modal-id="modal_order_<?php echo get_the_ID(); ?>">
 					<img src="https://i.ytimg.com/vi/<?php echo carbon_get_the_post_meta('crb_reviews_youtube'); ?>/hqdefault.jpg" alt="" class="w-full h-full object-cover">
 					<div class="reviews_item_play">
 						<img src="<?php bloginfo('template_url'); ?>/img/play.svg" alt="" width="15px">
 					</div>
 				</div>
-				<div class="flex justify-between items-center mb-4">
-					<div class="reviews_item_title text-xl">
+				<div class="flex flex-col mb-4">
+					<div class="reviews_item_title text-xl mb-4">
 						<?php echo carbon_get_the_post_meta('crb_reviews_name'); ?>
 					</div>	
 					<?php get_template_part('blocks/elements/stars'); ?>
