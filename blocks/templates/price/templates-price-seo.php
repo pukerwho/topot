@@ -24,13 +24,11 @@
 						<li><?php _e('Покупка 4 обратных ссылок в месяц', 'treba'); ?></li>
 					</ul>
 				</div>
-				<div class="price_item_btn">
+				<div class="price_item_btn cursor-pointer">
 					<div class="more_btn flex justify-center">
-						<a href="#">
-							<div class="second-btn text-black">
-								<?php _e('Оставить заявку', 'treba'); ?>
-							</div>
-						</a>
+						<div class="order_btn second-btn text-black order-js" data-order="Стартовый SEO">
+							<?php _e('Оставить заявку', 'treba'); ?>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -56,13 +54,11 @@
 						<li><?php _e('Покупка до 30 обратных ссылок', 'treba'); ?></li>
 					</ul>
 				</div>
-				<div class="price_item_btn">
+				<div class="price_item_btn cursor-pointer">
 					<div class="more_btn flex justify-center">
-						<a href="#">
-							<div class="second-btn text-black">
-								<?php _e('Оставить заявку', 'treba'); ?>
-							</div>
-						</a>
+						<div class="order_btn second-btn text-black order-js" data-order="Оптимальный SEO">
+							<?php _e('Оставить заявку', 'treba'); ?>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -85,13 +81,11 @@
 						<?php _e('Для крупных компаний, которые работают в конкурентной нише. Список задач определяется в процессе обсуждения.', 'treba'); ?>	
 					</div>
 				</div>
-				<div class="price_item_btn">
+				<div class="price_item_btn cursor-pointer">
 					<div class="more_btn flex justify-center">
-						<a href="#">
-							<div class="second-btn text-black">
-								<?php _e('Оставить заявку', 'treba'); ?>
-							</div>
-						</a>
+						<div class="order_btn second-btn text-black order-js" data-order="Продвинутый SEO">
+							<?php _e('Оставить заявку', 'treba'); ?>
+						</div>
 					</div>
 				</div>
 			</div>

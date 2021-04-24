@@ -91,6 +91,72 @@ function init() {
     });
   };
   
+  $('.order-js').on('click', function(){
+    $('.order_modal').addClass('show');
+    $('.modal_bg').addClass('show');
+
+    //Вставляем услугу в инпут
+    let dataOrder = $(this).data('order');
+    $('#input_hidden_service').val(dataOrder);
+  });
+
+  $('.order_close').on('click', function(){
+    $('.order_modal').removeClass('show');
+    $('.modal_bg').removeClass('show');
+  });
+
+  //Закрываем модульное окно
+  let allOrderModals = document.querySelectorAll('.order_modal');
+  document.addEventListener('click', function(e){
+    console.log(e.target.classList.value);
+    if(e.target.classList.value === 'modal_bg show') {
+      bgModal.classList.remove('show');
+      for (modalOrder of allOrderModals) {
+        modalOrder.classList.remove('show');  
+      }
+    }
+  });
+
+  // ФОРМЫ
+  const modalScriptURL = 'https://script.google.com/macros/s/AKfycbyENwP_h01wKzrn-NVoYgPmqOl8ME0ERnTzMRRAQXjTJ9gDPU_7PmJepwSI_Me7Gp0TcA/exec'
+  const form_welcome = document.forms['form_welcome']
+  if (form_welcome) {
+    form_welcome.addEventListener('submit', e => {
+      e.preventDefault()
+      let this_form = form_welcome
+      let data = new FormData(form_welcome)
+      fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
+        .then(response => showSuccessMessage(data, this_form))
+        .catch(error => console.error('Error!', error.message))
+    })  
+  }
+
+  const form_order = document.forms['form_order']
+  if (form_order) {
+    form_order.addEventListener('submit', e => {
+      e.preventDefault()
+      let this_form = form_order
+      let data = new FormData(form_order)
+      fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
+        .then(response => showOrderSuccessMessage(data, this_form))
+        .catch(error => console.error('Error!', error.message))
+    })  
+  }
+
+  function showOrderSuccessMessage(data, this_form) {
+    this_form.reset();
+    $('.order_success').addClass('show');
+  }
+
+  function showSuccessMessage(data, this_form){
+    this_form.reset();
+    $('.success_notice').addClass('show');
+    $('.modal_bg').addClass('show');
+    setTimeout(function(){
+      $('.success_notice').removeClass('show');
+      $('.modal_bg').removeClass('show');
+    }, 4500)
+  }
 
   // Scrollbar.init(document.querySelector('body'));
 
