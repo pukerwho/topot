@@ -118,7 +118,7 @@ function init() {
   });
 
   // ФОРМЫ
-  const modalScriptURL = 'https://script.google.com/macros/s/AKfycbzqoDSHHhAGRYR934FQfPw0XJKH9_YREqqln_uzaujE22UP0EVe8bVCYb8rxXoCw1tS/exec'
+  const modalScriptURL = 'https://script.google.com/macros/s/AKfycbyQlamDsES7saEBca0Z0zlwPBViEl54ym9u7br2sVw4Mw94WnSBczsSijvJkcWTitXgFA/exec'
   const form_welcome = document.forms['form_welcome']
   if (form_welcome) {
     form_welcome.addEventListener('submit', e => {
