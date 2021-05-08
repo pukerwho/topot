@@ -15,7 +15,8 @@
 					'hide_empty' => false,
 				));
 				foreach ( $all_uslugi as $uslugi ): ?>
-		      <div class="swiper-slide services_slider_slide flex flex-col justify-center">
+		      <div class="swiper-slide services_slider_slide relative flex flex-col justify-center">
+		      	<a href="<?php echo get_term_link($uslugi); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
 		      	<div class="title text-white text-4xl font-black  uppercase px-6 mb-6">
 		      		<?php echo $uslugi->name ?>
 		      	</div>
@@ -24,7 +25,7 @@
 		      		<?php echo carbon_get_term_meta($uslugi->term_id, 'crb_uslugi_description' ); ?>
 		      	</div>
 		      	<div class="more text-blue-400 text-xl font-bold px-6">
-		      		<a href="<?php echo get_term_link($uslugi); ?>"><?php _e('Подробнее', 'treba'); ?></a>
+		      		<?php _e('Подробнее', 'treba'); ?>
 		      	</div>
 		      </div>
 	      <?php endforeach; ?>

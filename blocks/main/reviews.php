@@ -1,7 +1,7 @@
 <div class="reviews mb-20">
 	<div class="container mx-auto px-4 lg:px-0">
 		<div class="relative">
-			<h2 class="display-inline text-4xl md:text-5xl text-center third-color mb-12"><?php _e('Что говорят наши клиенты', 'treba'); ?></h2>
+			<h2 class="display-inline text-4xl md:text-5xl text-center third-color mb-12">💬 <?php _e('Что говорят наши клиенты', 'treba'); ?></h2>
 			<div class="text-show"></div>	
 		</div>
 		<div class="reviews_grid flex flex-wrap mb-12 mx-0 md:-mx-6">

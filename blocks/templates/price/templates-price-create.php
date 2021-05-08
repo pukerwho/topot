@@ -8,13 +8,11 @@
 				<span class="text-5xl"><?php echo carbon_get_the_post_meta('crb_services_price_create_total');  ?> грн.</span>
 				</div>
 			</div>
-			<div class="price_item_btn">
+			<div class="price_item_btn cursor-pointer">
 				<div class="more_btn flex justify-center">
-					<a href="#">
-						<div class="second-btn text-black">
-							<?php _e('Оставить заявку', 'treba'); ?>
-						</div>
-					</a>
+					<div class="order_btn second-btn text-black order-js" data-order="Заказать сайт">
+						<?php _e('Оставить заявку', 'treba'); ?>
+					</div>
 				</div>
 			</div>
 		</div>

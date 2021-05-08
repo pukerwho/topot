@@ -1,9 +1,9 @@
 <div class="welcome flex items-center mb-20 md:mb-0 pt-32 lg:pt-0">
 	<div class="container mx-auto px-4 lg:px-0">
-		<div class="flex flex-col lg:flex-row items-center bg-light relative rounded-lg shadow-xl px-6 py-8">
+		<div class="flex flex-col lg:flex-row items-center bg-light relative rounded-lg shadow-md px-6 py-8">
 			<div class="w-full lg:w-2/3 mb-6 lg:mb-0">
 				<div class="welcome_title text-white relative z-10 mb-6">
-					<h1><?php _e('Создаем сайты', 'treba'); ?>
+					<h1>🧑‍💻 <?php _e('Создаем сайты', 'treba'); ?>
 					<br><?php _e('и привлекаем клиентов', 'treba'); ?></h1>
 				</div>
 				<div class="welcome_desc text-white text-xl md:text-2xl relative opacity-75 z-10 mb-6">
@@ -24,7 +24,7 @@
 					<div class="welcome_lead_title animate-puk bg-second-gradient inline-block rounded-2xl shadow-xl text-2xl lg:text-4xl title-font text-black pt-4 pb-8 px-8">
 						<?php _e('Чат с экспертом', 'treba'); ?>
 					</div>
-					<div class="welcome_lead_text animate-puk flex items-center relative justify-center bg-white rounded-2xl shadow-xl text-xl lg:text-2xl text-black py-4 px-8 -mt-8 lg:ml-8">
+					<div class="welcome_lead_text animate-puk flex items-center relative justify-center bg-white rounded-2xl shadow-xl text-xl lg:text-2xl text-black cursor-pointer py-4 px-8 -mt-8 lg:ml-8 chat-js">
 						<span class="font-bold pr-4"><?php _e('Задать вопрос', 'treba'); ?></span>
 						<img src="<?php bloginfo('template_url'); ?>/img/arrow-right.svg" width="20">
 					</div>

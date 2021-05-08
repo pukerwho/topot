@@ -91,6 +91,7 @@ function init() {
     });
   };
   
+  // ORDER MODAL
   $('.order-js').on('click', function(){
     $('.order_modal').addClass('show');
     $('.modal_bg').addClass('show');
@@ -102,6 +103,18 @@ function init() {
 
   $('.order_close').on('click', function(){
     $('.order_modal').removeClass('show');
+    $('.modal_bg').removeClass('show');
+  });
+
+
+  // CHAT MODAL
+  $('.chat-js').on('click', function(){
+    $('.chat_modal').addClass('show');
+    $('.modal_bg').addClass('show');
+  });
+
+  $('.chat_close').on('click', function(){
+    $('.chat_modal').removeClass('show');
     $('.modal_bg').removeClass('show');
   });
 

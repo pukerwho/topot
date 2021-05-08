@@ -1,7 +1,7 @@
 <div class="cases">
 	<div class="container mx-auto px-4 lg:px-0">
 		<div class="relative">
-			<h2 class="display-inline text-4xl md:text-5xl text-center second-color mb-4"><?php _e('Кейсы', 'treba'); ?></h2>
+			<h2 class="display-inline text-4xl md:text-5xl text-center second-color mb-4">📈 <?php _e('Кейсы', 'treba'); ?></h2>
 			<div class="text-show"></div>	
 		</div>
 		<div class="text-center text-xl md:text-2xl mb-12">
