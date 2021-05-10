@@ -16,7 +16,7 @@
 				<div class="h-full flex flex-col justify-between">
 					<a href="<?php the_permalink(); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
 					<div class="h-64">
-						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover object-top">
+						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" class="min-w-full h-full object-cover object-top">
 					</div>
 					<div class="h-full flex items-center justify-center bg-light rounded-b-lg text-center py-8 px-2">
 						<span class="text-lg text-white opacity-75"><?php the_title(); ?></span>
