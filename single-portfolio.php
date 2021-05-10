@@ -84,9 +84,11 @@
 				</div>
 				<div class="portfolio_archive">
 					<?php 
+						$current_id = get_the_ID();
 						$services_query = new WP_Query(array(
 							'post_type' => 'portfolio',
 							'posts_per_page' => 8,
+							'post__not_in' => array($current_id),
 						)); 
 						if ($services_query->have_posts()) : while ($services_query->have_posts()) : $services_query->the_post(); 
 					?>
