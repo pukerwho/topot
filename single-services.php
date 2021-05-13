@@ -170,14 +170,6 @@
 		</div>
 		<!-- END OUR CASE -->
 		<?php endif; ?>
-	
-		<!-- АУДИТ -->
-		<?php if(carbon_get_the_post_meta('crb_services_show_audit')): ?>
-			<div class="mb-20">
-				<?php get_template_part('blocks/elements/audit'); ?>
-			</div>
-		<?php endif; ?>
-		<!-- END АУДИТ -->
 
 		<!-- PERSON -->
 		<?php if(carbon_get_the_post_meta('crb_services_person_show')): ?>
@@ -263,24 +255,30 @@
 		</div>
 		<!-- END FAQ -->
 
-		<!-- КЛИЕНТЫ -->
-		<?php if(carbon_get_the_post_meta('crb_services_show_clients')): ?>
-			<div class="clients">
-				<h2 class="text-4xl md:text-5xl first-color text-center mb-12"><?php _e('Наши клиенты', 'treba'); ?></h2>
-				<div class="w-full md:w-10/12 mx-auto">
-					<div class="flex flex-col md:flex-row items-center justify-center md:-mx-4">
-						<?php 
-							$clients = carbon_get_the_post_meta('crb_services_clients');
-							foreach ( $clients as $client ): ?>
-							<div class="clients_logo md:px-4 mb-12 md:mb-6">
-								<?php $photo_src = wp_get_attachment_image_src($client, 'large'); ?>
-								<img src="<?php echo $photo_src[0]; ?>" loading="lazy" class="h-20 md:h-20 bg-white object-contain rounded-2xl px-6 py-3 mx-auto">
-							</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
+		<!-- АУДИТ -->
+		<?php if(carbon_get_the_post_meta('crb_services_show_audit')): ?>
+			<div class="mb-20">
+				<?php get_template_part('blocks/elements/audit'); ?>
 			</div>
 		<?php endif; ?>
+		<!-- END АУДИТ -->
+
+		<!-- КЛИЕНТЫ -->
+		<div class="clients">
+			<h2 class="text-4xl md:text-5xl first-color text-center mb-12"><?php _e('Наши клиенты', 'treba'); ?></h2>
+			<div class="w-full md:w-10/12 mx-auto">
+				<div class="flex flex-col md:flex-row items-center justify-center md:-mx-4">
+					<?php 
+						$clients = carbon_get_the_post_meta('crb_clients');
+						foreach ( $clients as $client ): ?>
+						<div class="clients_logo md:px-4 mb-12 md:mb-6">
+							<?php $photo_src = wp_get_attachment_image_src($client, 'large'); ?>
+							<img src="<?php echo $photo_src[0]; ?>" loading="lazy" class="h-20 md:h-20 bg-white object-contain rounded-2xl px-6 py-3 mx-auto">
+						</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
 		<!-- END КЛИЕНТЫ -->
 
 	</div>

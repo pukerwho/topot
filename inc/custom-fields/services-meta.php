@@ -73,10 +73,6 @@ function crb_services_theme_options() {
     ->add_tab('Аудит', array(
       Field::make( 'checkbox', 'crb_services_show_audit', 'Выводить Аудит?' ),
     ))
-    ->add_tab('Клиенты', array(
-      Field::make( 'checkbox', 'crb_services_show_clients', 'Выводить клиентов?' ),
-      Field::make( 'media_gallery', 'crb_services_clients', 'Клиент' )->set_type( array( 'image' ) ),
-    ))
     ->add_tab('Шаблон', array(
       Field::make( 'checkbox', 'crb_services_show_price', 'Выводить Тарифы?' ),
       Field::make( 'select', 'crb_services_price_template', 'Шаблон тарифов' )->add_options(

@@ -17,6 +17,9 @@ function crb_attach_theme_options() {
     ->add_tab( __('Блок О НАС'), array(
         Field::make( 'rich_text', 'crb_aboutus_text', 'Текст О НАС' ),
     ) )
+    ->add_tab( __('Клиенты'), array(
+        Field::make( 'media_gallery', 'crb_clients', 'Клиент' )->set_type( array( 'image' ) ),
+    ) )
     ->add_tab( __('Контакты'), array(
         Field::make( 'complex', 'crb_contacts', __( 'Контактная информация' ) )
             ->set_layout( 'tabbed-horizontal')
