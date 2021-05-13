@@ -269,7 +269,7 @@
 			<div class="w-full md:w-10/12 mx-auto">
 				<div class="flex flex-col md:flex-row items-center justify-center md:-mx-4">
 					<?php 
-						$clients = carbon_get_the_post_meta('crb_clients');
+						$clients = carbon_get_theme_option('crb_clients');
 						foreach ( $clients as $client ): ?>
 						<div class="clients_logo md:px-4 mb-12 md:mb-6">
 							<?php $photo_src = wp_get_attachment_image_src($client, 'large'); ?>

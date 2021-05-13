@@ -3,7 +3,7 @@
 		<div class="flex flex-col lg:flex-row items-center bg-light relative rounded-lg shadow-md px-6 py-8">
 			<div class="w-full lg:w-2/3 mb-6 lg:mb-0">
 				<div class="welcome_title text-white relative z-10 mb-6">
-					<h1>🧑‍💻 <?php _e('Создаем сайты', 'treba'); ?>
+					<h1><?php _e('Создаем сайты', 'treba'); ?>
 					<br><?php _e('и привлекаем клиентов', 'treba'); ?></h1>
 				</div>
 				<div class="welcome_desc text-white text-xl md:text-2xl relative opacity-75 z-10 mb-6">
