@@ -72,8 +72,7 @@
 		<?php if(carbon_get_the_post_meta('crb_services_show_example')): ?>
 		<!-- PORTFOLIO -->
 		<h2 class="text-4xl md:text-5xl first-color mb-10"><?php _e('Примеры работ', 'treba'); ?></h2>
-		<div class="portfolio-masonry lg:-mx-2 mb-16">
-			<div class="portfolio-masonry-size"></div>
+		<div class="portfolio_archive mb-20">
 			<?php 
 	  		$portfolio_array = [];
 	  		$u_portfolio = carbon_get_post_meta(get_the_ID(), 'crb_services_portfolio'); 
@@ -90,10 +89,38 @@
 				'post__in' => $portfolio_array,
 			) );
 			if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-			  <div class="portfolio-masonry-item overflow-hidden px-2 service_example_item animate-puk mb-4">
-					<a href="<?php the_permalink(); ?>">
-						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="" class="w-full">
-					</a>
+			  <div class="portfolio_archive_item flex flex-col md:flex-row md:items-center bg-light rounded-xl mb-10 md:mb-6">
+					<div class="w-full md:w-1/2 px-4 md:px-12 py-6 md:py-8 md:mr-6 mb-6 md:mb-0">
+						<div class="portfolio_archive_item_service mb-8">
+							<a href="#" class="text-sm uppercase bg-first-gradient rounded-lg px-3 py-2"><?php _e('Создание сайтов', 'treba'); ?></a>
+							<a href="#" class="hidden text-sm uppercase bg-green-500 rounded-lg px-3 py-2"><?php _e('SEO-продвижение', 'treba'); ?></a>
+						</div>
+						<div class="text-3xl font-bold mb-6">
+							<?php echo carbon_get_the_post_meta('crb_portfolio_title'); ?>
+						</div>
+						<div class="text-xl opacity-75 md:mb-12">
+							<?php echo carbon_get_the_post_meta('crb_portfolio_description'); ?>
+						</div>
+						<div class="hidden md:block">
+							<a href="<?php the_permalink(); ?>" class="inline-flex items-center text-center rounded-full px-12 py-3" style="border: 1px solid rgba(255,255,255,0.55);">	
+								<span class="mr-2"><?php _e('Подробнее', 'treba'); ?></span>
+								<svg class="push-this tran-03s" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.7446 14.2159C12.1822 14.6664 11.3527 14.6342 10.8285 14.1194L10.7302 14.0126C10.2715 13.4602 10.3042 12.6455 10.8285 12.1306L14.1118 8.90625H2.29545C1.50468 8.90625 0.863636 8.27665 0.863636 7.5C0.863636 6.72335 1.50468 6.09375 2.29545 6.09375H14.1118L10.8285 2.86937L10.7302 2.76257C10.2715 2.21023 10.3042 1.39548 10.8285 0.88063C11.3876 0.331455 12.2942 0.331455 12.8534 0.88063L18.5806 6.50563L18.6789 6.61243C19.1376 7.16477 19.1048 7.97952 18.5806 8.49437L12.8534 14.1194L12.7446 14.2159Z" fill="#ffffff"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="w-full md:w-1/2 mb-6 md:mb-0">
+						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" class="portfolio_archive_item_thumb w-full mb-6 md:mb-0">
+						<div class="block md:hidden px-4">
+							<a href="<?php the_permalink(); ?>" class="flex md:inline-flex justify-center items-center text-center rounded-full px-8 py-3" style="border: 1px solid rgba(255,255,255,0.55);">	
+								<span class="mr-2"><?php _e('Подробнее', 'treba'); ?></span>
+								<svg class="push-this tran-03s" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.7446 14.2159C12.1822 14.6664 11.3527 14.6342 10.8285 14.1194L10.7302 14.0126C10.2715 13.4602 10.3042 12.6455 10.8285 12.1306L14.1118 8.90625H2.29545C1.50468 8.90625 0.863636 8.27665 0.863636 7.5C0.863636 6.72335 1.50468 6.09375 2.29545 6.09375H14.1118L10.8285 2.86937L10.7302 2.76257C10.2715 2.21023 10.3042 1.39548 10.8285 0.88063C11.3876 0.331455 12.2942 0.331455 12.8534 0.88063L18.5806 6.50563L18.6789 6.61243C19.1376 7.16477 19.1048 7.97952 18.5806 8.49437L12.8534 14.1194L12.7446 14.2159Z" fill="#ffffff"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
 				</div>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
@@ -108,8 +135,13 @@
 					<img src="<?php bloginfo('template_url'); ?>/img/sign-of-the-horns.webp" width="35" class="mr-2">
 					<span><?php _e('Реальный кейс', 'treba'); ?></span>
 				</div>
-				<div class="text-md content">
+				<div class="text-md content mb-8">
 					<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_case_text') ); ?>
+				</div>
+				<div class="text-xl">
+					<a href="<?php echo get_post_type_archive_link('cases'); ?>" class="bg-first-gradient rounded px-6 py-3">
+						👉 <?php _e('Больше кейсов', 'treba'); ?>
+					</a>
 				</div>
 			</div>
 			<div class="w-full lg:w-1/2 lg:pl-8">
@@ -138,6 +170,14 @@
 		</div>
 		<!-- END OUR CASE -->
 		<?php endif; ?>
+	
+		<!-- АУДИТ -->
+		<?php if(carbon_get_the_post_meta('crb_services_show_audit')): ?>
+			<div class="mb-20">
+				<?php get_template_part('blocks/elements/audit'); ?>
+			</div>
+		<?php endif; ?>
+		<!-- END АУДИТ -->
 
 		<!-- PERSON -->
 		<?php if(carbon_get_the_post_meta('crb_services_person_show')): ?>
@@ -193,8 +233,9 @@
 			<?php the_content(); ?>
 		</div>
 		<!-- END DESCRIPTION -->
+
 		<!-- FAQ -->
-		<div>
+		<div class="mb-12">
 			<div class="w-full lg:w-3/4 mx-auto">
 				<h2 class="text-4xl md:text-5xl second-color text-center mb-4"><?php _e('Ответы на вопросы', 'treba'); ?></h2>
 				<?php 
@@ -221,6 +262,27 @@
 			</div>
 		</div>
 		<!-- END FAQ -->
+
+		<!-- КЛИЕНТЫ -->
+		<?php if(carbon_get_the_post_meta('crb_services_show_clients')): ?>
+			<div class="clients">
+				<h2 class="text-4xl md:text-5xl first-color text-center mb-12"><?php _e('Наши клиенты', 'treba'); ?></h2>
+				<div class="w-full md:w-10/12 mx-auto">
+					<div class="flex flex-col md:flex-row items-center justify-center md:-mx-4">
+						<?php 
+							$clients = carbon_get_the_post_meta('crb_services_clients');
+							foreach ( $clients as $client ): ?>
+							<div class="clients_logo md:px-4 mb-12 md:mb-6">
+								<?php $photo_src = wp_get_attachment_image_src($client, 'large'); ?>
+								<img src="<?php echo $photo_src[0]; ?>" loading="lazy" class="h-20 md:h-20 bg-white object-contain rounded-2xl px-6 py-3 mx-auto">
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
+		<!-- END КЛИЕНТЫ -->
+
 	</div>
 </div>
 <?php endwhile; else: ?>

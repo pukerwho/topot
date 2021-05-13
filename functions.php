@@ -25,12 +25,24 @@ if( !isset( $content_width ) ) {
   $content_width = 960;
 }
 
-require_once get_template_directory() . '/inc/carbon-fields/carbon-fields-plugin.php';
-require_once get_template_directory() . '/inc/custom-fields/settings-meta.php';
-require_once get_template_directory() . '/inc/custom-fields/post-meta.php';
-require_once get_template_directory() . '/inc/custom-fields/pages-meta.php';
-require_once get_template_directory() . '/inc/custom-fields/services-meta.php';
-require_once get_template_directory() . '/inc/custom-fields/uslugi-meta.php';
+
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+use Carbon_Fields\Block;
+
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+    require_once __DIR__ . '/vendor/autoload.php';
+    \Carbon_Fields\Carbon_Fields::boot();
+    require_once get_template_directory() . '/inc/carbon-fields/carbon-fields-plugin.php';
+    require_once get_template_directory() . '/inc/custom-fields/settings-meta.php';
+    require_once get_template_directory() . '/inc/custom-fields/post-meta.php';
+    require_once get_template_directory() . '/inc/custom-fields/pages-meta.php';
+    require_once get_template_directory() . '/inc/custom-fields/services-meta.php';
+    require_once get_template_directory() . '/inc/custom-fields/uslugi-meta.php';
+}
+
+
 require_once get_template_directory() . '/inc/TGM/example.php';
 
 

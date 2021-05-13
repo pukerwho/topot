@@ -1,4 +1,4 @@
-<div class="welcome flex items-center mb-20 md:mb-0 pt-32 lg:pt-0">
+<div class="welcome flex items-center mb-32 pt-32">
 	<div class="container mx-auto px-4 lg:px-0">
 		<div class="flex flex-col lg:flex-row items-center bg-light relative rounded-lg shadow-md px-6 py-8">
 			<div class="w-full lg:w-2/3 mb-6 lg:mb-0">
