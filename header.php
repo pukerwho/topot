@@ -29,22 +29,32 @@
   <header id="header" class="header py-6" role="banner">
     <div class="container mx-auto px-4 lg:px-0">
       <div class="header_content flex justify-between items-center text-white">
-        <div class="header_logo">
-          <a href="<?php echo home_url(); ?>" class="flex items-center">
-            <span class="text-xl uppercase"><span class="font-black">Treba</span></span>
-          </a>
+        <div class="flex items-center">
+          <div class="header_logo">
+            <a href="<?php echo home_url(); ?>" class="flex items-center">
+              <span class="text-xl uppercase"><span class="font-black">Treba</span></span>
+            </a>
+          </div>
+          <div class="hidden text-2xl red-color lg:block lg:pl-6 lg:pr-2">|</div>
+          <div class="header_menu hidden lg:block">
+            <?php wp_nav_menu([
+              'theme_location' => 'head_menu',
+              'menu_id' => 'head_menu',
+              'menu_class' => 'flex justify-between text-lg'
+            ]); ?>
+          </div>
         </div>
-        <div class="header_menu hidden lg:block">
-          <?php wp_nav_menu([
-            'theme_location' => 'head_menu',
-            'menu_id' => 'head_menu',
-            'menu_class' => 'flex justify-between text-lg'
-          ]); ?>
-        </div>
-        <div class="lang flex items-center">
-          <?php if (function_exists('pll_the_languages')) { 
-            pll_the_languages(); 
-          } ?>
+        <div class="flex items-center">
+          <div class="hidden lg:block header_order mr-4">
+            <div class="first-btn cursor-pointer order-js" data-order="В шапке кликнули">
+              <?php _e('Оставить заявку', 'treba'); ?>
+            </div>
+          </div>
+          <div class="lang flex items-center">
+            <?php if (function_exists('pll_the_languages')) { 
+              pll_the_languages(); 
+            } ?>
+          </div>
         </div>
         <div class="header_humburger block lg:hidden">
           <span></span>

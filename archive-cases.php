@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div class="pt-32 pb-20">
 	<div class="container mx-auto px-2 lg:px-0">
 		<h1 class="text-5xl first-color text-center mb-12">📈 <?php echo post_type_archive_title(); ?></h1>

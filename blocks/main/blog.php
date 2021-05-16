@@ -21,7 +21,7 @@
 					'order' => 'DESC',
 				));
 				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-					<div class="blog_item bg-orange-200 rounded-lg py-4 px-6 mb-6">
+					<div class="blog_item bg-orange-light rounded-lg py-4 px-6 mb-6">
 						<div class="blog_item_title title-color text-xl md:text-2xl font-bold mb-2">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</div>

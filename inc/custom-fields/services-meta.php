@@ -8,6 +8,7 @@ function crb_services_theme_options() {
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'services' )
     ->add_tab('Контент', array(
+      Field::make( 'rich_text', 'crb_services_welcome_text', 'Вступительный текст' ),
       Field::make( 'image', 'crb_services_thumb', 'Иконка для услуги' )->set_value_type( 'url'),
       Field::make( 'checkbox', 'crb_services_person_show', 'Выводить Вы В Надежны Руках?' ),
     	Field::make( 'image', 'crb_services_person_photo', 'Вы в надежных руках - Фото' )->set_conditional_logic( array(

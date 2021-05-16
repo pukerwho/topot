@@ -1,5 +1,6 @@
     </section>
     <footer id="footer">
+      <?php get_template_part('blocks/elements/clients'); ?>
     	<?php get_template_part('blocks/main/hey'); ?>
     </footer>
     <div class="order_modal w-full h-full fixed left-0 top-0 flex justify-center items-center">

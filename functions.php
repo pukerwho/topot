@@ -77,7 +77,6 @@ function theme_name_scripts() {
   wp_enqueue_script( 'TweenMax', get_template_directory_uri() . '/js/TweenMax.min.js','','',true);
   wp_enqueue_script( 'ScrollMagic', get_template_directory_uri() . '/js/ScrollMagic.min.js','','',true);
   wp_enqueue_script( 'gsap', get_template_directory_uri() . '/js/animation.gsap.min.js','','',true);
-  wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js','','',true);
   wp_enqueue_script( 'imageloaded', get_template_directory_uri() . '/js/imageloaded.min.js','','',true);
   wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.min.js','','',true);
   // wp_enqueue_script( 'chart', 'https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js','','',true);
@@ -198,7 +197,7 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 function wpb_login_logo_url_title() {
   return 'Treba Solutions';
 }
-add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
+add_filter( 'login_headertext', 'wpb_login_logo_url_title' );
 
 function my_custom_upload_mimes($mimes = array()) {
     $mimes['svg'] = "image/svg+xml";
@@ -208,4 +207,7 @@ function my_custom_upload_mimes($mimes = array()) {
 
 add_action('upload_mimes', 'my_custom_upload_mimes');
 
-?>
+function get_taxonomy_archive_link( $taxonomy ) {
+  $tax = get_taxonomy( $taxonomy ) ;
+  return get_bloginfo( 'url' ) . '/' . $tax->rewrite['slug'];
+}

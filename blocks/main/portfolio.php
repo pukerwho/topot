@@ -10,7 +10,7 @@
 					
 					<div class="text-xl md:text-2xl">
 						<p class="mb-2"><?php _e('Если вам нравятся наши работы - обязательно напишите нам. Мы отправим вам свое коммерческое предложение', 'treba'); ?>.</p>
-						<p class="mb-6"><a href="mailto:info@timeto.top" class="underline">info@timeto.top</a></p>
+						<p class="mb-6"><a href="mailto:hello@treba-solutions.com" class="underline">hello@treba-solutions.com</a></p>
 						<p><?php _e('Выполненные проекты', 'treba'); ?> <span class="hidden md:inline">👉</span><span class="inline md:hidden">👇</span></p>
 					</div>	
 				</div>
