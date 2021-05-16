@@ -6,6 +6,7 @@
 				'taxonomy' => 'uslugi', 
 				'parent' => 0, 
 				'hide_empty' => false,
+				'orderby' => 'term_order',
 			));
 			foreach ( $all_uslugi as $uslugi ): ?>
 				<div class="services_item md:h-80 w-full md:w-1/3 relative md:px-2 mb-4">
