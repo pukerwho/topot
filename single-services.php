@@ -43,8 +43,16 @@
 	</div>
 	<!-- END WELCOME -->
 
+	<!-- ОТЗЫВ -->
+	<?php if(carbon_get_the_post_meta('crb_services_show_review')): ?>
+		<?php get_template_part('blocks/main/review'); ?>
+	<?php endif; ?>
+	<!-- END ОТЗЫВ -->
+
 	<!-- КОММЕРЧЕСКОЕ -->
+	<?php if(carbon_get_the_post_meta('crb_services_show_commerce')): ?>
 		<?php get_template_part('blocks/elements/commerce'); ?>
+	<?php endif; ?>
 	<!-- END КОММЕРЧЕСКОЕ -->
 
 	<div class="container mx-auto px-2 lg:px-0">

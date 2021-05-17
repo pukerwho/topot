@@ -139,6 +139,8 @@ function crb_services_theme_options() {
       ),
       Field::make( 'checkbox', 'crb_services_city_show', 'Выводить в разделе Города?' ),
       Field::make( 'checkbox', 'crb_services_crm_show', 'Выводить в разделе CRM?' ),
+      Field::make( 'checkbox', 'crb_services_show_commerce', 'Выводить Коммерческое?' ),
+      Field::make( 'checkbox', 'crb_services_show_review', 'Выводить Отзыв?' ),
     ));
 }
 

@@ -8,6 +8,7 @@
 				'taxonomy' => 'uslugi', 
 				'parent' => 0, 
 				'hide_empty' => false,
+				'orderby' => 'term_order',
 			)); 
 			foreach ($services as $service): ?>
 				<div class="services_item flex bg-light rounded-lg py-6 px-4 mb-6">
