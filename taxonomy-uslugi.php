@@ -47,13 +47,13 @@
 		<!-- END WELCOME -->
 
 		<!-- ОТЗЫВ -->
-		<?php if(carbon_get_term_meta('crb_uslugi_show_review')): ?>
+		<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_review')): ?>
 			<?php get_template_part('blocks/main/review'); ?>
 		<?php endif; ?>
 		<!-- END ОТЗЫВ -->
 
 		<!-- КОММЕРЧЕСКОЕ -->
-		<?php if(carbon_get_term_meta('crb_uslugi_show_commerce')): ?>
+		<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_commerce')): ?>
 			<?php get_template_part('blocks/elements/commerce'); ?>
 		<?php endif; ?>
 		<!-- END КОММЕРЧЕСКОЕ -->
