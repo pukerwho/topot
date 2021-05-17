@@ -9,7 +9,7 @@
 		<!-- WELCOME -->
 		<div class="welcome relative pb-20 md:pb-32">
 			<div class="container mx-auto px-2 lg:px-0">
-				<h1 class="text-6xl text-center mb-20"><?php the_title(); ?></h1>
+				<h1 class="text-6xl text-center mb-20"><?php single_term_title(); ?></h1>
 				<div class="flex flex-col md:flex-row md:justify-between md:-mx-12">
 					<div class="w-full md:w-7/12 md:px-12 mb-8 md:mb-0">
 						<div class="content text-xl mb-12">
