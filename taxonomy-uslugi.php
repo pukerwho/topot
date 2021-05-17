@@ -6,49 +6,59 @@
   if ($uslugi_template === 'seo'): 
 ?>
 	<div class="pt-32 pb-20">
-		<div class="container mx-auto px-2 lg:px-0">
-			<!-- WELCOME -->
-			<div class="flex items-center bg-light relative rounded-lg shadow-xl px-6 py-8 mb-20">
-				<div class="w-full lg:w-2/3">
-					<div class="welcome_title text-white relative z-10 mb-6">
-						<h1><?php single_term_title(); ?></h1>
-					</div>
-					<div class="welcome_desc text-white text-xl md:text-2xl relative opacity-75 z-10 mb-6">
-						<p><?php _e('Бесплатная консультация специалиста по вашему вопросу', 'topot'); ?></p>
-					</div>	
-				</div>
-				<div class="w-full lg:w-1/3">
-					<div class="welcome_lead">
-						<div class="welcome_lead_title w-full text-center">
-							<div class="bg-second-gradient inline-block rounded-2xl shadow-xl text-4xl title-font text-black pt-4 pb-8 px-8">
-								<?php _e('Обсудить проект', 'top'); ?>	
-							</div>
+		<!-- WELCOME -->
+		<div class="welcome relative pb-20 md:pb-32">
+			<div class="container mx-auto px-2 lg:px-0">
+				<h1 class="text-6xl text-center mb-20"><?php the_title(); ?></h1>
+				<div class="flex flex-col md:flex-row md:justify-between md:-mx-12">
+					<div class="w-full md:w-7/12 md:px-12 mb-8 md:mb-0">
+						<div class="content text-xl mb-12">
+							<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_welcome_text') ); ?>	
 						</div>
-						<div class="flex items-center justify-center -mx-2 -mt-4 relative z-20">
-							<div class="welcome_contact_icon px-2">
-								<a href="tg://resolve?domain=time2top" class="flex items-center rounded-lg btn telegram px-4 py-2" target="_blank">
-									<img src="<?php bloginfo('template_url'); ?>/img/telegram.svg" alt="Telegram" width="21" class="mr-2">
-									<span class="text-xl">Telegram</span>
-								</a>
+						<?php get_template_part('blocks/elements/recommend'); ?>
+					</div>
+					<div class="w-full md:w-5/12 md:px-12">
+						<div class="bg-light rounded-2xl px-6 py-8">
+							<div class="text-lg uppercase text-center mb-4">
+								<?php _e('Обсуждение проекта', 'treba'); ?>
 							</div>
-							<div class="welcome_contact_icon px-2">
-								<a href="viber://chat?number=+380997713997" class="flex items-center rounded-lg btn viber px-4 py-2" target="_blank">
-									<img src="<?php bloginfo('template_url'); ?>/img/viber.svg" alt="Viber" width="21" class="mr-2">
-									<span class="text-xl">Viber</span>
-								</a>
-							</div>
-							<div class="welcome_contact_icon px-2">
-								<a href="mailto:hello@treba-solutions.com" class="flex items-center rounded-lg btn email px-4 py-2">
-									<img src="<?php bloginfo('template_url'); ?>/img/email.svg" alt="Email" width="21" class="mr-2">
-									<span class="text-xl">Email</span>
-								</a>
+							<div class="welcome_form">
+								<!-- ФОРМА -->
+								<form name="form_welcome">
+				          <input type="text" name="Контакт" placeholder="<?php _e('Ваш телефон или email для связи', 'treba'); ?>" class="w-full rounded-lg px-3 py-4 mb-4" required>
+				          <input type="text" name="URL" placeholder="<?php _e('Адрес вашего сайта', 'treba'); ?>" class="w-full rounded-lg px-3 py-4 mb-4">
+				          <textarea name="Сообщение" col="5" class="w-full rounded-lg px-3 py-4 mb-4" placeholder="<?php _e('Например: Меня интересует стоимость продвижения моего сайта', 'treba'); ?>"></textarea>
+				          <input type="hidden" name="Cтраница" value="<?php echo get_the_permalink(); ?>">
+				          <input type="hidden" name="Услуга" value="<?php the_title(); ?>" id="input_hidden_service">
+					        <button type="submit" class="welcome_btn second-btn text-black w-full flex justify-center">
+					          <?php _e('Отправить', 'treba'); ?>
+					        </button>
+					      </form>
+					      <div class="welcome_form_success bg-green-700 px-3 py-4 mt-4">
+					      	👌 <?php _e('Отлично, мы получили вашу заявку. В ближайшие 20 минут мы вам ответим', 'treba'); ?>. 
+					      </div>
+								<!-- END ФОРМА -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- END WELCOME -->
+		</div>
+		<!-- END WELCOME -->
 
+		<!-- ОТЗЫВ -->
+		<?php if(carbon_get_the_post_meta('crb_services_show_review')): ?>
+			<?php get_template_part('blocks/main/review'); ?>
+		<?php endif; ?>
+		<!-- END ОТЗЫВ -->
+
+		<!-- КОММЕРЧЕСКОЕ -->
+		<?php if(carbon_get_the_post_meta('crb_services_show_commerce')): ?>
+			<?php get_template_part('blocks/elements/commerce'); ?>
+		<?php endif; ?>
+		<!-- END КОММЕРЧЕСКОЕ -->
+
+		<div class="container mx-auto px-2 lg:px-0">
 			<!-- WHY US -->
 			<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_whyus')): ?>
 			<div class="mb-20">
@@ -123,24 +133,6 @@
 				<?php endforeach; ?>
 			</div>
 			<!-- END FAQ -->
-
-			<!-- КЛИЕНТЫ -->
-			<div class="clients">
-				<h2 class="text-4xl md:text-5xl first-color text-center mb-12"><?php _e('Наши клиенты', 'treba'); ?></h2>
-				<div class="w-full md:w-10/12 mx-auto">
-					<div class="flex flex-col md:flex-row items-center justify-center md:-mx-4">
-						<?php 
-							$clients = carbon_get_the_post_meta('crb_clients');
-							foreach ( $clients as $client ): ?>
-							<div class="clients_logo md:px-4 mb-12 md:mb-6">
-								<?php $photo_src = wp_get_attachment_image_src($client, 'large'); ?>
-								<img src="<?php echo $photo_src[0]; ?>" loading="lazy" class="h-20 md:h-20 bg-white object-contain rounded-2xl px-6 py-3 mx-auto">
-							</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
-			</div>
-			<!-- END КЛИЕНТЫ -->
 
 			<!-- Продвижение в городах -->
 			<div class="mb-10">
