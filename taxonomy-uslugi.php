@@ -13,7 +13,7 @@
 				<div class="flex flex-col md:flex-row md:justify-between md:-mx-12">
 					<div class="w-full md:w-7/12 md:px-12 mb-8 md:mb-0">
 						<div class="content text-xl mb-12">
-							<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_welcome_text') ); ?>	
+							<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_welcome_text') ); ?>	
 						</div>
 						<?php get_template_part('blocks/elements/recommend'); ?>
 					</div>

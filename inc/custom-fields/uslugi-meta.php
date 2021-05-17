@@ -16,6 +16,7 @@ function crb_uslugi_theme_options() {
       ),
       Field::make( 'image', 'crb_uslugi_thumb', 'Иконка для категории' )->set_value_type( 'url'),
       Field::make( 'text', 'crb_uslugi_title', 'Заголовок H1' ),
+      Field::make( 'rich_text', 'crb_uslugi_welcome_text', 'Вступительный текст' ),
       Field::make( 'textarea', 'crb_uslugi_description', 'Короткое описание' ),
       Field::make( 'checkbox', 'crb_uslugi_show_whyus', 'Показывать ЧЕМ МЫ ЛУЧШЕ?' ),
       Field::make( 'checkbox', 'crb_uslugi_show_review', 'Показывать ОТЗЫВ?' ),
