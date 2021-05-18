@@ -21,6 +21,8 @@ function crb_uslugi_theme_options() {
       Field::make( 'checkbox', 'crb_uslugi_show_whyus', 'Показывать ЧЕМ МЫ ЛУЧШЕ?' ),
       Field::make( 'checkbox', 'crb_uslugi_show_review', 'Показывать ОТЗЫВ?' ),
       Field::make( 'checkbox', 'crb_uslugi_show_commerce', 'Показывать КОММЕРЧЕСКОЕ?' ),
+      Field::make( 'checkbox', 'crb_uslugi_show_city', 'Показывать продвижение в ГОРОДАХ?' ),
+      Field::make( 'checkbox', 'crb_uslugi_show_crm', 'Показывать продвижение на CRM?' ),
       Field::make( 'complex', 'crb_uslugi_whyus', 'Чем мы лучше других?' )
 	    	->add_fields( array(
 	    		Field::make( 'image', 'crb_uslugi_whyus_icon', 'Иконка' )->set_value_type( 'url'),

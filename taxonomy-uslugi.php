@@ -135,6 +135,7 @@
 			<!-- END FAQ -->
 
 			<!-- Продвижение в городах -->
+			<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_city')): ?>
 			<div class="mb-10">
 				<h2 class="text-2xl md:text-3xl second-color text-center mb-4"><?php _e('Занимаемся SEO-продвижением по всей Украине', 'topot'); ?></h2>
 				<div class="flex flex-wrap lg:-mx-2 bg-light rounded-lg px-8 pt-8 pb-4">
@@ -173,9 +174,11 @@
 					<?php endwhile; endif; wp_reset_postdata(); ?>
 				</div>
 			</div>
+			<?php endif; ?>
 			<!-- END Продвижение в городах -->
 
 			<!-- Продвижение на CMS -->
+			<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_crm')): ?>
 			<div class="mb-10">
 				<h2 class="text-2xl md:text-3xl first-color text-center mb-4"><?php _e('Раскрутка сайтов на различных CMS', 'topot'); ?></h2>
 				<div class="flex flex-wrap lg:-mx-2 bg-light rounded-lg px-8 pt-8 pb-4">
@@ -214,6 +217,7 @@
 					<?php endwhile; endif; wp_reset_postdata(); ?>
 				</div>
 			</div>
+			<?php endif; ?>
 			<!-- END Продвижение в городах -->	
 
 			<!-- OTHER -->
