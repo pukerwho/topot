@@ -121,7 +121,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="w-full md:w-1/2 mb-6 md:mb-0">
+					<div class="w-full md:w-1/2 mb-6 md:mb-0 bg-main">
 						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" class="portfolio_archive_item_thumb w-full mb-6 md:mb-0">
 						<div class="block md:hidden px-4">
 							<a href="<?php the_permalink(); ?>" class="flex md:inline-flex justify-center items-center text-center rounded-full px-8 py-3" style="border: 1px solid rgba(255,255,255,0.55);">	
