@@ -78,6 +78,8 @@
     	</div>
     </div>
     <div class="modal_bg"></div>
+    <!-- МАСКИ -->
+    <?php get_template_part('blocks/elements/masks'); ?>
     <?php wp_footer(); ?>
 </body>
 </html>
