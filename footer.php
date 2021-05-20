@@ -13,7 +13,6 @@
 	  				✖️
 	  			</div>
   			</div>
-  			
   			<div class="text-lg text-black mb-4">
   				<?php _e('Заполните пару полей ниже и мы примем вашу заявку', 'treba'); ?> 👇
   			</div>
@@ -35,6 +34,8 @@
   			</div>
   		</div>
     </div>
+
+    <?php get_template_part('blocks/forms/commerce-form'); ?>
 
     <!-- Выбрать мессенджер -->
     <div class="chat_modal w-full h-full fixed left-0 top-0 flex justify-center items-center">

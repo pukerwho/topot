@@ -10,7 +10,7 @@
 	</div>
 </div>
 <div class="flex justify-center px-2 mb-20">
-	<div class="first-btn text-center">
+	<div class="first-btn text-center cursor-pointer commerce-js" data-commerce="<?php echo get_the_title(); ?>">
 		<?php _e('Получить коммерческое предложение', 'treba'); ?>
 	</div>
 </div>

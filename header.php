@@ -23,7 +23,7 @@
     wp_head();
 	?>
 </head>
-<body <?php echo body_class(); ?> id="test" data-scrollery>
+<body <?php echo body_class(); ?>>
   <!-- <div class="preloader"></div> -->
   
   <header id="header" class="header py-6" role="banner">

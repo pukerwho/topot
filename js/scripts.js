@@ -106,6 +106,21 @@ function init() {
     $('.modal_bg').removeClass('show');
   });
 
+  // COMMERCE MODAL
+  $('.commerce-js').on('click', function(){
+    $('.commerce_modal').addClass('show');
+    $('.modal_bg').addClass('show');
+
+    //Вставляем услугу в инпут
+    let dataCommerce = $(this).data('commerce');
+    $('#input_hidden_service').val(dataOrder);
+  });
+
+  $('.commerce_close').on('click', function(){
+    $('.commerce_modal').removeClass('show');
+    $('.modal_bg').removeClass('show');
+  });
+
 
   // CHAT MODAL
   $('.chat-js').on('click', function(){
