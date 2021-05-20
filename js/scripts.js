@@ -110,10 +110,6 @@ function init() {
   $('.commerce-js').on('click', function(){
     $('.commerce_modal').addClass('show');
     $('.modal_bg').addClass('show');
-
-    //Вставляем услугу в инпут
-    let dataCommerce = $(this).data('commerce');
-    $('#input_hidden_service').val(dataOrder);
   });
 
   $('.commerce_close').on('click', function(){
@@ -184,6 +180,23 @@ function init() {
       $('.success_notice').removeClass('show');
       $('.modal_bg').removeClass('show');
     }, 4500)
+  }
+
+  const form_commerce = document.forms['form_commerce']
+  if (form_commerce) {
+    form_commerce.addEventListener('submit', e => {
+      e.preventDefault()
+      let this_form = form_commerce
+      let data = new FormData(form_commerce)
+      fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
+        .then(response => showCommerceSuccessMessage(data, this_form))
+        .catch(error => console.error('Error!', error.message))
+    })  
+  }
+
+  function showCommerceSuccessMessage(data, this_form) {
+    this_form.reset();
+    $('.commerce_success').addClass('show');
   }
 
   // Scrollbar.init(document.querySelector('body'));

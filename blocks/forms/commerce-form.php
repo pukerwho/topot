@@ -13,12 +13,12 @@
     </div>
     <div>
       <!-- ФОРМА -->
-      <form name="form_order" class="">
-        <input type="text" name="Контакт" placeholder="<?php _e('Ваш email для связи', 'treba'); ?>" class="w-full text-black px-2 py-4 mb-4 border-2" required>
+      <form name="form_commerce">
+        <input type="email" name="Контакт" placeholder="<?php _e('Ваш email для связи', 'treba'); ?>" class="w-full text-black px-2 py-4 mb-4 border-2" required>
         <input type="text" name="URL" placeholder="<?php _e('Адрес вашего сайта (если есть)', 'treba'); ?>" class="w-full text-black px-2 py-4 mb-4 border-2">
         <textarea name="Сообщение" rows="5" class="w-full text-black px-2 py-4 mb-4 border-2" placeholder="<?php _e('Ваше сообщение', 'treba'); ?>"></textarea>
         <input type="hidden" name="Cтраница" value="<?php echo get_the_permalink(); ?>">
-        <input type="hidden" name="Услуга" value="" id="input_hidden_service">
+        <input type="hidden" name="Услуга" value="Коммерческое">
         <button type="submit" class="welcome_btn first-btn flex">
           <?php _e('Отправить', 'treba'); ?>
         </button>
