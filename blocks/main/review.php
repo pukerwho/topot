@@ -4,10 +4,10 @@
 			<div class="text-xl italic font-bold mb-6">
 				"Всем советую Кирилла из компании Treba Solutions. Это человек, который поймет, что вы хотите, посоветует правильность воплощение ваших желаний, все сделает в срок и <span class="red-color">вы останетесь довольны результатом на 100%.</span>"
 			</div>
-			<div class="flex items-center">
+			<div class="flex justify-center items-center">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svetlana-review.jpeg" class="rounded-full mr-4" width="52">
 				<div class="text-lg opacity-75">
-					Светлана, владелец студии S2S_ARCHITECT
+					<?php _e('Светлана, владелец студии S2S_ARCHITECT', 'treba'); ?>
 				</div>
 			</div>
 		</div>

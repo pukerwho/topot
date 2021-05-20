@@ -207,7 +207,7 @@
 							<?php _e('Вы в надежных руках', 'treba'); ?>
 						</div>
 						<div class="text-xl">
-							<?php echo carbon_get_the_post_meta('crb_services_person_text'); ?>
+							<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_person_text') ); ?>	
 						</div>
 					</div>
 				</div>
