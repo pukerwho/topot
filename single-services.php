@@ -206,7 +206,7 @@
 						<div class="text-4xl font-bold mb-6">
 							<?php _e('Вы в надежных руках', 'treba'); ?>
 						</div>
-						<div class="text-xl">
+						<div class="content text-xl">
 							<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_person_text') ); ?>	
 						</div>
 					</div>
