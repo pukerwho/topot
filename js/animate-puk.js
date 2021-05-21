@@ -46,7 +46,7 @@ let textShow = document.querySelectorAll('.text-show');
 var text_show_array = Array.prototype.slice.call(textShow);
 text_show_array.forEach(function(item){
   console.log('text-show')
-  var scene = new ScrollMagic.Scene({triggerElement: item,  duration: 1000, offset: -250, ease: Linear.easeNone})
+  var scene = new ScrollMagic.Scene({triggerElement: item,  duration: 1000, offset: -500, ease: Linear.easeNone})
   .setTween(item, {scaleX: 0,})
   .addTo(controller);
 })

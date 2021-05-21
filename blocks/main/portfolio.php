@@ -3,8 +3,8 @@
 		<div class="flex flex-col lg:flex-row justify-between">
 			<div class="w-full lg:w-2/5 pr-0 md:pr-10 mb-6 lg:mb-0">
 				<div class="sticky">
-					<div class="relative">
-						<h2 class="display-inline text-4xl md:text-5xl second-color mb-6"><?php _e('Портфолио', 'treba'); ?></h2>
+					<div class="relative flex">
+						<h2 class="inline text-4xl md:text-5xl second-color mb-6"><?php _e('Портфолио', 'treba'); ?></h2>
 						<div class="text-show"></div>	
 					</div>
 					
