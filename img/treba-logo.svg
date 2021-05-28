@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 112.422 139.151">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#Градієнт_без_назви_30);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+    </style>
+    <linearGradient id="Градієнт_без_назви_30" data-name="Градієнт без назви 30" x1="3.301" y1="102.406" x2="105.057" y2="0.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#facd33"/>
+      <stop offset="0.761" stop-color="#f47723"/>
+      <stop offset="1" stop-color="#f47723"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path class="cls-1" d="M71.58,135.927H36.822V35.7H1.019V2.888H107.3V35.7H71.58Z"/>
+    </clipPath>
+  </defs>
+  <title>treba-logo</title>
+  <g id="Шар_2" data-name="Шар 2">
+    <g id="Objects">
+      <g>
+        <path class="cls-2" d="M71.58,135.927H36.822V35.7H1.019V2.888H107.3V35.7H71.58Z"/>
+        <g class="cls-3">
+          <g>
+            <g>
+              <line class="cls-4" x1="52.951" y1="94.356" x2="73.448" y2="46.384"/>
+              <line class="cls-4" x1="35.054" y1="136.245" x2="49.197" y2="103.136"/>
+              <path class="cls-4" d="M49.2,103.136a4.774,4.774,0,1,0-2.9-4.39,4.763,4.763,0,0,0,2.9,4.39"/>
+            </g>
+            <g>
+              <g>
+                <line class="cls-4" x1="71.013" y1="14.945" x2="84.039" y2="1.762"/>
+                <line class="cls-4" x1="34.413" y1="51.388" x2="66.142" y2="19.815"/>
+              </g>
+              <path class="cls-4" d="M67.146,20.66a3.514,3.514,0,1,0-2.131-3.231,3.5,3.5,0,0,0,2.131,3.231"/>
+            </g>
+            <g>
+              <line class="cls-4" x1="18.819" y1="26.432" x2="26.132" y2="36.737"/>
+              <line class="cls-4" x1="1.019" y1="1.349" x2="15.322" y2="21.503"/>
+              <path class="cls-4" d="M15.88,26.752a3.027,3.027,0,1,0-1.835-2.784,3.029,3.029,0,0,0,1.835,2.784"/>
+            </g>
+            <line class="cls-4" x1="94.163" y1="1.796" x2="111.451" y2="23.088"/>
+            <line class="cls-4" x1="47.956" y1="138.157" x2="74.979" y2="117.507"/>
+            <line class="cls-4" x1="65.847" y1="15.162" x2="31.227" y2="1.159"/>
+            <line class="cls-4" x1="55.673" y1="100.015" x2="74.358" y2="107.62"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -32,6 +32,7 @@
         <div class="flex items-center">
           <div class="header_logo">
             <a href="<?php echo home_url(); ?>" class="flex items-center">
+              <!-- <img src=" echo get_stylesheet_directory_uri(); /img/treba-logo.svg" alt="Лого" width="36"> -->
               <span class="text-xl uppercase"><span class="font-black">Treba</span></span>
             </a>
           </div>
