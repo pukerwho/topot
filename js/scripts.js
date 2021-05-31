@@ -7,12 +7,12 @@ function init() {
   let mobileMenuBgOne = document.querySelector('.mobile_menu_bg_one');
   let mobileMenuBgTwo = document.querySelector('.mobile_menu_bg_two');
   
-  let mobileMenuHeight = mobileMenu.offsetHeight;
-  mobileMenu.style.width = mobileMenuHeight + 'px';
-  mobileMenuBgOne.style.width = mobileMenuHeight + 'px';
-  mobileMenuBgTwo.style.width = mobileMenuHeight + 'px';
-  mobileMenuBgOne.style.height = mobileMenuHeight + 'px';
-  mobileMenuBgTwo.style.height = mobileMenuHeight + 'px';
+  // let mobileMenuHeight = mobileMenu.offsetHeight;
+  // mobileMenu.style.width = mobileMenuHeight + 'px';
+  // mobileMenuBgOne.style.width = mobileMenuHeight + 'px';
+  // mobileMenuBgTwo.style.width = mobileMenuHeight + 'px';
+  // mobileMenuBgOne.style.height = mobileMenuHeight + 'px';
+  // mobileMenuBgTwo.style.height = mobileMenuHeight + 'px';
 
   headerHumburger.addEventListener('click', function(){
     headerHumburger.classList.toggle('active');

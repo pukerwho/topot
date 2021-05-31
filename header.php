@@ -69,9 +69,7 @@
     <?php wp_nav_menu([
       'theme_location' => 'head_menu',
       'menu_id' => 'head_menu',
-      'menu_class' => 'mobile_menu_list flex flex-col relative text-lg z-10 pl-4'
+      'menu_class' => 'mobile_menu_list flex flex-col relative text-lg py-8 px-4'
     ]); ?>
-    <div class="mobile_menu_bg_one"></div>
-    <div class="mobile_menu_bg_two"></div>
   </div>
   <section id="content" role="main">

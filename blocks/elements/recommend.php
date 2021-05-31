@@ -3,12 +3,12 @@
 </div>
 <div class="recommend">
 	<ul class="flex mb-6">
-		<li><img src="https://cdn-a.leavemealone.app/static/Anne-Laure-LeCunff-417cb59a5efdb1b6aadf7c126d53eb26.jpg" alt="" class="border-second rounded-full" width="46"></li>
-		<li class="-ml-2"><img src="https://cdn-a.leavemealone.app/static/Ely-Fornoville-c0324dd3dacd8b284ec5e7a4a2061c07.jpg" alt="" class="border-second rounded-full" width="46"></li>
-		<li class="-ml-2"><img src="https://cdn-a.leavemealone.app/static/Marie-88315b8d611a291bbfe8acc6b2a45dfa.jpg" alt="" class="border-second rounded-full" width="46"></li>
-		<li class="-ml-2"><img src="https://cdn-a.leavemealone.app/static/Jess-Wallace-f6ff807b8e4c957aafbf9f7eecb3bcb7.jpg" alt="" class="border-second rounded-full" width="46"></li>
-		<li class="-ml-2"><img src="https://cdn-a.leavemealone.app/static/Anne-Laure-LeCunff-417cb59a5efdb1b6aadf7c126d53eb26.jpg" alt="" class="border-second rounded-full" width="46"></li>
-		<li class="-ml-2"><img src="https://cdn-a.leavemealone.app/static/Anne-Laure-LeCunff-417cb59a5efdb1b6aadf7c126d53eb26.jpg" alt="" class="border-second rounded-full" width="46"></li>
+		<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/recommend-01.jpeg" alt="" class="border-second rounded-full" width="46"></li>
+		<li class="-ml-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/recommend-06.jpeg" alt="" class="border-second rounded-full" width="46"></li>
+		<li class="-ml-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/recommend-03.jpeg" alt="" class="border-second rounded-full" width="46"></li>
+		<li class="-ml-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/recommend-04.jpeg" alt="" class="border-second rounded-full" width="46"></li>
+		<li class="-ml-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/recommend-05.jpeg" alt="" class="border-second rounded-full" width="46"></li>
+		<li class="-ml-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/recommend-02.jpeg" alt="" class="border-second rounded-full" width="46"></li>
 		<li class="-ml-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svetlana-review.jpeg" alt="" class="border-second rounded-full" width="46"></li>
 	</ul>
 	<div class="text-lg">
