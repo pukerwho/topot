@@ -2,7 +2,7 @@
 
 
 <div class="pt-32 pb-20">
-	<div class="container mx-auto px-2 lg:px-0">
+	<div class="container mx-auto px-4 lg:px-0">
 		<div class="text-center mb-12">
 			<h1 class="text-3xl lg:text-5xl first-color"><?php echo post_type_archive_title(); ?></h1>
 			<div class="text-2xl"><?php _e('Сайты, разработанные нашей студией', 'treba'); ?></div>	

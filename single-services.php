@@ -5,8 +5,8 @@
 
 	<!-- WELCOME -->
 	<div class="welcome relative pb-20 md:pb-32">
-		<div class="container mx-auto px-2 lg:px-0">
-			<h1 class="text-6xl text-center mb-20"><?php the_title(); ?></h1>
+		<div class="container mx-auto px-4 lg:px-0">
+			<h1 class="text-4xl md:text-6xl text-center mb-12 md:mb-20"><?php the_title(); ?></h1>
 			<div class="flex flex-col md:flex-row md:justify-between md:-mx-12">
 				<div class="w-full md:w-7/12 md:px-12 mb-8 md:mb-0">
 					<div class="content text-xl mb-12">
@@ -39,7 +39,7 @@
 	<?php endif; ?>
 	<!-- END КОММЕРЧЕСКОЕ -->
 
-	<div class="container mx-auto px-2 lg:px-0">
+	<div class="container mx-auto px-4 lg:px-0">
 		<!-- WHY US -->
 		<div class="mb-20">
 			<div>
@@ -130,14 +130,16 @@
 					<img src="<?php bloginfo('template_url'); ?>/img/sign-of-the-horns.webp" width="35" class="mr-2">
 					<span><?php _e('Реальный кейс', 'treba'); ?></span>
 				</div>
-				<div class="text-md content mb-8">
+				<div class="text-md content mb-0 lg:mb-8">
 					<?php echo apply_filters( 'the_content', carbon_get_the_post_meta('crb_services_case_text') ); ?>
 				</div>
-				<div class="text-xl">
+				<!-- Кнопка на десктопе -->
+				<div class="hidden lg:block text-xl">
 					<a href="<?php echo get_post_type_archive_link('cases'); ?>" class="bg-first-gradient rounded px-6 py-3">
 						👉 <?php _e('Больше кейсов', 'treba'); ?>
 					</a>
 				</div>
+				<!-- END Кнопка на десктопе -->
 			</div>
 			<div class="w-full lg:w-1/2 lg:pl-8">
 				<div class="flex">
@@ -145,7 +147,7 @@
 						<div class="text-2xl font-bold first-color text-center mb-4">
 							<?php echo carbon_get_the_post_meta('crb_services_case_title'); ?>
 						</div>
-						<div class="w-full">
+						<div class="w-full mb-12 lg:mb-0">
 							<?php 
 								$case_photo_medium = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_img'), 'medium'); 
 								$case_photo_large = wp_get_attachment_image_src(carbon_get_the_post_meta('crb_services_case_img'), 'large'); 
@@ -159,6 +161,13 @@
 						  1440px"
 							src="<?php echo $case_photo_full[0] ?>" alt="<?php echo carbon_get_the_post_meta('crb_services_case_title'); ?>" loading="lazy" class="w-full bg-light p-5 rounded-lg">
 						</div>
+						<!-- Кнопка на мобиле -->
+						<div class="block lg:hidden text-xl">
+							<a href="<?php echo get_post_type_archive_link('cases'); ?>" class="bg-first-gradient rounded px-6 py-3">
+								👉 <?php _e('Больше кейсов', 'treba'); ?>
+							</a>
+						</div>
+						<!-- END Кнопка на мобиле -->
 					</div>
 				</div>
 			</div>

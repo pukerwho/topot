@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="pt-32 pb-20">
-		<div class="container mx-auto">
+		<div class="container mx-auto px-4 lg:px-0">
 			<!-- Хлебные крошки -->
 			<div class="breadcrumbs mb-4" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
 		    <ul class="flex justify-center uppercase">

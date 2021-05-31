@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="pt-32 pb-16">
-	<div class="container mx-auto px-2 lg:px-0">
+	<div class="container mx-auto px-4 lg:px-0">
 		<h1 class="text-5xl first-color text-center mb-12"><?php _e('Все наши услуги', 'treba'); ?></h1>
 		<div>
 			<?php $services = get_terms(array(

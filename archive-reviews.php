@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="reviews pt-32 pb-20">
-	<div class="container mx-auto px-2 lg:px-0">
+	<div class="container mx-auto px-4 lg:px-0">
 		<h1 class="text-5xl first-color text-center mb-12">💬 <?php _e('Что говорят наши клиенты', 'treba'); ?></h1>
 		<div class="reviews_grid flex flex-wrap mb-12 mx-0 md:-mx-6">
 			<div class="reviews_facebook flex flex-col justify-center rounded-lg w-full lg:w-1/4 px-6 mb-6 md:mb-0 py-8 md:py-0">

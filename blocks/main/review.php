@@ -1,5 +1,5 @@
 <div class="relative bg-light py-20 -mt-2 mb-20">
-	<div class="container mx-auto px-2 lg:px-0">
+	<div class="container mx-auto px-4 lg:px-0">
 		<div class="w-full md:w-1/2 mx-auto">
 			<div class="text-xl italic font-bold mb-6">
 				"Всем советую Кирилла из компании Treba Solutions. Это человек, который поймет, что вы хотите, посоветует правильность воплощение ваших желаний, все сделает в срок и <span class="red-color">вы останетесь довольны результатом на 100%.</span>"
