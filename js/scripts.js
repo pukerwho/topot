@@ -4,8 +4,6 @@ function init() {
   //MOBILE MENU
   let headerHumburger = document.querySelector('.header_humburger');
   let mobileMenu = document.querySelector('.mobile_menu');
-  let mobileMenuBgOne = document.querySelector('.mobile_menu_bg_one');
-  let mobileMenuBgTwo = document.querySelector('.mobile_menu_bg_two');
   
   // let mobileMenuHeight = mobileMenu.offsetHeight;
   // mobileMenu.style.width = mobileMenuHeight + 'px';
