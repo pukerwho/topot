@@ -31,7 +31,7 @@ function crb_post_theme_options() {
       Field::make( 'text', 'crb_case_title', 'Заголовок' ),
       Field::make( 'image', 'crb_case_thumb', 'Картинка' ),
       Field::make( 'text', 'crb_case_subtitle', 'Что это? (СТО в Киеве, Интернет-магазин парфюмов)' ),
-      Field::make( 'textarea', 'crb_case_bg', 'Бекграунд' ),
+      Field::make( 'image', 'crb_case_bg', 'Бекграунд' )->set_value_type( 'url'),
       Field::make( 'complex', 'crb_case_params', 'Показатели' )->set_layout( 'tabbed-vertical' )
         ->add_fields( array(
           Field::make( 'text', 'crb_case_param_number', 'Значение' ),
