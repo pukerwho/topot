@@ -13,7 +13,7 @@
 			?>
 			<div class="w-full lg:w-1/2 relative px-2 mb-12 lg:mb-20">
 				<a href="<?php the_permalink(); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
-				<div class="flex flex-wrap lg:-mx-2" style="background: url(<?php echo carbon_get_the_post_meta('crb_case_bg'); ?>);">
+				<div class="flex flex-wrap lg:-mx-2" style="<?php echo carbon_get_the_post_meta('crb_case_bg'); ?>">
 					<div class="cases_item_subtitle rounded-b-lg text-sm px-10 py-1">
 						<?php echo carbon_get_the_post_meta('crb_case_subtitle'); ?>
 					</div>
