@@ -12,7 +12,7 @@
 				if ($services_query->have_posts()) : while ($services_query->have_posts()) : $services_query->the_post(); 
 			?>
 			<div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-20">
-				<div class="h-full flex flex-wrap relative lg:-mx-2 px-4" style="background: url(<?php echo carbon_get_the_post_meta('crb_case_bg'); ?>);">
+				<div class="h-full flex flex-wrap relative lg:-mx-2 px-4" style="background: url(<?php echo carbon_get_the_post_meta('crb_case_bg'); ?>); background-size: contain;;">
 					<a href="<?php the_permalink(); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
 					<div class="cases_item_subtitle rounded-b-lg text-sm px-10 py-1">
 						<?php echo carbon_get_the_post_meta('crb_case_subtitle'); ?>
