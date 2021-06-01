@@ -15,7 +15,7 @@
 					</li>
 					<span class="mx-1">—</span>
 		      <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-		        <a itemprop="item" href="<?php echo get_post_type_archive_link( 'cases' ); ?>" class="red-color hover:text-white">
+		        <a itemprop="item" href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>" class="red-color hover:text-white">
 		          <span itemprop="name"><?php _e( 'Портфолио', 'treba' ); ?></span>
 		        </a>                        
 		        <meta itemprop="position" content="2">

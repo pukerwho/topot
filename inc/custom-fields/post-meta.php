@@ -28,6 +28,15 @@ function crb_post_theme_options() {
     ->where( 'post_type', '=', 'cases' )
     ->add_fields( array(
       Field::make( 'textarea', 'crb_cases_description', 'Описание' ),
+      Field::make( 'text', 'crb_case_title', 'Заголовок' ),
+      Field::make( 'image', 'crb_case_thumb', 'Картинка' ),
+      Field::make( 'text', 'crb_case_subtitle', 'Что это? (СТО в Киеве, Интернет-магазин парфюмов)' ),
+      Field::make( 'image', 'crb_case_bg', 'Бекграунд' )->set_value_type( 'url'),
+      Field::make( 'complex', 'crb_case_params', 'Показатели' )->set_layout( 'tabbed-vertical' )
+        ->add_fields( array(
+          Field::make( 'text', 'crb_case_param_number', 'Значение' ),
+          Field::make( 'text', 'crb_case_params_text', 'Текст' ),
+      ) ),
       // Field::make( 'text', 'crb_cases_name', 'Заголовок' ),
       // Field::make( 'image', 'crb_cases_thumb', 'Заглавная картинка' )->set_value_type( 'url')
   ) );
