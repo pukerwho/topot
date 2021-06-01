@@ -23,20 +23,8 @@
 					<?php echo carbon_get_the_post_meta('crb_case_title'); ?>
 				</div>
 				<div class="w-10/12 mx-auto mb-12">
-					<div class="flex -mx-4">
-						<?php 
-							$cases_params = carbon_get_the_post_meta('crb_case_params'); 
-							foreach ($cases_params as $cases_param):
-						?>
-							<div class="w-1/<?php echo count($cases_params); ?> px-4">
-								<div class="text-4xl font-black text-center second-color mb-4">
-									<?php echo $cases_param['crb_case_param_number']; ?>
-								</div>
-								<div class="text-xl text-center">
-									<?php echo $cases_param['crb_case_params_text']; ?>
-								</div>
-							</div>
-						<?php endforeach; ?>
+					<div class="flex justify-center -mx-4">
+						<div class="second-btn text-black text-center"><?php _e('Подробнее', 'treba'); ?></div>
 					</div>
 				</div>
 				<div class="w-10/12 mx-auto">
