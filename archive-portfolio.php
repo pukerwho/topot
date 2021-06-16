@@ -18,8 +18,8 @@
 				<div class="portfolio_archive_item flex flex-col md:flex-row md:items-center bg-light rounded-xl mb-10 md:mb-6">
 					<div class="w-full md:w-1/2 px-4 md:px-12 py-6 md:py-8 md:mr-6 mb-6 md:mb-0">
 						<div class="portfolio_archive_item_service mb-8">
-							<a href="#" class="text-sm uppercase bg-first-gradient rounded-lg px-3 py-2">Создание сайтов</a>
-							<a href="#" class="hidden text-sm uppercase bg-green-500 rounded-lg px-3 py-2">SEO-продвижение</a>
+							<a href="#" class="text-sm uppercase bg-first-gradient rounded-lg px-3 py-2"><?php _e('Создание сайтов', 'treba'); ?></a>
+							<a href="#" class="hidden text-sm uppercase bg-green-500 rounded-lg px-3 py-2"><?php _e('SEO-продвижение', 'treba'); ?></a>
 						</div>
 						<div class="text-3xl font-bold mb-6">
 							<?php echo carbon_get_the_post_meta('crb_portfolio_title'); ?>
