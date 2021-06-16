@@ -2,7 +2,7 @@
 	<!-- ФОРМА -->
 	<form name="form_welcome">
     <input type="text" name="Контакт" placeholder="<?php _e('Ваш телефон или email для связи', 'treba'); ?>" class="w-full rounded-lg px-3 py-4 mb-4" required>
-    <input type="text" name="URL" placeholder="<?php _e('Адрес вашего сайта', 'treba'); ?>" class="w-full rounded-lg px-3 py-4 mb-4">
+    <input type="text" name="URL" placeholder="<?php _e('Адрес вашего сайта (если есть)', 'treba'); ?>" class="w-full rounded-lg px-3 py-4 mb-4">
     <textarea name="Сообщение" col="5" class="w-full rounded-lg px-3 py-4 mb-4" placeholder="<?php _e('Например: Меня интересует стоимость продвижения моего сайта', 'treba'); ?>"></textarea>
     <input type="hidden" name="Cтраница" value="<?php echo get_the_permalink(); ?>">
     <input type="hidden" name="Услуга" value="Welcome Block">

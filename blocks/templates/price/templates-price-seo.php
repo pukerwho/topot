@@ -74,7 +74,7 @@
 						</div>
 						<div class="flex flex-col">
 							<span class="text-3xl"><?php _e('Продвинутый', 'treba'); ?></span>
-							<span class="text-2xl opacity-75">Индивидуальная цена</span>
+							<span class="text-2xl opacity-75"><?php _e('Индивидуальная цена', 'treba'); ?></span>
 						</div>	
 					</div>
 					<div class="price_item_pro mb-8">
