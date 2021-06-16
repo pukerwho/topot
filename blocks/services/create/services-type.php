@@ -24,7 +24,7 @@
 						<div>
 							<a href="#">
 								<div class="service_type_more text-xl font-black inline">
-									<?php _e('Подробнее', 'topot'); ?>
+									<?php _e('Подробнее', 'treba'); ?>
 								</div>
 							</a>
 						</div>
@@ -49,7 +49,7 @@
 						<div>
 							<a href="#">
 								<div class="service_type_more text-xl font-black inline">
-									<?php _e('Подробнее', 'topot'); ?>
+									<?php _e('Подробнее', 'treba'); ?>
 								</div>
 							</a>
 						</div>
@@ -74,7 +74,7 @@
 						<div>
 							<a href="#">
 								<div class="service_type_more text-xl font-black inline">
-									<?php _e('Подробнее', 'topot'); ?>
+									<?php _e('Подробнее', 'treba'); ?>
 								</div>
 							</a>
 						</div>
@@ -99,7 +99,7 @@
 						<div>
 							<a href="#">
 								<div class="service_type_more text-xl font-black inline">
-									<?php _e('Подробнее', 'topot'); ?>
+									<?php _e('Подробнее', 'treba'); ?>
 								</div>
 							</a>
 						</div>
@@ -124,7 +124,7 @@
 						<div>
 							<a href="#">
 								<div class="service_type_more text-xl font-black inline">
-									<?php _e('Подробнее', 'topot'); ?>
+									<?php _e('Подробнее', 'treba'); ?>
 								</div>
 							</a>
 						</div>
@@ -149,7 +149,7 @@
 						<div>
 							<a href="#">
 								<div class="service_type_more text-xl font-black inline">
-									<?php _e('Подробнее', 'topot'); ?>
+									<?php _e('Подробнее', 'treba'); ?>
 								</div>
 							</a>
 						</div>

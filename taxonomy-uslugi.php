@@ -47,7 +47,7 @@
 			<?php if(carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_whyus')): ?>
 			<div class="mb-20">
 				<div>
-					<h2 class="block text-4xl md:text-5xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'topot'); ?>?</h2>
+					<h2 class="block text-4xl md:text-5xl second-color text-center mb-10"><?php _e('Чем мы отличаемся', 'treba'); ?>?</h2>
 				</div>
 				<div class="flex flex-wrap lg:-mx-2">
 					<?php 
@@ -70,7 +70,7 @@
 			<!-- END WHY US -->
 
 			<!-- DESCRIPTION -->
-			<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Несколько слов про услугу', 'topot'); ?></h2>
+			<h2 class="text-4xl md:text-5xl third-color mb-4"><?php _e('Несколько слов про услугу', 'treba'); ?></h2>
 			<div class="content mb-20">
 				<?php echo category_description(get_queried_object()->term_id); ?>
 			</div>
@@ -93,7 +93,7 @@
 
 			<!-- FAQ -->
 			<div class="w-full lg:w-3/4 mx-auto mb-20">
-				<h2 class="text-4xl md:text-5xl third-color text-center mb-4"><?php _e('Ответы на вопросы', 'topot'); ?></h2>
+				<h2 class="text-4xl md:text-5xl third-color text-center mb-4"><?php _e('Ответы на вопросы', 'treba'); ?></h2>
 				<?php 
 					$faq = carbon_get_term_meta(get_queried_object_id(),'crb_uslugi_faq');
 					foreach($faq as $f):
@@ -121,7 +121,7 @@
 			<!-- Продвижение в городах -->
 			<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_city')): ?>
 			<div class="mb-10">
-				<h2 class="text-2xl md:text-3xl second-color text-center mb-4"><?php _e('Занимаемся SEO-продвижением по всей Украине', 'topot'); ?></h2>
+				<h2 class="text-2xl md:text-3xl second-color text-center mb-4"><?php _e('Занимаемся SEO-продвижением по всей Украине', 'treba'); ?></h2>
 				<div class="flex flex-wrap lg:-mx-2 bg-light rounded-lg px-8 pt-8 pb-4">
 					<?php 
 						$current_term = get_queried_object_id();
@@ -164,7 +164,7 @@
 			<!-- Продвижение на CMS -->
 			<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_uslugi_show_crm')): ?>
 			<div class="mb-10">
-				<h2 class="text-2xl md:text-3xl first-color text-center mb-4"><?php _e('Раскрутка сайтов на различных CMS', 'topot'); ?></h2>
+				<h2 class="text-2xl md:text-3xl first-color text-center mb-4"><?php _e('Раскрутка сайтов на различных CMS', 'treba'); ?></h2>
 				<div class="flex flex-wrap lg:-mx-2 bg-light rounded-lg px-8 pt-8 pb-4">
 					<?php 
 						$current_term = get_queried_object_id();
@@ -206,7 +206,7 @@
 
 			<!-- OTHER -->
 			<div>
-				<h2 class="text-2xl md:text-4xl second-color mb-4"><?php _e('Другие услуги', 'topot'); ?></h2>
+				<h2 class="text-2xl md:text-4xl second-color mb-4"><?php _e('Другие услуги', 'treba'); ?></h2>
 				<div class="flex flex-wrap lg:-mx-2">
 					<?php 
 			  		$services_array = [];

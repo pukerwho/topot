@@ -20,7 +20,7 @@
 			<div class="more_btn flex justify-center">
 				<a href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>">
 					<div class="first-btn text-black font-black">
-						<?php _e('Наше портфолио', 'topot'); ?>
+						<?php _e('Наше портфолио', 'treba'); ?>
 					</div>
 				</a>
 			</div>
