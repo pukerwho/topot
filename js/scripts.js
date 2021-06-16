@@ -56,6 +56,11 @@ function init() {
     }
   }
 
+  sUsrAg = navigator.userAgent;
+  if (sUsrAg.indexOf("Chrome") > -1) {
+    $('.portfolio_archive_item').addClass('chrome');
+    console.log(sUsrAg);
+  }
   //Like сайт
   let likeObj = {site:'', email:''};
   let likeContent = document.querySelector('.like_content');
