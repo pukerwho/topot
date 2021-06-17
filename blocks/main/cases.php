@@ -15,7 +15,7 @@
 		));
 		if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="cases_item w-full md:w-1/2 relative block mx-auto mb-20" style="background: url(<?php echo carbon_get_the_post_meta('crb_case_bg'); ?>);">
-				<a href="<?php the_permalink(); ?>" class="absolute w-full h-full top-0 left-0"></a>
+				<a href="<?php the_permalink(); ?>" class="absolute w-full h-full top-0 left-0 z-10"></a>
 				<div class="cases_item_subtitle rounded-b-lg text-sm px-10 py-1">
 					<?php echo carbon_get_the_post_meta('crb_case_subtitle'); ?>
 				</div>
