@@ -84,6 +84,12 @@
 		      case 'seo':
 		        get_template_part('blocks/templates/price/templates-price-seo');
 		        break;
+		      case 'create':
+		        get_template_part('blocks/templates/price/templates-price-create');
+		        break;
+		      case 'maps':
+		        get_template_part('blocks/templates/price/templates-price-maps');
+		        break;
 		      default: 
 		        get_template_part('blocks/templates/price/templates-price-seo');
 		    }

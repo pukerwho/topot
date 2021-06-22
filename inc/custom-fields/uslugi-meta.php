@@ -42,6 +42,8 @@ function crb_uslugi_theme_options() {
       Field::make( 'select', 'crb_uslugi_price_template', 'Шаблон тарифов' )->add_options(
         array(
           'seo' => 'Для SEO-продвижения',
+          'create' => 'Для Создания сайта',
+          'maps' => 'Для Google Maps',
         ))->set_conditional_logic( 
         array(
           array(

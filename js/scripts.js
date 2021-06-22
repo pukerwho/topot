@@ -173,12 +173,22 @@ function init() {
   function showOrderSuccessMessage(data, this_form) {
     this_form.reset();
     $('.order_success').addClass('show');
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Заявка',
+      eventAction: 'Успешно отправлено',
+    })
   }
 
   function showSuccessMessage(data, this_form){
     this_form.reset();
     $('.success_notice').addClass('show');
     $('.modal_bg').addClass('show');
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Заявка',
+      eventAction: 'Успешно отправлено',
+    })
     setTimeout(function(){
       $('.success_notice').removeClass('show');
       $('.modal_bg').removeClass('show');
@@ -200,6 +210,11 @@ function init() {
   function showCommerceSuccessMessage(data, this_form) {
     this_form.reset();
     $('.commerce_success').addClass('show');
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Заявка',
+      eventAction: 'Успешно отправлено',
+    })
   }
 
   // Scrollbar.init(document.querySelector('body'));
