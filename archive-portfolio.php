@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div class="pt-32 pb-20">
 	<div class="container mx-auto px-4 lg:px-0">
 		<div class="text-center mb-12">

@@ -16,6 +16,7 @@
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ahrefs-site-verification" content="37088a82688414b730e1b09f36a99e58578fbd0cb813a12ed11fa883f9c157ef">
 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">

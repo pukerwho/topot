@@ -316,5 +316,55 @@ function init() {
   });
 }
 
+var allDictionaryItems = document.querySelectorAll('.dictionary_item');
+var allDictionaryArray = [];
+var charArray = [];
+
+function createChar(item, char) {
+  var newChar = document.createElement('div');
+  newChar.className = 'dictionary_varchar red-color text-3xl mt-4 mb-1';
+  newChar.innerHTML = char;
+  item.before(newChar);
+}
+
+for (allDictionaryItem of allDictionaryItems) {
+  if (allDictionaryItem) {
+    var dictionaryName = allDictionaryItem.textContent;
+    dictionaryChar = dictionaryName.replace(/\s/g, "").charAt(0);
+    if (charArray.includes(dictionaryChar)) {
+      console.log('уже есть');
+    } else {
+      charArray.push(dictionaryChar);
+      createChar(allDictionaryItem, dictionaryChar)
+    }
+  }
+}
+
+//Быстрый поиск на странице Citylist
+$("#search_dictionary_box").keyup(function() {
+  var filter = $(this).val();
+  filter = filter.toLowerCase();
+  if (filter.length > 0) {
+    $('.dictionary_varchar').css({'display':'none'});
+  } else {
+    $('.dictionary_varchar').css({'display':'block'});
+  }
+  $(".dictionary_item a").each(function() {
+    var metadata = $(this).data("metadata");
+    var regexp = new RegExp(filter); 
+    var metadatastring = "";
+    metadatastring = metadatastring.toLowerCase();
+
+    if(typeof metadata.tag != "undefined") {
+      metadatastring = metadata.tag.join(" ");
+    }
+    if (metadatastring.toLowerCase().search(regexp) < 0) {
+      $(this).hide();
+    } 
+    else {
+      $(this).show();
+    }
+  });
+});
 
 document.addEventListener("DOMContentLoaded", init);
