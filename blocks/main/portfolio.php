@@ -1,17 +1,18 @@
 <div class="portfolio mb-20">
-	<div class="container mx-auto px-4 lg:px-0">
+	<div class="container mx-auto px-4 lg:px-0 border-separate pb-8">
 		<div class="flex flex-col lg:flex-row justify-between">
 			<div class="w-full lg:w-2/5 pr-0 md:pr-10 mb-6 lg:mb-0">
 				<div class="sticky">
+					<div class="hand-font third-color-dark text-2xl mb-4"><?php _e('Выполненные проекты', 'treba'); ?> <span class="hidden md:inline">👉</span><span class="inline md:hidden">👇</span></div>
 					<div class="relative flex">
-						<h2 class="inline text-4xl md:text-5xl second-color mb-6"><?php _e('Портфолио', 'treba'); ?></h2>
-						<div class="text-show"></div>	
+						<h2 class="inline text-4xl md:text-5xl font-black mb-6"><?php _e('Портфолио', 'treba'); ?></h2>
+						<!-- <div class="text-show"></div>	 -->
 					</div>
 					
-					<div class="text-xl md:text-2xl">
+					<div class="text-xl">
 						<p class="mb-2"><?php _e('Если вам нравятся наши работы - обязательно напишите нам. Мы отправим вам свое коммерческое предложение', 'treba'); ?>.</p>
 						<p class="mb-6"><a href="mailto:hello@treba-solutions.com" class="underline">hello@treba-solutions.com</a></p>
-						<p><?php _e('Выполненные проекты', 'treba'); ?> <span class="hidden md:inline">👉</span><span class="inline md:hidden">👇</span></p>
+						
 					</div>	
 				</div>
 			</div>

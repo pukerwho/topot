@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <div class="pt-32 pb-20">
+  <div class="pt-40 pb-20">
     <div class="container mx-auto px-4 lg:px-0">
       
       <h1 class="text-3xl lg:text-5xl text-center font-bold mb-12"><span class="red-color">[ </span><?php the_title(); ?><span class="red-color"> ]</span></h1>

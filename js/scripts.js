@@ -13,6 +13,9 @@ function init() {
   // mobileMenuBgTwo.style.height = mobileMenuHeight + 'px';
 
   headerHumburger.addEventListener('click', function(){
+    $('body').toggleClass('overflow-hidden');
+    $('.modal_bg').toggleClass('show filter blur-lg');
+
     headerHumburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
   });
@@ -145,7 +148,7 @@ function init() {
   });
 
   // ФОРМЫ
-  const modalScriptURL = 'https://script.google.com/macros/s/AKfycbyQlamDsES7saEBca0Z0zlwPBViEl54ym9u7br2sVw4Mw94WnSBczsSijvJkcWTitXgFA/exec'
+  const modalScriptURL = 'https://script.google.com/macros/s/AKfycbz-He2k77yNB78ucoyz8Z8RHfKE-HfFabIPwEoC9TIouBrdVbALqpkxABjxjB2KfpjI/exec'
   const form_welcome = document.forms['form_welcome']
   if (form_welcome) {
     form_welcome.addEventListener('submit', e => {
@@ -193,6 +196,7 @@ function init() {
       $('.success_notice').removeClass('show');
       $('.modal_bg').removeClass('show');
     }, 4500)
+    console.log(data);
   }
 
   const form_commerce = document.forms['form_commerce']

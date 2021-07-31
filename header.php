@@ -20,6 +20,11 @@
 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;800&display=swap" rel="stylesheet">
+
   <?php
   // ENQUEUE your css and js in inc/enqueues.php
 
@@ -28,6 +33,9 @@
 </head>
 <body <?php echo body_class(); ?>>
   <!-- <div class="preloader"></div> -->
+  <div class="overflow-hidden absolute right-0" style="width: 722px; height: 320px; z-index: -1;">
+    <?php get_template_part('blocks/elements/header-wave'); ?>
+  </div>
   
   <header id="header" class="header py-6" role="banner">
     <div class="container mx-auto px-4 lg:px-0">
@@ -68,11 +76,13 @@
       </div>
     </div>
   </header>
-  <div class="mobile_menu block lg:hidden">
-    <?php wp_nav_menu([
-      'theme_location' => 'head_menu',
-      'menu_id' => 'head_menu',
-      'menu_class' => 'mobile_menu_list flex flex-col relative text-lg py-8 px-4'
-    ]); ?>
+  <div class="mobile_menu block lg:hidden px-4">
+    <div class="w-full bg-light rounded-xl">
+      <?php wp_nav_menu([
+        'theme_location' => 'head_menu',
+        'menu_id' => 'head_menu',
+        'menu_class' => 'mobile_menu_list flex flex-col relative text-lg py-8 px-4'
+      ]); ?>  
+    </div>
   </div>
   <section id="content" role="main">

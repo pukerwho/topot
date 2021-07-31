@@ -2,6 +2,53 @@
     <footer id="footer">
       <?php get_template_part('blocks/elements/clients'); ?>
     	<?php get_template_part('blocks/main/hey'); ?>
+      <div class="container mx-auto px-4 lg:px-0">
+        <div class="flex md:-mx-4 mb-8 pb-8 border-separate">
+          <div class="w-full md:w-6/12 md:px-4">
+            <div class="font-black text-white text-xl mb-4">
+              Treba Solutions
+            </div>
+            <div>
+              <?php _e('Специализируемся на развитии клиентского бизнеса в интернете. Есть десятки успешных примеров. Есть отзывы, есть результаты, которыми мы гордимся. Обращайтесь и вы к нам!', 'treba'); ?>
+            </div>
+          </div>
+          <div class="w-full md:w-3/12 md:px-4">
+            <div class="font-black mb-4">
+              <?php _e('SEO продвижение', 'treba'); ?>
+            </div>
+            <div>
+              <?php wp_nav_menu([
+                'theme_location' => 'seo_menu',
+                'menu_id' => 'seo_menu',
+                'menu_class' => ''
+              ]); ?>
+            </div>
+          </div>
+          <div class="w-full md:w-3/12 md:px-4">
+            <div class="font-black mb-4">
+              <?php _e('Создание сайтов', 'treba'); ?>
+            </div>
+            <div>
+              <?php wp_nav_menu([
+                'theme_location' => 'create_menu',
+                'menu_id' => 'create_menu',
+                'menu_class' => ''
+              ]); ?>
+            </div>
+          </div>
+        </div>
+
+        <!-- Копирайт -->
+        <div class="flex justify-between items-center pb-8">
+          <div>
+            © Treba, 2021
+          </div>
+          <div>
+            Соц сети
+          </div>
+        </div>
+        <!-- Копирайт -->
+      </div>
     </footer>
     <div class="order_modal w-full h-full fixed left-0 top-0 flex justify-center items-center">
   		<div class="order_modal_block w-full md:w-2/5 flex flex-col relative bg-white rounded-lg p-4 mx-2 md:mx-0">

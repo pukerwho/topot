@@ -1,5 +1,5 @@
 <!-- WELCOME -->
-<div class="welcome relative pt-32 pb-20 md:pb-32">
+<div class="welcome relative pt-40 pb-20 md:pb-32">
 	<div class="container mx-auto px-4 md:px-0">
 		<h1 class="text-5xl md:text-6xl font-bold text-center mb-12 md:mb-20"><?php _e('Создаем и продвигаем сайты', 'treba'); ?></h1>
 		<div class="flex flex-col md:flex-row md:justify-between md:-mx-12">

@@ -1,17 +1,23 @@
 <!-- PRICE BLOCK -->
-<div class="price mb-20">
-	<h2 class="text-4xl md:text-5xl text-center second-color mb-12"><?php _e('Тарифы', 'treba'); ?></h2>
+<div class="price border-separate pb-20 mb-20">
+	<div class="text-center mb-12">
+		<h2 class="text-4xl md:text-5xl font-black mb-6"><?php _e('Тарифы', 'treba'); ?></h2>	
+		<div class="text-2xl">
+			<?php _e('Сколько стоят наши услуги', 'treba'); ?>
+		</div>
+	</div>
+	
 	<div class="flex flex-col lg:flex-row flex-wrap lg:-mx-2 ">
 		<!-- PRICE ITEM -->
 		<div class="w-full lg:w-1/3 lg:px-2 mb-4 lg:mb-0">
-			<div class="price_item h-full flex flex-col justify-between bg-light rounded-lg shadow-xl px-4 py-8 ">
+			<div class="price_item h-full flex flex-col justify-between bg-light px-6 py-8 ">
 				<div class="price_item_info flex flex-col justify-between">
-					<div class="flex items-center mb-8">
-						<div class="mr-6">
-							<img src="<?php bloginfo('template_url'); ?>/img/thumbs-up-sign.webp" width="60">
+					<div class="price_item_top flex items-center pb-8 mb-8">
+						<div class="text-6xl mr-6">
+							👍
 						</div>
 						<div class="flex flex-col">
-							<span class="text-3xl"><?php _e('Стартовый', 'treba'); ?></span>
+							<span class="text-3xl text-white"><?php _e('Стартовый', 'treba'); ?></span>
 							<span class="text-2xl">3999 <span class="text-xl opacity-75"><?php _e('грн/мес', 'treba'); ?></span></span>
 						</div>	
 					</div>
@@ -25,8 +31,8 @@
 					</ul>
 				</div>
 				<div class="price_item_btn cursor-pointer">
-					<div class="more_btn flex justify-center">
-						<div class="order_btn second-btn text-black order-js" data-order="Стартовый SEO">
+					<div class="w-full more_btn">
+						<div class="order_btn first-btn text-center order-js" data-order="Стартовый SEO">
 							<?php _e('Оставить заявку', 'treba'); ?>
 						</div>
 					</div>
@@ -36,14 +42,14 @@
 		<!-- END PRICE ITEM -->
 		<!-- PRICE ITEM -->
 		<div class="w-full lg:w-1/3 lg:px-2 mb-4 lg:mb-0">
-			<div class="price_item h-full flex flex-col justify-between bg-light rounded-lg shadow-xl px-4 py-8 ">
+			<div class="price_item h-full flex flex-col justify-between bg-light px-6 py-8 ">
 				<div class="price_item_info flex flex-col justify-between">
-					<div class="flex items-center mb-8">
-						<div class="mr-6">
-							<img src="<?php bloginfo('template_url'); ?>/img/trophy.webp" width="60">
+					<div class="price_item_top flex items-center pb-8 mb-8">
+						<div class="text-6xl mr-6">
+							🏆
 						</div>
 						<div class="flex flex-col">
-							<span class="text-3xl"><?php _e('Оптимальный', 'treba'); ?></span>
+							<span class="text-3xl text-white"><?php _e('Оптимальный', 'treba'); ?></span>
 							<span class="text-2xl">6999 <span class="text-xl opacity-75"><?php _e('грн/мес', 'treba'); ?></span></span>
 						</div>	
 					</div>
@@ -55,8 +61,8 @@
 					</ul>
 				</div>
 				<div class="price_item_btn cursor-pointer">
-					<div class="more_btn flex justify-center">
-						<div class="order_btn second-btn text-black order-js" data-order="Оптимальный SEO">
+					<div class="more_btn w-full">
+						<div class="order_btn first-btn text-center order-js" data-order="Оптимальный SEO">
 							<?php _e('Оставить заявку', 'treba'); ?>
 						</div>
 					</div>
@@ -66,14 +72,14 @@
 		<!-- END PRICE ITEM -->
 		<!-- PRICE ITEM -->
 		<div class="w-full lg:w-1/3 lg:px-2 mb-4 lg:mb-0">
-			<div class="price_item h-full flex flex-col justify-between bg-light rounded-lg shadow-xl px-4 py-8">
+			<div class="price_item h-full flex flex-col justify-between bg-light px-6 py-8">
 				<div class="price_item_info flex flex-col justify-between">
-					<div class="flex items-center mb-8">
-						<div class="mr-6">
-							<img src="<?php bloginfo('template_url'); ?>/img/smiling-face-with-sunglasses.webp" width="60">
+					<div class="price_item_top flex items-center pb-8 mb-8">
+						<div class="text-6xl mr-6">
+							😎
 						</div>
 						<div class="flex flex-col">
-							<span class="text-3xl"><?php _e('Продвинутый', 'treba'); ?></span>
+							<span class="text-3xl text-white"><?php _e('Продвинутый', 'treba'); ?></span>
 							<span class="text-2xl opacity-75"><?php _e('Индивидуальная цена', 'treba'); ?></span>
 						</div>	
 					</div>
@@ -82,8 +88,8 @@
 					</div>
 				</div>
 				<div class="price_item_btn cursor-pointer">
-					<div class="more_btn flex justify-center">
-						<div class="order_btn second-btn text-black order-js" data-order="Продвинутый SEO">
+					<div class="more_btn w-full">
+						<div class="order_btn first-btn text-center order-js" data-order="Продвинутый SEO">
 							<?php _e('Оставить заявку', 'treba'); ?>
 						</div>
 					</div>

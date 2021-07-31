@@ -48,6 +48,8 @@ require_once get_template_directory() . '/inc/TGM/example.php';
 
 register_nav_menus( array(
   'head_menu' => 'Меню в шапке',
+  'seo_menu' => 'SEO услуги',
+  'create_menu' => 'Создание услуги',
 ) );
 
 // Register sidebars

@@ -1,23 +1,29 @@
 <?php get_header(); ?>
 
-<div class="reviews pt-32 pb-20">
+<div class="reviews pt-40 pb-20">
 	<div class="container mx-auto px-4 lg:px-0">
-		<h1 class="text-5xl first-color text-center mb-12">💬 <?php _e('Что говорят наши клиенты', 'treba'); ?></h1>
+		<div class="text-center mb-12">
+			<h1 class="text-3xl lg:text-5xl font-black mb-8">💬 <?php _e('Что говорят наши клиенты', 'treba'); ?></h1>
+			<div class="text-2xl"><?php _e('Мы собрали все отзывы о нашей работе', 'treba'); ?></div>	
+		</div>
+		<h1 class="text-5xl first-color text-center mb-12"></h1>
 		<div class="reviews_grid flex flex-wrap mb-12 mx-0 md:-mx-6">
-			<div class="reviews_facebook flex flex-col justify-center rounded-lg w-full lg:w-1/4 px-6 mb-6 md:mb-0 py-8 md:py-0">
-				<div class="reviews_facebook_svg mb-6">
-					<figure class="chart" data-percent="75">
-						<figcaption class="text_dark">5/5</figcaption>
-						<svg width="120" height="120" style="margin: auto;">
-							<circle class="outer totop-animate" cx="60" cy="60" r="55"></circle>
-						</svg>
-					</figure>
-				</div>
-				<div class="text-white text-center text-xl title_font font-black mb-4">
-					facebook
-				</div>
-				<div class="flex justify-center">
-					<?php get_template_part('blocks/elements/stars'); ?>	
+			<div class="w-full lg:w-1/4 h-80 lg:h-auto lg:min-h-full md:px-6 mb-6 md:mb-0 py-8 md:py-0">
+				<div class="reviews_facebook flex flex-col justify-center rounded-lg lg:min-h-full h-full lg:h-auto ">
+					<div class="reviews_facebook_svg mb-6">
+						<figure class="chart" data-percent="75">
+							<figcaption class="text_dark">5/5</figcaption>
+							<svg width="120" height="120" style="margin: auto;">
+								<circle class="outer totop-animate" cx="60" cy="60" r="55"></circle>
+							</svg>
+						</figure>
+					</div>
+					<div class="text-white text-center text-xl title_font font-black mb-4">
+						facebook
+					</div>
+					<div class="flex justify-center">
+						<?php get_template_part('blocks/elements/stars'); ?>	
+					</div>
 				</div>
 			</div>
 			<?php $custom_query = new WP_Query( array( 

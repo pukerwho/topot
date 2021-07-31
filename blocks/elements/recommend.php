@@ -1,4 +1,4 @@
-<div class="text-2xl first-color mb-4">
+<div class="hand-font text-3xl third-color-dark mb-4">
 	❤️ <?php _e('Нас рекомендуют', 'treba'); ?>
 </div>
 <div class="recommend">

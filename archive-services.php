@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 
-<div class="pt-32 pb-16">
+<div class="pt-40 pb-16">
 	<div class="container mx-auto px-4 lg:px-0">
-		<h1 class="text-5xl first-color text-center mb-12"><?php _e('Все наши услуги', 'treba'); ?></h1>
+		<div class="text-center mb-12">
+			<h1 class="text-3xl lg:text-5xl font-black mb-8"><?php _e('Все наши услуги', 'treba'); ?></h1>
+			<div class="text-2xl"><?php _e('По этим направлениям мы можем гарантировать результат!', 'treba'); ?></div>	
+		</div>
 		<div>
 			<?php $services = get_terms(array(
 				'taxonomy' => 'uslugi', 

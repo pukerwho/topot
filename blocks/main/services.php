@@ -1,6 +1,18 @@
-<div class="services mb-12">
+<div class="services mb-20">
 	<div class="container mx-auto mb-12 px-4 lg:px-0">
-		<h2 class="text-4xl md:text-5xl third-color mb-12"><?php _e('Наши услуги', 'treba'); ?></h2>
+		<!-- TITLE BLOCK -->
+		<div class="w-full md:w-6/12 mx-auto mb-16">
+			<div class="hand-font third-color-dark text-2xl text-center mb-4">
+				<?php _e('Помогаем развивать ваш бизнес в интернете', 'treba'); ?>
+			</div>
+			<h2 class="text-4xl md:text-5xl text-center font-black mb-8">
+				<?php _e('Наши услуги', 'treba'); ?>
+			</h2>
+			<div class="text-xl text-center">
+				<?php _e('В нашей компании множество сильных команд, потому что наши сотрудники - одни из лучших в своем деле!', 'treba'); ?>
+			</div>
+		</div>
+		<!-- END TITLE BLOCK -->
 		<div class="flex flex-wrap md:-mx-2">
 			<?php $all_uslugi = get_terms( array( 
 				'taxonomy' => 'uslugi', 
@@ -33,11 +45,13 @@
 			<?php endforeach; ?>
 		</div>
 	</div>
-	<div class="more_btn flex justify-center mb-20">
+	<div class="container mx-auto mb-12 px-4 lg:px-0">
+		<div class="more_btn flex justify-center mb-20 pb-20 border-separate">
 			<a href="<?php echo get_post_type_archive_link( 'services' ); ?>">
 				<div class="first-btn">
 					<?php _e('Все услуги', 'treba'); ?>
 				</div>
 			</a>
 		</div>
+	</div>
 </div>

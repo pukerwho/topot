@@ -1,6 +1,7 @@
 <!-- КЛИЕНТЫ -->
 <div class="clients mb-20">
-	<h2 class="text-4xl md:text-5xl first-color text-center mb-12"><?php _e('Наши клиенты', 'treba'); ?></h2>
+	<div class="hand-font text-2xl text-center third-color-dark mb-4"><?php _e('Гордимся сотрудничеством!', 'treba'); ?></div>
+	<h2 class="text-4xl md:text-5xl text-center font-black mb-12"><?php _e('Наши клиенты', 'treba'); ?></h2>
 	<div class="w-full md:w-10/12 mx-auto">
 		<div class="flex flex-col md:flex-row items-center justify-center md:-mx-4">
 			<?php 

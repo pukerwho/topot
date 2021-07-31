@@ -3,11 +3,12 @@
 		<div class="flex flex-col lg:flex-row justify-between">
 			<div class="w-full lg:w-2/5 pr-0 md:pr-10 mb-6 lg:mb-0">
 				<div class="sticky">
+					<div class="hand-font third-color-dark text-2xl mb-4"><?php _e('Мы сами пишем статьи!', 'treba'); ?></div>
 					<div class="relative flex">
-						<h2 class="inline text-4xl md:text-5xl second-color mb-6"><?php _e('Наш блог', 'treba'); ?></h2>
-						<div class="text-show"></div>	
+						<h2 class="inline text-4xl md:text-5xl font-black mb-6"><?php _e('Наш блог', 'treba'); ?></h2>
+						<!-- <div class="text-show"></div>	 -->
 					</div>
-					<div class="text-xl md:text-2xl">
+					<div class="text-xl">
 						<p class="mb-6"><?php _e('Делимся различной полезной информацией для наших клиентов', 'treba'); ?>.</p>
 						<p>👉 <a href="/blog" class="underline"><?php _e('Перейти в раздел', 'treba'); ?></a></p>
 					</div>	

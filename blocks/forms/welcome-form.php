@@ -6,7 +6,7 @@
     <textarea name="Сообщение" col="5" class="w-full rounded-lg px-3 py-4 mb-4" placeholder="<?php _e('Например: Меня интересует стоимость продвижения моего сайта', 'treba'); ?>"></textarea>
     <input type="hidden" name="Cтраница" value="<?php echo get_the_permalink(); ?>">
     <input type="hidden" name="Услуга" value="Welcome Block">
-    <button type="submit" class="welcome_btn second-btn text-black w-full flex justify-center">
+    <button type="submit" class="welcome_btn first-btn text-white text-black w-full flex justify-center">
       <?php _e('Отправить', 'treba'); ?>
     </button>
   </form>
