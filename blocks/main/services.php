@@ -24,13 +24,12 @@
 				<div class="services_item md:h-80 w-full md:w-1/3 relative md:px-2 mb-4">
 					<div class="h-full flex flex-col bg-light rounded-2xl px-6 py-8">
 						<a href="<?php echo get_term_link($uslugi); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
-						<div class="title flex items-center text-white text-2xl font-black mb-6">
+						<div class="title flex items-center text-white text-2xl font-black pb-6 mb-6">
 							<div class="mr-3">
 								<img src="<?php echo carbon_get_term_meta($uslugi->term_id, 'crb_uslugi_thumb'); ?>"  width="36">
 							</div>
 		      		<?php echo $uslugi->name ?>
 		      	</div>
-		      	<div class="line mb-6"></div>
 		      	<div class="text text-white text-xl opacity-75 mb-6">
 		      		<?php echo carbon_get_term_meta($uslugi->term_id, 'crb_uslugi_description' ); ?>
 		      	</div>

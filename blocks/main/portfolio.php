@@ -29,7 +29,7 @@
 							<div class="portfolio_item_title bold-font text-4xl mb-3">
 								<a href="<?php echo carbon_get_the_post_meta('crb_portfolio_url'); ?>"><?php echo carbon_get_the_post_meta('crb_portfolio_title'); ?></a>
 							</div>
-							<div class="portfolio_item_description text-xl md:text-2xl mb-8">
+							<div class="portfolio_item_description text-xl mb-8">
 								<?php echo carbon_get_the_post_meta('crb_portfolio_description'); ?>
 							</div>
 							<div class="portfolio_item_tags">
