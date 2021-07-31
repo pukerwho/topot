@@ -19,7 +19,7 @@
 						<img src="<?php echo carbon_get_term_meta($service->term_id, 'crb_uslugi_thumb'); ?>" alt="<?php echo $service->name ?>" width="55">
 					</div>
 					<div class="w-full">
-						<div class="title text-white text-2xl">							
+						<div class="text-white text-2xl">							
 							<a href="<?php echo get_term_link($service); ?>">
 			      		<?php echo $service->name; ?>
 			      	</a>
