@@ -60,9 +60,7 @@
 
 					<!-- Иконка -->
 					<div class="flex justify-center items-center bg-third rounded-full p-3 mb-4" style="width: 64px; height: 64px">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
-						  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-						</svg>
+						<img src="<?php echo $whyus_item['crb_services_whyus_icon']; ?>">
 					</div>
 					<!-- END Иконка -->
 
