@@ -7,7 +7,7 @@
 
     <div class="flex justify-center mb-6">
       <div class="w-full lg:w-7/12">
-        <input id="search_dictionary_box" placeholder="<?php _e('Быстрый поиск', 'restx'); ?>" class="w-full text-lg text-black rounded px-3 py-3" />
+        <input id="search_dictionary_box" placeholder="<?php _e('Быстрый поиск', 'treba'); ?>" class="w-full text-lg text-black rounded px-3 py-3" />
       </div>
     </div>
 
