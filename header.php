@@ -58,7 +58,7 @@
         </div>
         <div class="flex items-center">
           <div class="hidden lg:block header_order mr-4">
-            <div class="first-btn cursor-pointer order-js" data-order="В шапке кликнули">
+            <div class="first-btn cursor-pointer text-md md:text-sm order-js" data-order="В шапке кликнули">
               <?php _e('Оставить заявку', 'treba'); ?>
             </div>
           </div>
