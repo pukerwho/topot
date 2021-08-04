@@ -3,7 +3,7 @@
 <div class="pt-40 pb-20">
 	<div class="container mx-auto px-4 lg:px-0">
 		<div class="text-center mb-12">
-			<h1 class="text-3xl lg:text-5xl font-black mb-8"><?php echo post_type_archive_title(); ?></h1>
+			<h1 class="text-3xl lg:text-5xl font-black mb-8"><?php _e('Портфолио', 'treba'); ?></h1>
 			<div class="text-2xl"><?php _e('Проекты, выполненные нашей студией', 'treba'); ?></div>	
 		</div>
 		<div class="portfolio_archive">
