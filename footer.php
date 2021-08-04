@@ -3,8 +3,8 @@
       <?php get_template_part('blocks/elements/clients'); ?>
     	<?php get_template_part('blocks/main/hey'); ?>
       <div class="container mx-auto px-4 lg:px-0">
-        <div class="flex md:-mx-4 mb-8 pb-8 border-separate">
-          <div class="w-full md:w-6/12 md:px-4">
+        <div class="flex flex-col lg:flex-row lg:-mx-4 mb-8 pb-8 border-separate">
+          <div class="w-full lg:w-6/12 lg:px-4 mb-4 lg:mb-0">
             <div class="font-black text-white text-xl mb-4">
               Treba Solutions
             </div>
@@ -12,8 +12,8 @@
               <?php _e('Специализируемся на развитии клиентского бизнеса в интернете. Есть десятки успешных примеров. Есть отзывы, есть результаты, которыми мы гордимся. Обращайтесь и вы к нам!', 'treba'); ?>
             </div>
           </div>
-          <div class="w-full md:w-3/12 md:px-4">
-            <div class="font-black mb-4">
+          <div class="w-full lg:w-3/12 lg:px-4 mb-4 lg:mb-0">
+            <div class="font-black mb-2 lg:mb-4">
               <?php _e('SEO продвижение', 'treba'); ?>
             </div>
             <div>
@@ -24,8 +24,8 @@
               ]); ?>
             </div>
           </div>
-          <div class="w-full md:w-3/12 md:px-4">
-            <div class="font-black mb-4">
+          <div class="w-full lg:w-3/12 lg:px-4 mb-4 lg:mb-0">
+            <div class="font-black mb-2 lg:mb-4">
               <?php _e('Создание сайтов', 'treba'); ?>
             </div>
             <div>
@@ -51,7 +51,7 @@
       </div>
     </footer>
     <div class="order_modal w-full h-full fixed left-0 top-0 flex justify-center items-center">
-  		<div class="order_modal_block w-full md:w-2/5 flex flex-col relative bg-white rounded-lg p-4 mx-2 md:mx-0">
+  		<div class="order_modal_block w-full lg:w-2/5 flex flex-col relative bg-white rounded-lg p-4 mx-2 lg:mx-0">
   			<div class="flex items-start justify-between mb-8">
 	  			<div class="order_modal_title text-2xl text-black font-bold">
 	  				<?php _e('Оставить заявку', 'treba'); ?> 
@@ -86,7 +86,7 @@
 
     <!-- Выбрать мессенджер -->
     <div class="chat_modal w-full h-full fixed left-0 top-0 flex justify-center items-center">
-      <div class="chat_modal_block w-full md:w-2/5 flex flex-col relative bg-white rounded-lg p-4 mx-2 md:mx-0">
+      <div class="chat_modal_block w-full lg:w-2/5 flex flex-col relative bg-white rounded-lg p-4 mx-2 lg:mx-0">
         <div class="flex items-start justify-between mb-8">
           <div class="chat_modal_title text-2xl text-black font-bold">
             <?php _e('Где Вам удобно общаться?', 'treba'); ?> 
@@ -116,11 +116,11 @@
     <!-- END Выбрать мессенджер -->
 
     <div class="success_notice callback-form w-full h-full fixed left-0 top-0 flex justify-center items-center">
-    	<div class="success_notice_block w-full md:w-2/5 flex flex-col md:flex-row items-center relative bg-white rounded-lg p-4 mx-2 md:mx-0">
+    	<div class="success_notice_block w-full lg:w-2/5 flex flex-col lg:flex-row items-center relative bg-white rounded-lg p-4 mx-2 lg:mx-0">
     		<div class="text-5xl">
     			👍
     		</div>
-    		<div class="text-black text-xl md:ml-8">
+    		<div class="text-black text-xl lg:ml-8">
     			<?php _e('Спасибо, мы получили ваше сообщение. В течении 20 минут мы выйдем с вами на связь.', 'treba'); ?>
     		</div>
     	</div>

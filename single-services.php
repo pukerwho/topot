@@ -160,7 +160,7 @@
 			<div class="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
 				
 				<!-- Title -->
-				<div class="hand-font third-color-dark text-2xl mb-4"><?php _e('"Cвежий" пример', 'treba'); ?></div>
+				<div class="hand-font third-color-dark text-2xl mb-4"><?php _e('Cвежий пример', 'treba'); ?></div>
 				<div class="relative flex">
 					<h2 class="inline text-4xl md:text-5xl font-black mb-6">🤘 <?php _e('Реальный кейс', 'treba'); ?></h2>
 				</div>
