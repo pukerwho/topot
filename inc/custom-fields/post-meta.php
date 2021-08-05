@@ -40,6 +40,20 @@ function crb_post_theme_options() {
           Field::make( 'text', 'crb_case_step_title', 'Заголовок' ),
           Field::make( 'rich_text', 'crb_case_step_description', 'Описание' ),
       ) ),
+      Field::make( 'rich_text', 'crb_case_result_content', 'Результаты (контент)' ),
+      Field::make( 'complex', 'crb_case_results_stats', 'Результаты (статистика)' )->set_layout( 'tabbed-vertical' )
+        ->add_fields( array(
+          Field::make( 'text', 'crb_case_results_stats_title', 'Заголовок' ),
+          Field::make( 'text', 'crb_case_results_stats_new', 'Новое значение' ),
+          Field::make( 'text', 'crb_case_results_stats_old', 'Старое значение' ),
+          Field::make( 'text', 'crb_case_results_stats_percent', 'Изменение' ),  
+          Field::make( 'select', 'crb_case_results_stats_move', 'Up/Down?' )->add_options(
+            array(
+              'up' => 'Вверх (green)',
+              'down' => ' Вниз (red)',
+            )
+          )
+      ) ),
       // Field::make( 'text', 'crb_cases_name', 'Заголовок' ),
       // Field::make( 'image', 'crb_cases_thumb', 'Заглавная картинка' )->set_value_type( 'url')
   ) );

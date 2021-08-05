@@ -86,6 +86,75 @@
 
 				</div>
 				<!-- END Что было сделано -->
+
+				<!-- Результаты -->
+				<div>
+					<div class="hand-font text-2xl text-center third-color-dark mb-4">
+						<?php _e('Какие результаты мы получили', 'treba'); ?>
+					</div>
+					<h2 class="text-3xl lg:text-5xl text-center font-bold mb-8"><?php _e('Итоги и выводы', 'treba'); ?></h2>
+					<div class="text-2xl mb-12">
+						<?php echo carbon_get_the_post_meta('crb_case_result_content'); ?>
+					</div>
+				</div>
+				<!-- END Результаты -->
+			</div>
+
+			<div class="w-full mx-auto">
+				<!-- Статистика -->
+				<div class="flex flex-col lg:flex-row bg-white rounded-lg">
+					<?php 
+						$stat_items = carbon_get_the_post_meta('crb_case_results_stats'); 
+						foreach ($stat_items as $stat_item):
+					?>
+						<!-- Item -->
+						<div class="case_results_item w-full lg:w-1/3 border-b lg:border-r border-grey-700 p-6">
+							<!-- Title -->
+							<div class="text-gray-700 font-semibold mb-2">
+								<?php echo $stat_item['crb_case_results_stats_title']; ?>	
+							</div>
+							<!-- END Title -->
+
+							<div class="flex justify-between items-center">
+								<!-- Numbers -->
+								<div class="text-gray-600">
+									<span class="text-2xl font-semibold third-color-dark pr-1"><?php echo $stat_item['crb_case_results_stats_new']; ?></span>
+									<?php _e('было', 'treba'); ?>
+									<?php echo $stat_item['crb_case_results_stats_old']; ?>
+								</div>
+								<!-- END Numbers -->
+
+								<?php $case_results_stats_move = $stat_item['crb_case_results_stats_move']; ?>
+
+								<?php if ($case_results_stats_move === 'up'): ?>
+								<!-- UP -->
+								<div class="flex justify-center items-center bg-green-200 text-green-700 px-2 py-1 rounded-lg">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+									  <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+									</svg>
+									<span><?php echo $stat_item['crb_case_results_stats_percent']; ?></span>
+								</div>
+								<!-- END UP -->
+								<?php endif; ?>
+
+								<?php if ($case_results_stats_move === 'down'): ?>
+								<!-- DOWN -->
+								<div class="flex justify-center items-center bg-red-200 text-red-700 px-2 py-1 rounded-lg">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+									  <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+									</svg>
+									<span><?php echo $stat_item['crb_case_results_stats_percent']; ?></span>
+								</div>
+								<!-- END DOWN -->
+								<?php endif; ?>
+
+							</div>
+						</div>
+						<!-- END Item -->
+					<?php endforeach; ?>
+
+				</div>
+				<!-- END Статистика -->
 			</div>
 			
 			<div class="w-full lg:w-4/5 page bg-light shadow-md rounded-lg my-0 mx-auto lg:my-8 px-4 lg:px-8 py-8">
