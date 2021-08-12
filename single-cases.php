@@ -74,7 +74,7 @@
 											
 											<div class="text-3xl text-white"><?php echo $case_step['crb_case_step_title']; ?></div>
 										</div>
-										<div><?php echo $case_step['crb_case_step_description']; ?></div>	
+										<div class="content"><?php echo $case_step['crb_case_step_description']; ?></div>	
 									</div>
 									<!-- END Right -->
 
