@@ -43,7 +43,7 @@
 						<?php _e('В чем заключалась наша работа', 'treba'); ?>
 					</div>
 					<h2 class="text-3xl lg:text-5xl text-center font-bold mb-8"><?php _e('Что было сделано', 'treba'); ?></h2>
-					<div class="text-2xl mb-12">
+					<div class="content text-2xl mb-12">
 						<?php echo carbon_get_the_post_meta('crb_case_what_do_description'); ?>
 					</div>
 
@@ -93,7 +93,7 @@
 						<?php _e('Какие результаты мы получили', 'treba'); ?>
 					</div>
 					<h2 class="text-3xl lg:text-5xl text-center font-bold mb-8"><?php _e('Итоги и выводы', 'treba'); ?></h2>
-					<div class="text-2xl mb-12">
+					<div class="content text-2xl mb-12">
 						<?php echo carbon_get_the_post_meta('crb_case_result_content'); ?>
 					</div>
 				</div>

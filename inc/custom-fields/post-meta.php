@@ -32,7 +32,7 @@ function crb_post_theme_options() {
       Field::make( 'image', 'crb_case_thumb', 'Картинка' ),
       Field::make( 'text', 'crb_case_subtitle', 'Что это? (СТО в Киеве, Интернет-магазин парфюмов)' ),
       Field::make( 'rich_text', 'crb_case_start', 'Начальные условия' ),
-      Field::make( 'textarea', 'crb_case_what_do_description', 'Что было сделано ОПИСАНИЕ' ),
+      Field::make( 'rich_text', 'crb_case_what_do_description', 'Что было сделано ОПИСАНИЕ' ),
       Field::make( 'complex', 'crb_case_steps', 'Что было сделано' )->set_layout( 'tabbed-vertical' )
         ->add_fields( array(
           Field::make( 'text', 'crb_case_step_date', 'Дата/Время' ),
