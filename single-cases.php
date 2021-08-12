@@ -31,7 +31,7 @@
 						<?php _e('Перед началом работы', 'treba'); ?>
 					</div>
 					<h2 class="text-3xl lg:text-5xl text-center font-bold mb-8"><?php _e('Начальные условия', 'treba'); ?></h2>
-					<div class="content text-2xl">
+					<div class="content text-xl">
 						<?php echo carbon_get_the_post_meta('crb_case_start'); ?>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 						<?php _e('В чем заключалась наша работа', 'treba'); ?>
 					</div>
 					<h2 class="text-3xl lg:text-5xl text-center font-bold mb-8"><?php _e('Что было сделано', 'treba'); ?></h2>
-					<div class="content text-2xl mb-12">
+					<div class="content text-xl mb-12">
 						<?php echo carbon_get_the_post_meta('crb_case_what_do_description'); ?>
 					</div>
 
@@ -93,7 +93,7 @@
 						<?php _e('Какие результаты мы получили', 'treba'); ?>
 					</div>
 					<h2 class="text-3xl lg:text-5xl text-center font-bold mb-8"><?php _e('Итоги и выводы', 'treba'); ?></h2>
-					<div class="content text-2xl mb-12">
+					<div class="content text-xl mb-12">
 						<?php echo carbon_get_the_post_meta('crb_case_result_content'); ?>
 					</div>
 				</div>
@@ -155,12 +155,6 @@
 
 				</div>
 				<!-- END Статистика -->
-			</div>
-			
-			<div class="w-full lg:w-4/5 page bg-light shadow-md rounded-lg my-0 mx-auto lg:my-8 px-4 lg:px-8 py-8">
-				<article class="content text-lg">
-					<?php the_content(); ?>
-				</article>
 			</div>
 
 			<!-- Хлебные крошки -->
