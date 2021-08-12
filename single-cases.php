@@ -100,7 +100,7 @@
 				<!-- END Результаты -->
 			</div>
 
-			<div class="w-full mx-auto">
+			<div class="w-full mx-auto mb-10">
 				<!-- Статистика -->
 				<div class="flex flex-col lg:flex-row bg-white rounded-lg">
 					<?php 
