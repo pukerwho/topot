@@ -3,9 +3,9 @@
 function enqueueTheThemeScriptsAndStyles() {
 
 	// Comment reply JS
-	if( is_singular() ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// if( is_singular() ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 
 	// @TODO : Uncomment what you need
 
@@ -64,7 +64,7 @@ function registerJqueryFromCdn() {
 	wp_deregister_script( 'jquery-ui-widget' );
 	wp_deregister_script( 'jquery' );
 
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3', true );
-	wp_register_script( 'jquery-ui-core', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array( 'jquery' ), '', true);
+	// wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3', true );
+	// wp_register_script( 'jquery-ui-core', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array( 'jquery' ), '', true);
 }
 add_action('wp_head', 'registerJqueryFromCdn', 1 );

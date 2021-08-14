@@ -1,45 +1,45 @@
-const { src, dest, series } = require('gulp');
+// gulpfile.js
+const { watch, series, src, dest } = require("gulp");
 const sass = require('gulp-sass');
-const inlinesource = require('gulp-inline-source');
-const autoprefixer = require('gulp-autoprefixer');
+const postcss = require("gulp-postcss");
+const purgecss = require('gulp-purgecss');
 const concat = require('gulp-concat');
-const cleanCSS = require('gulp-clean-css');
+const concatCss = require('gulp-concat-css');
+const tailwindcss = require('tailwindcss');
 
+function createTailwindProd() {
+  return src("./source/css/tailwind.scss")
+  .pipe(postcss([
+    tailwindcss('./tailwind.config.js'),
+    ...(process.env.NODE_ENV === "production"
+      ? [
+          purgecss({
+            content: ["**/*.php"],
+            defaultExtractor: content =>
+              content.match(/[\w-/:]+(?<!:)/g) || []
+          })
+        ]
+      : [])
+  ]))
+  .pipe(dest("./source/css/src"))
+}
 
 function scss() {
-  return src('./sass/**/*.scss')
+  return src('./source/css/styles.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./css'));
+    .pipe(dest('./build/css'));
 }
-
-function prefix() {
-  return src('./css/style.css')
-    .pipe(autoprefixer())
-    .pipe(dest('./css'));
-}
-
-function minify() {
-  return src('./css/style.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(dest('./css'));
-};
 
 function scripts() {
-	return src('./assets/js/**/*.js')
-		.pipe(concat('all.js'))
-    .pipe(dest('./js'));
+  return src('./source/javascript/**/*.js')
+    .pipe(concat('all.js'))
+    .pipe(dest('./build/js'));
 }
 
-function inlinecss() {
-  return src('temp/header.php')
-    .pipe(inlinesource())
-    .pipe(dest('./'));
-}
-
-exports.prefix = prefix;
-exports.minify = minify;
+// Default Gulp Task
+exports.tailwindPurge = createTailwindProd;
 exports.scss = scss;
 exports.scripts = scripts;
-exports.inlinecss = inlinecss;
 
-exports.default = series(scss, prefix, minify);
+exports.dev = series(scss, scripts);
+exports.build = series(createTailwindProd, scss, scripts);

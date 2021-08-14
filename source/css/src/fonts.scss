@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'SlimamifBold';
+  src: local('SlimamifBold'), local('SlimamifBold'),
+      url('../../fonts/SlimamifBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kram';
+  src: url('../../fonts/kraM.woff2') format('woff2'),
+        url('../../fonts/kraM.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
