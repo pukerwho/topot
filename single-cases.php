@@ -74,7 +74,10 @@
 											
 											<div class="text-3xl text-white"><?php echo $case_step['crb_case_step_title']; ?></div>
 										</div>
-										<div class="content"><?php echo $case_step['crb_case_step_description']; ?></div>	
+										<div class="content">
+											<?php $case_step = $case_step['crb_case_step_description']; ?>
+											<?php echo apply_filters( 'the_content', $case_step  ); ?>	
+										</div>	
 									</div>
 									<!-- END Right -->
 
