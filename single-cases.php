@@ -6,7 +6,7 @@
 			<div class="w-full lg:w-9/12 mx-auto">
 				<h1 class="text-3xl lg:text-5xl text-center font-black lg:leading-normal mb-8"><?php the_title(); ?></h1>
 				<!-- Вступительный текст -->
-				<div class="text-2xl text-center mb-8">
+				<div class="text-xl lg:text-2xl mb-8">
 					<?php echo carbon_get_the_post_meta('crb_cases_description'); ?>
 				</div>
 				<!-- END Вступительный текст -->
