@@ -1,6 +1,8 @@
     </section>
     <footer id="footer">
-      <?php get_template_part('blocks/elements/clients'); ?>
+      <?php if (is_home() || is_front_page()): ?>
+        <?php get_template_part('blocks/elements/clients'); ?>
+      <?php endif; ?>
     	<?php get_template_part('blocks/main/hey'); ?>
       <div class="container mx-auto px-4 lg:px-0">
         <div class="flex flex-col lg:flex-row lg:-mx-4 mb-8 pb-8 border-separate">
