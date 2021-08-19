@@ -2936,12 +2936,10 @@ details .icon span {
       border-bottom-right-radius: 0.75rem;
       border-bottom-left-radius: 0.75rem; }
     .cases_item_subtitle {
+      width: 100%;
       position: absolute;
-      left: 50%;
       top: 1rem;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%); }
+      text-align: center; }
     .cases_item_title {
       text-shadow: 0 0 8px black; }
   .cases_row:nth-of-type(2n) {

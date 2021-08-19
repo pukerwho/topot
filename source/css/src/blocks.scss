@@ -751,11 +751,10 @@
 			}
 		}
 		&_subtitle {
+			width: 100%;
 			position: absolute;
-			left: 50%; top: 1rem;
-			-webkit-transform: translateX(-50%);
-			-ms-transform: translateX(-50%);
-			transform: translateX(-50%);
+			top: 1rem;
+			text-align: center;
 		}
 		&_title {
 			text-shadow: 0 0 8px black;

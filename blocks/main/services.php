@@ -1,11 +1,11 @@
 <div class="services mb-20">
 	<div class="container mx-auto mb-12 px-4 lg:px-0">
 		<!-- TITLE BLOCK -->
-		<div class="w-full md:w-6/12 mx-auto mb-16">
+		<div class="w-full lg:w-6/12 mx-auto mb-16">
 			<div class="hand-font third-color-dark text-2xl text-center mb-4">
 				<?php _e('Помогаем развивать ваш бизнес в интернете', 'treba'); ?>
 			</div>
-			<h2 class="text-4xl md:text-5xl text-center font-black mb-8">
+			<h2 class="text-4xl lg:text-5xl text-center font-black mb-8">
 				<?php _e('Наши услуги', 'treba'); ?>
 			</h2>
 			<div class="text-xl text-center">
@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<!-- END TITLE BLOCK -->
-		<div class="flex flex-wrap md:-mx-2">
+		<div class="flex flex-wrap lg:-mx-2">
 			<?php $all_uslugi = get_terms( array( 
 				'taxonomy' => 'uslugi', 
 				'parent' => 0, 
@@ -21,7 +21,7 @@
 				'orderby' => 'term_order',
 			));
 			foreach ( $all_uslugi as $uslugi ): ?>
-				<div class="services_item md:h-80 w-full md:w-1/3 relative md:px-2 mb-4">
+				<div class="services_item lg:h-80 w-full lg:w-1/3 relative lg:px-2 mb-4">
 					<div class="h-full flex flex-col bg-light rounded-2xl px-6 py-8">
 						<a href="<?php echo get_term_link($uslugi); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
 						<div class="title flex items-center text-white text-2xl font-black pb-6 mb-6">
