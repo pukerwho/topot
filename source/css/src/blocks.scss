@@ -4,6 +4,9 @@
 	width: 100%;
 	position: absolute;
 	z-index: 99;
+	@include for-phone {
+		position: fixed;
+	}
 	@include for-tablet {
 		position: fixed;
 	}
