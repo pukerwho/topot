@@ -2343,7 +2343,7 @@ details .icon span {
   width: 100%;
   position: absolute;
   z-index: 99; }
-  @media (max-width: 767px) {
+  @media (min-width: 767px) and (max-width: 1280px) {
     .header {
       position: fixed; } }
   .header_menu li {

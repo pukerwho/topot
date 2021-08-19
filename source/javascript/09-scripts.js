@@ -1,6 +1,19 @@
 function init() {
   var Scrollbar = window.Scrollbar;
 
+  // На телефоне при скроле добавляем фон для Header
+  $(window).scroll(function(){
+    if ($(document).width() < 1024) {
+      var h_scroll = $(this).scrollTop();
+      if (h_scroll > 1) {
+        $('.header').addClass('bg-light');
+      } else {
+        $('.header').removeClass('bg-light');
+      }
+    }
+  })
+  
+
   //MOBILE MENU
   let headerHumburger = document.querySelector('.header_humburger');
   let mobileMenu = document.querySelector('.mobile_menu');
