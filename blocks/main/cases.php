@@ -22,10 +22,10 @@
 		if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="cases_item w-full md:w-1/2 relative block bg-dark-light mx-auto mb-20">
 				<a href="<?php the_permalink(); ?>" class="absolute w-full h-full top-0 left-0 z-10"></a>
-				<div class="cases_item_subtitle hand-font text-2xl third-color-dark">
+				<div class="cases_item_subtitle hand-font text-lg lg:text-2xl third-color-dark">
 					<?php echo carbon_get_the_post_meta('crb_case_subtitle'); ?>
 				</div>
-				<div class="cases_item_title w-10/12 text-3xl text-center red-color pb-8 pt-20 mx-auto mb-4">
+				<div class="cases_item_title w-10/12 text-2xl lg:text-3xl text-center red-color pb-8 pt-20 mx-auto mb-4">
 					<?php echo carbon_get_the_post_meta('crb_case_title'); ?>
 				</div>
 				<div class="w-10/12 mx-auto mb-12">
