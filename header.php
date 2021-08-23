@@ -38,7 +38,7 @@
     <?php get_template_part('blocks/elements/header-wave'); ?>
   </div>
   
-  <header id="header" class="header py-6" role="banner">
+  <header id="header" class="header fixed py-4 lg:py-6" role="banner">
     <div class="container mx-auto px-4 lg:px-0">
       <div class="header_content flex justify-between items-center text-white">
         <div class="flex items-center">
@@ -78,12 +78,78 @@
     </div>
   </header>
   <div class="mobile_menu block lg:hidden px-4">
-    <div class="w-full bg-light rounded-xl">
+
+    <!-- Меню -->
+    <div class="w-full bg-light rounded-xl mb-6">
+      <div class="font-black text-white uppercase text-xl p-4"><?php _e('Меню', 'treba'); ?></div>
       <?php wp_nav_menu([
         'theme_location' => 'head_menu',
         'menu_id' => 'head_menu',
-        'menu_class' => 'mobile_menu_list flex flex-col relative text-lg py-8 px-4'
+        'menu_class' => 'mobile_menu_list flex flex-col relative text-lg pt-4 pb-8 px-4'
       ]); ?>  
     </div>
+    <!-- END Меню -->
+
+    <!-- Портфолио -->
+    <div class="w-full bg-light rounded-xl mb-6">
+      <div class="font-black text-white uppercase text-xl p-4 pb-2"><?php _e('Новая работа', 'treba'); ?></div>
+      <div class="px-4 pb-8 pt-4">
+        <?php $portfolio_menu = new WP_Query( array( 
+          'post_type' => 'portfolio', 
+          'posts_per_page' => 1,
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+        if ($portfolio_menu->have_posts()) : while ($portfolio_menu->have_posts()) : $portfolio_menu->the_post(); ?>
+        <div class="h-48 relative">
+          <a href="<?php the_permalink(); ?>" class="w-full h-full absolute left-0 top-0 z-10"></a>
+          <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>" alt="<?php the_title(); ?>" class="w-full object-cover">
+          <div class="w-full absolute left-0 bottom-0 text-center bg-black bg-opacity-40 backdrop-filter backdrop-blur backdrop-contrast-200 px-6 py-4">
+            <span class="text-white font-bold"><?php the_title(); ?></span>
+          </div>
+        </div>
+        <?php endwhile; endif; wp_reset_postdata(); ?>
+      </div>
+      
+      <div class="px-4 pb-4">
+        <div class="border border-gray-700 px-4 py-3">
+          <a href="<?php get_post_type_archive_link('portfolio'); ?>" class="block bg-third text-white font-bold text-center px-4 py-3">
+            <?php _e('Все работы', 'treba'); ?>
+          </a>  
+        </div>
+      </div>
+    </div>
+    <!-- END Портфолио -->
+
+    <!-- Кейс -->
+    <div class="w-full bg-light rounded-xl mb-6">
+      <div class="font-black text-white uppercase text-xl p-4 pb-2"><?php _e('Свежие кейсы', 'treba'); ?></div>
+      <div class="px-4 py-4">
+        <?php $portfolio_menu = new WP_Query( array( 
+          'post_type' => 'cases', 
+          'posts_per_page' => 2,
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+        if ($portfolio_menu->have_posts()) : while ($portfolio_menu->have_posts()) : $portfolio_menu->the_post(); ?>
+        <div class="relative mb-6">
+          <a href="<?php the_permalink(); ?>" class="w-full h-full absolute left-0 top-0 z-10"></a>
+          <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>" alt="<?php the_title(); ?>" class="w-full h-full mb-2">
+          <div>
+            <?php the_title(); ?>
+          </div>
+        </div>
+        <?php endwhile; endif; wp_reset_postdata(); ?>
+      </div>
+      
+      <div class="px-4 pb-4">
+        <div class="border border-gray-700 px-4 py-3">
+          <a href="<?php get_post_type_archive_link('cases'); ?>" class="block bg-third text-white font-bold text-center px-4 py-3">
+            <?php _e('Больше кейсов', 'treba'); ?>
+          </a>  
+        </div>
+      </div>
+    </div>
+    <!-- END Кейс -->
   </div>
   <section id="content" role="main">

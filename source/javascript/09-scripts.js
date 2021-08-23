@@ -1,17 +1,24 @@
 function init() {
   var Scrollbar = window.Scrollbar;
+  var headerHeight = document.querySelector('header').offsetHeight;
 
-  // На телефоне при скроле добавляем фон для Header
-  $(window).scroll(function(){
-    if ($(document).width() < 1024) {
-      var h_scroll = $(this).scrollTop();
-      if (h_scroll > 1) {
-        $('.header').addClass('bg-light');
-      } else {
-        $('.header').removeClass('bg-light');
+  $(function(){
+    var lastScrollTop = 0, delta = 5;
+    $(window).scroll(function(){
+      var nowScrollTop = $(this).scrollTop();
+      if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+        if (nowScrollTop > lastScrollTop){
+          $('.header').addClass('hide').removeClass('show');
+        } else {
+          $('.header').addClass('show').removeClass('hide');
+        }
+        lastScrollTop = nowScrollTop;
       }
-    }
-  })
+      if(nowScrollTop < headerHeight){
+        $('.header').removeClass('show').removeClass('hide');        
+      }
+    });
+  });
   
 
   //MOBILE MENU

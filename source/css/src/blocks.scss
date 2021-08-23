@@ -2,13 +2,20 @@
 
 .header {
 	width: 100%;
-	position: absolute;
 	z-index: 99;
-	@include for-phone {
-		position: fixed;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+	&.show {
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+		background: $bg_light;
 	}
-	@include for-tablet {
-		position: fixed;
+	&.hide {
+		-webkit-transform: translateY(-100%);
+		-ms-transform: translateY(-100%);
+		transform: translateY(-100%);
 	}
 	&_menu {
 		li {
@@ -123,11 +130,12 @@
 		-webkit-transform: scale(0);
 		-ms-transform: scale(0);
 		transform: scale(0);
+		padding-bottom: 90px;
 		-webkit-transition: all 0.5s;
 		-o-transition: all 0.5s;
 		transition: all 0.5s;
 		&.active {
-			overflow: visible;
+			overflow-y: scroll;
 			visibility: visible;
 			opacity: 1;
 			-webkit-transform: scale(1);
@@ -180,6 +188,9 @@
 				transform: translateY(1rem);
 				margin-bottom: 1rem;
 				opacity: 0;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
