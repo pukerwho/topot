@@ -103,7 +103,7 @@
         if ($portfolio_menu->have_posts()) : while ($portfolio_menu->have_posts()) : $portfolio_menu->the_post(); ?>
         <div class="h-48 relative">
           <a href="<?php the_permalink(); ?>" class="w-full h-full absolute left-0 top-0 z-10"></a>
-          <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>" alt="<?php the_title(); ?>" class="w-full object-cover">
+          <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
           <div class="w-full absolute left-0 bottom-0 text-center bg-black bg-opacity-40 backdrop-filter backdrop-blur backdrop-contrast-200 px-6 py-4">
             <span class="text-white font-bold"><?php the_title(); ?></span>
           </div>
