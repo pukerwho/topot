@@ -18,6 +18,14 @@ function crb_post_theme_options() {
       ) ),
   ) );
   Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( array(
+      Field::make( 'complex', 'crb_blog_tags', 'Теги' )->set_layout( 'tabbed-vertical' )
+        ->add_fields( array(
+          Field::make( 'text', 'crb_blog_tag', 'Тег' ),
+      ) ),
+  ) );
+  Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'reviews' )
     ->add_fields( array(
       Field::make( 'text', 'crb_reviews_name', 'Заголовок' ),

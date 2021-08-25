@@ -22,20 +22,20 @@
 					'order' => 'DESC',
 				));
 				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-					<div class="blog_item bg-orange-light rounded-lg py-4 px-6 mb-6">
-						<div class="blog_item_title title-color text-xl md:text-2xl font-bold mb-2">
+					<div class="blog_item bg-yellow-50 rounded-lg py-4 px-6 mb-6">
+						<div class="blog_item_title text-gray-800 text-xl md:text-2xl font-bold mb-2">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</div>
-						<div class="blog_item_description title-color text-xl mb-4">
+						<div class="blog_item_description text-gray-700 text-xl mb-4">
 							<?php the_excerpt(); ?>
 						</div>
-						<div class="blog_item_tags">
-							<span>Wordpress</span>
-							<span>Верстка</span>
-							<span>Интернет-магазин</span>
-							<span>API</span>
-							<span>JS</span>
-							<span>SCSS</span>
+						<div class="blog_item_tags text-gray-700">
+							<?php 
+								$blog_tags = carbon_get_the_post_meta('crb_portfolio_tags'); 
+								foreach ($blog_tags as $blog_tag):
+							?>
+								<span><?php echo $blog_tag['crb_portfolio_tag']; ?></span>
+							<?php endforeach; ?>
 						</div>
 					</div>
 				<?php endwhile; endif; wp_reset_postdata(); ?>

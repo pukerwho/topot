@@ -39,7 +39,7 @@
   </div>
   
   <header id="header" class="header fixed py-4 lg:py-6" role="banner">
-    <div class="container mx-auto px-4 lg:px-0">
+    <div class="container">
       <div class="header_content flex justify-between items-center text-white">
         <div class="flex items-center">
           <div class="header_logo">
@@ -80,20 +80,20 @@
   <div class="mobile_menu block lg:hidden px-4">
 
     <!-- Меню -->
-    <div class="w-full bg-light rounded-xl mb-6">
-      <div class="font-black text-white uppercase text-xl p-4"><?php _e('Меню', 'treba'); ?></div>
+    <div class="w-full bg-light rounded-xl mb-6 p-4">
+      <div class="font-black text-white uppercase text-xl mb-4"><?php _e('Меню', 'treba'); ?></div>
       <?php wp_nav_menu([
         'theme_location' => 'head_menu',
         'menu_id' => 'head_menu',
-        'menu_class' => 'mobile_menu_list flex flex-col relative text-lg pt-4 pb-8 px-4'
+        'menu_class' => 'mobile_menu_list flex flex-col relative text-lg'
       ]); ?>  
     </div>
     <!-- END Меню -->
 
     <!-- Портфолио -->
-    <div class="w-full bg-light rounded-xl mb-6">
-      <div class="font-black text-white uppercase text-xl p-4 pb-2"><?php _e('Новая работа', 'treba'); ?></div>
-      <div class="px-4 pb-8 pt-4">
+    <div class="w-full bg-light rounded-xl mb-6 p-4">
+      <div class="font-black text-white uppercase text-xl mb-4"><?php _e('Новая работа', 'treba'); ?></div>
+      <div class="mb-4">
         <?php $portfolio_menu = new WP_Query( array( 
           'post_type' => 'portfolio', 
           'posts_per_page' => 1,
@@ -111,7 +111,7 @@
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </div>
       
-      <div class="px-4 pb-4">
+      <div>
         <div class="border border-gray-700 px-4 py-3">
           <a href="<?php get_post_type_archive_link('portfolio'); ?>" class="block bg-third text-white font-bold text-center px-4 py-3">
             <?php _e('Все работы', 'treba'); ?>
@@ -122,9 +122,9 @@
     <!-- END Портфолио -->
 
     <!-- Кейс -->
-    <div class="w-full bg-light rounded-xl mb-6">
-      <div class="font-black text-white uppercase text-xl p-4 pb-2"><?php _e('Свежие кейсы', 'treba'); ?></div>
-      <div class="px-4 py-4">
+    <div class="w-full bg-light rounded-xl mb-6 p-4">
+      <div class="font-black text-white uppercase text-xl mb-4"><?php _e('Свежие кейсы', 'treba'); ?></div>
+      <div class="mb-4">
         <?php $portfolio_menu = new WP_Query( array( 
           'post_type' => 'cases', 
           'posts_per_page' => 2,
@@ -142,7 +142,7 @@
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </div>
       
-      <div class="px-4 pb-4">
+      <div>
         <div class="border border-gray-700 px-4 py-3">
           <a href="<?php get_post_type_archive_link('cases'); ?>" class="block bg-third text-white font-bold text-center px-4 py-3">
             <?php _e('Больше кейсов', 'treba'); ?>
