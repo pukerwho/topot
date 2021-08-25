@@ -31,10 +31,10 @@
 						</div>
 						<div class="blog_item_tags text-gray-700">
 							<?php 
-								$blog_tags = carbon_get_the_post_meta('crb_portfolio_tags'); 
+								$blog_tags = carbon_get_the_post_meta('crb_blog_tags'); 
 								foreach ($blog_tags as $blog_tag):
 							?>
-								<span><?php echo $blog_tag['crb_portfolio_tag']; ?></span>
+								<span><?php echo $blog_tag['crb_blog_tag']; ?></span>
 							<?php endforeach; ?>
 						</div>
 					</div>
