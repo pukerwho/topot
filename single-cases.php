@@ -54,23 +54,23 @@
 							foreach ($case_steps as $case_step):
 						?>
 							<div class="case_step relative py-4">
-								<div class="flex">
+								<div class="flex flex-col lg:flex-row">
 									<!-- Left -->
-									<div class="mt-5 pr-16">
-										<div class="transform translate-y-full text-sm font-bold rounded-full px-3 py-1 bg-light-green green-color">
+									<div class="lg:mt-5 lg:pr-16 mb-6 lg:mb-0">
+										<div class="inline lg:block lg:transform lg:translate-y-full text-sm text-center font-bold rounded-full px-3 py-1 bg-light-green green-color">
 											<?php echo $case_step['crb_case_step_date']; ?>
 										</div>
 									</div>
 									<!-- END Left -->
 
 									<!-- Right -->
-									<div class="w-9/12">
+									<div class="w-full lg:w-9/12">
 										<div class="hand-font text-2xl third-color-dark mb-2"><?php echo $case_step['crb_case_step_subtitle']; ?></div>
 										<div class="flex mb-3 items-center">
 
-											<div class="case_step_line bg-light h-full self-start absolute left-0 transform -translate-x-1/2 translate-y-3 ml-32 p-px" aria-hidden="true"></div>
+											<div class="case_step_line hidden lg:block bg-light h-full self-start absolute left-0 transform -translate-x-1/2 translate-y-3 ml-32 p-px" aria-hidden="true"></div>
 											
-											<div class="h-2 w-2 absolute left-0 bg-third-dark rounded-full transform -translate-x-1/2 ml-32" aria-hidden="true"></div>
+											<div class="hidden lg:block h-2 w-2 absolute left-0 bg-third-dark rounded-full transform -translate-x-1/2 ml-32" aria-hidden="true"></div>
 											
 											<div class="text-3xl text-white"><?php echo $case_step['crb_case_step_title']; ?></div>
 										</div>

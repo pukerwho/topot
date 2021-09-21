@@ -14,8 +14,8 @@
 				'orderby' => 'term_order',
 			)); 
 			foreach ($services as $service): ?>
-				<div class="services_item flex bg-light rounded-lg py-6 px-4 mb-6">
-					<div class="mr-6">
+				<div class="services_item block lg:flex bg-light rounded-lg py-6 px-4 mb-6">
+					<div class="float-left lg:float-none mr-6">
 						<img src="<?php echo carbon_get_term_meta($service->term_id, 'crb_uslugi_thumb'); ?>" alt="<?php echo $service->name ?>" width="55">
 					</div>
 					<div class="w-full">
