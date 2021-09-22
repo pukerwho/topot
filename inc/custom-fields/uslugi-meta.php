@@ -68,6 +68,7 @@ function crb_uslugi_theme_options() {
             'post_type' => 'services',
           )
       ) ),
+      Field::make( 'checkbox', 'crb_uslugi_type_sites', 'Есть типы сайтов?' ),
   ) );
 }
 

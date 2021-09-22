@@ -143,9 +143,10 @@ function crb_services_theme_options() {
       Field::make( 'checkbox', 'crb_services_show_review', 'Выводить Отзыв?' ),
       Field::make( 'select', 'crb_services_type', 'Вид услуги' )->add_options(
         array(
-          'subject' => 'По тематике сайта',
-          'crm' => 'По CRM сайта',
-          'region' => 'По региону',
+          'По тематике сайта' => 'По тематике сайта',
+          'По типу сайта' => 'По типу сайта',
+          'По CRM сайта' => 'По CRM сайта',
+          'По региону' => 'По региону',
         )
       )
     ));

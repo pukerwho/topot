@@ -29,30 +29,83 @@
 		      			<?php _e('Перейти', 'treba'); ?> →
 		      		</a>
 		      	</div>
-		      	<div class="flex flex-wrap flex-col lg:flex-row lg:-mx-2">
-		      		<?php 
-								$current_term = $service->term_id;
-								$custom_query = new WP_Query( array( 
-								'post_type' => 'services', 
-								'orderby' => 'date',
-								'order' => 'DESC',
-								'tax_query' => array(
-							    array(
-						        'taxonomy' => 'uslugi',
-								    'terms' => $current_term,
-						        'field' => 'term_id',
-						        'include_children' => true,
-						        'operator' => 'IN'
-							    )
-								),
-							) );
-							if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-								<div class="w-full lg:w-1/2 lg:px-2 mb-2">
-									<a href="<?php the_permalink(); ?>" class="text-lg white-link-with-hover">
-					      		<?php the_title(); ?>
-									</a>	
-								</div>
-							<?php endwhile; endif; wp_reset_postdata(); ?>
+		      	<div>
+		      		<?php if (carbon_get_term_meta($service->term_id, 'crb_uslugi_type_sites')): ?>
+		      			<!-- Выводим по типу сайта услуги из категории -->
+		      			<?php 
+		      				$site_types = ['По тематике сайта', 'По CRM сайта', 'По региону', 'По типу сайта']; 
+		      				foreach ($site_types as $site_type):
+		      			?>
+		      				
+		      				<div class="mb-4">
+		      					<div class="text-xl third-color-dark  mb-2">
+		      						<?php echo $site_type; ?>	
+		      					</div>
+		      					<div class="flex flex-wrap flex-col lg:flex-row lg:-mx-2">
+				      				<?php 
+												$current_term = $service->term_id;
+												$current_type_site_services = new WP_Query( array( 
+												'post_type' => 'services', 
+												'orderby' => 'date',
+												'order' => 'DESC',
+												'tax_query' => array(
+											    array(
+										        'taxonomy' => 'uslugi',
+												    'terms' => $current_term,
+										        'field' => 'term_id',
+										        'include_children' => true,
+										        'operator' => 'IN'
+											    )
+												),
+												'meta_query' => array(
+										      array(
+														'key'       => '_crb_services_type',
+														'value'     => $site_type,
+														'compare'   => '='
+										      )
+										    )
+											) );
+											if ($current_type_site_services->have_posts()) : while ($current_type_site_services->have_posts()) : $current_type_site_services->the_post(); ?>
+												<div class="w-full lg:w-1/2 lg:px-2 mb-2">
+													<a href="<?php the_permalink(); ?>" class="text-lg white-link-with-hover">
+									      		<?php the_title(); ?>
+													</a>	
+												</div>
+											<?php endwhile; endif; wp_reset_postdata(); ?>
+										</div>
+									</div>
+
+		      				
+		      			<?php endforeach; ?>
+		      			<!-- END Выводим по типу сайта услуги из категории -->
+		      		<?php else: ?>
+		      			<!-- Выводим все записи из этой категории -->
+		      			<?php 
+									$current_term = $service->term_id;
+									$all_services = new WP_Query( array( 
+									'post_type' => 'services', 
+									'orderby' => 'date',
+									'order' => 'DESC',
+									'tax_query' => array(
+								    array(
+							        'taxonomy' => 'uslugi',
+									    'terms' => $current_term,
+							        'field' => 'term_id',
+							        'include_children' => true,
+							        'operator' => 'IN'
+								    )
+									),
+								) );
+								if ($all_services->have_posts()) : while ($all_services->have_posts()) : $all_services->the_post(); ?>
+									<div class="w-full lg:w-1/2 lg:px-2 mb-2">
+										<a href="<?php the_permalink(); ?>" class="text-lg white-link-with-hover">
+						      		<?php the_title(); ?>
+										</a>	
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+								<!-- END Выводим все записи из этой категории -->
+
+		      		<?php endif; ?>
 		      	</div>
 					</div>
 				</div>
