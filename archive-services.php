@@ -38,7 +38,7 @@
 		      			?>
 		      				
 		      				<div class="mb-4">
-		      					<div class="text-xl third-color-dark  mb-2">
+		      					<div class="text-xl text-white mb-2">
 		      						<?php echo $site_type; ?>	
 		      					</div>
 		      					<div class="flex flex-wrap flex-col lg:flex-row lg:-mx-2">
@@ -80,29 +80,31 @@
 		      			<!-- END Выводим по типу сайта услуги из категории -->
 		      		<?php else: ?>
 		      			<!-- Выводим все записи из этой категории -->
-		      			<?php 
-									$current_term = $service->term_id;
-									$all_services = new WP_Query( array( 
-									'post_type' => 'services', 
-									'orderby' => 'date',
-									'order' => 'DESC',
-									'tax_query' => array(
-								    array(
-							        'taxonomy' => 'uslugi',
-									    'terms' => $current_term,
-							        'field' => 'term_id',
-							        'include_children' => true,
-							        'operator' => 'IN'
-								    )
-									),
-								) );
-								if ($all_services->have_posts()) : while ($all_services->have_posts()) : $all_services->the_post(); ?>
-									<div class="w-full lg:w-1/2 lg:px-2 mb-2">
-										<a href="<?php the_permalink(); ?>" class="text-lg white-link-with-hover">
-						      		<?php the_title(); ?>
-										</a>	
-									</div>
-								<?php endwhile; endif; wp_reset_postdata(); ?>
+		      			<div class="flex flex-wrap flex-col lg:flex-row lg:-mx-2">
+			      			<?php 
+										$current_term = $service->term_id;
+										$all_services = new WP_Query( array( 
+										'post_type' => 'services', 
+										'orderby' => 'date',
+										'order' => 'DESC',
+										'tax_query' => array(
+									    array(
+								        'taxonomy' => 'uslugi',
+										    'terms' => $current_term,
+								        'field' => 'term_id',
+								        'include_children' => true,
+								        'operator' => 'IN'
+									    )
+										),
+									) );
+									if ($all_services->have_posts()) : while ($all_services->have_posts()) : $all_services->the_post(); ?>
+										<div class="w-full lg:w-1/2 lg:px-2 mb-2">
+											<a href="<?php the_permalink(); ?>" class="text-lg white-link-with-hover">
+							      		<?php the_title(); ?>
+											</a>	
+										</div>
+									<?php endwhile; endif; wp_reset_postdata(); ?>
+								</div>
 								<!-- END Выводим все записи из этой категории -->
 
 		      		<?php endif; ?>
