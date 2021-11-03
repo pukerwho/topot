@@ -17,7 +17,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="copyright" content="treba-solutions.com">
-  <meta name="ahrefs-site-verification" content="9a91c9f8bb7de37d7814e5b41231bd39c880f0a9532deda08c5c1143e3029726">
+  <meta name="ahrefs-site-verification" content="54811f58d1a52fab0a052990219dc5e8d66d0c050168dfee875da937c895d324">
 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">
