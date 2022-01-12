@@ -13,7 +13,7 @@
     </div>
     <div>
       <!-- ФОРМА -->
-      <form name="form_commerce">
+      <form name="form_commerce-create">
         <input type="text" name="Контакт" placeholder="<?php _e('Телефон или e-mail для связи', 'treba'); ?>" class="w-full text-black px-2 py-4 mb-4 border-2" required>
         <input type="text" name="URL" placeholder="<?php _e('Адрес вашего сайта (если есть)', 'treba'); ?>" class="w-full text-black px-2 py-4 mb-4 border-2">
         <textarea name="Сообщение" rows="5" class="w-full text-black px-2 py-4 mb-4 border-2" placeholder="<?php _e('Постарайтесь подробно описать вашу задачу', 'treba'); ?>"></textarea>

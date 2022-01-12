@@ -364,6 +364,29 @@ function init() {
     })
   }
 
+  // Коммерческое (создание сайта)
+  const form_commerce_create = document.forms['form_commerce-create']
+  if (form_commerce_create) {
+    form_commerce_create.addEventListener('submit', e => {
+      e.preventDefault()
+      let this_form = form_commerce_create
+      let data = new FormData(form_commerce_create)
+      fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
+        .then(response => showCommerceCreateSuccessMessage(data, this_form))
+        .catch(error => console.error('Error!', error.message))
+    })  
+  }
+
+  function showCommerceCreateSuccessMessage(data, this_form) {
+    this_form.reset();
+    $('.commerce_success-create').addClass('show');
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Заявка',
+      eventAction: 'Успешно отправлено',
+    })
+  }
+
   // Scrollbar.init(document.querySelector('body'));
 
   //WELCOME BLOCK
