@@ -35,7 +35,16 @@
 
 	<!-- КОММЕРЧЕСКОЕ -->
 	<?php if(carbon_get_the_post_meta('crb_services_show_commerce')): ?>
-		<?php get_template_part('blocks/elements/commerce'); ?>
+		<?php
+			$custom_price_template = carbon_get_the_post_meta('crb_services_price_template');
+	    switch ($custom_price_template) {
+	      case 'create':
+	        get_template_part('blocks/elements/commerce-create');
+	        break;
+	      default: 
+	        get_template_part('blocks/elements/commerce');
+	    }
+		?>
 	<?php endif; ?>
 	<!-- END КОММЕРЧЕСКОЕ -->
 

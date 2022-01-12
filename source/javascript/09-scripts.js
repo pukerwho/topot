@@ -143,6 +143,17 @@ function init() {
     $('.modal_bg').removeClass('show');
   });
 
+  // COMMERCE CREATE MODAL
+  $('.commerce-create-js').on('click', function(){
+    $('.commerce_modal-create').addClass('show');
+    $('.modal_bg').addClass('show');
+  });
+
+  $('.commerce_close-create').on('click', function(){
+    $('.commerce_modal-create').removeClass('show');
+    $('.modal_bg').removeClass('show');
+  });
+
 
   // CHAT MODAL
   $('.chat-js').on('click', function(){
@@ -168,7 +179,7 @@ function init() {
   });
 
   // ФОРМЫ
-  const modalScriptURL = 'https://script.google.com/macros/s/AKfycbxUfMuLIeFlIgpKKtbppOWsuATAbLeOsTkFsB5ayNMKjdU9wWLGY7ksh0QvLR2Tf9fM4Q/exec'
+  const modalScriptURL = 'https://script.google.com/macros/s/AKfycbz-He2k77yNB78ucoyz8Z8RHfKE-HfFabIPwEoC9TIouBrdVbALqpkxABjxjB2KfpjI/exec'
   const form_welcome = document.forms['form_welcome']
   if (form_welcome) {
     form_welcome.addEventListener('submit', e => {

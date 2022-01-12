@@ -43,10 +43,7 @@
         <!-- Копирайт -->
         <div class="flex justify-between items-center pb-8">
           <div>
-            © Treba, 2021
-          </div>
-          <div>
-            Соц сети
+            © Treba, 2022
           </div>
         </div>
         <!-- Копирайт -->
@@ -85,6 +82,7 @@
     </div>
 
     <?php get_template_part('blocks/forms/commerce-form'); ?>
+    <?php get_template_part('blocks/forms/commerce-create-form'); ?>
 
     <!-- Выбрать мессенджер -->
     <div class="chat_modal w-full h-full fixed left-0 top-0 flex justify-center items-center">
